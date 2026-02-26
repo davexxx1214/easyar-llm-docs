@@ -1,0 +1,1292 @@
+[
+  {
+    "title": "获取和使用 API Key",
+    "rel_path": "apikey-auth.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/apikey-auth.html",
+    "original_file": "doc--zh-cn--develop--apikey-auth.md"
+  },
+  {
+    "title": "EasyAR 云服务 API Key 统一认证",
+    "rel_path": "apikey.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/apikey.html",
+    "original_file": "doc--zh-cn--develop--apikey.md"
+  },
+  {
+    "title": "摄像头和输入扩展",
+    "rel_path": "cameras/cameras.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/cameras/cameras.html",
+    "original_file": "doc--zh-cn--develop--cameras--cameras.md"
+  },
+  {
+    "title": "自定义相机",
+    "rel_path": "cameras/custom-camera.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/cameras/custom-camera.html",
+    "original_file": "doc--zh-cn--develop--cameras--custom-camera.md"
+  },
+  {
+    "title": "与平面图像跟踪的混合使用",
+    "rel_path": "cloud-recognition/image-recognition-with-tracking.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/image-recognition-with-tracking.html",
+    "original_file": "doc--zh-cn--develop--cloud-recognition--image-recognition-with-tracking.md"
+  },
+  {
+    "title": "图像云识别简介",
+    "rel_path": "cloud-recognition/intro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/intro.html",
+    "original_file": "doc--zh-cn--develop--cloud-recognition--intro.md"
+  },
+  {
+    "title": "创建目标图像 (Target)",
+    "rel_path": "cloud-recognition/management-adding.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-adding.html",
+    "original_file": "doc--zh-cn--develop--cloud-recognition--management-adding.md"
+  },
+  {
+    "title": "删除目标图",
+    "rel_path": "cloud-recognition/management-deletion.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-deletion.html",
+    "original_file": "doc--zh-cn--develop--cloud-recognition--management-deletion.md"
+  },
+  {
+    "title": "目标图列表查询",
+    "rel_path": "cloud-recognition/management-gallery.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-gallery.html",
+    "original_file": "doc--zh-cn--develop--cloud-recognition--management-gallery.md"
+  },
+  {
+    "title": "图像识别难度评级",
+    "rel_path": "cloud-recognition/management-grading.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-grading.html",
+    "original_file": "doc--zh-cn--develop--cloud-recognition--management-grading.md"
+  },
+  {
+    "title": "目标图像管理",
+    "rel_path": "cloud-recognition/management.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management.html",
+    "original_file": "doc--zh-cn--develop--cloud-recognition--management.md"
+  },
+  {
+    "title": "EasyAR Sense 数据访问",
+    "rel_path": "compliance/data-access.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/compliance/data-access.html",
+    "original_file": "doc--zh-cn--develop--compliance--data-access.md"
+  },
+  {
+    "title": "EasyAR Sense 合规指南",
+    "rel_path": "compliance/guide.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/compliance/guide.html",
+    "original_file": "doc--zh-cn--develop--compliance--guide.md"
+  },
+  {
+    "title": "合规",
+    "rel_path": "compliance/intro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/compliance/intro.html",
+    "original_file": "doc--zh-cn--develop--compliance--intro.md"
+  },
+  {
+    "title": "稠密空间地图支持的设备和平台",
+    "rel_path": "dense-spatial-mapping/devices.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/dense-spatial-mapping/devices.html",
+    "original_file": "doc--zh-cn--develop--dense-spatial-mapping--devices.md"
+  },
+  {
+    "title": "EasyAR 稠密空间地图",
+    "rel_path": "dense-spatial-mapping/intro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/dense-spatial-mapping/intro.html",
+    "original_file": "doc--zh-cn--develop--dense-spatial-mapping--intro.md"
+  },
+  {
+    "title": "EasyAR CRS 支持的设备和平台应用",
+    "rel_path": "devices-crs.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/devices-crs.html",
+    "original_file": "doc--zh-cn--develop--devices-crs.md"
+  },
+  {
+    "title": "EasyAR Sense 支持的系统和设备",
+    "rel_path": "devices-sense.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/devices-sense.html",
+    "original_file": "doc--zh-cn--develop--devices-sense.md"
+  },
+  {
+    "title": "Android 上的崩溃分析",
+    "rel_path": "diagnostics/crash-android.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/diagnostics/crash-android.html",
+    "original_file": "doc--zh-cn--develop--diagnostics--crash-android.md"
+  },
+  {
+    "title": "iOS/macOS/visionOS 上的崩溃分析",
+    "rel_path": "diagnostics/crash-ios.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/diagnostics/crash-ios.html",
+    "original_file": "doc--zh-cn--develop--diagnostics--crash-ios.md"
+  },
+  {
+    "title": "Windows 上的崩溃分析",
+    "rel_path": "diagnostics/crash-windows.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/diagnostics/crash-windows.html",
+    "original_file": "doc--zh-cn--develop--diagnostics--crash-windows.md"
+  },
+  {
+    "title": "问题诊断和报告",
+    "rel_path": "diagnostics/diagnostics.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/diagnostics/diagnostics.html",
+    "original_file": "doc--zh-cn--develop--diagnostics--diagnostics.md"
+  },
+  {
+    "title": "Android 上的日志分析",
+    "rel_path": "diagnostics/log-android.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/diagnostics/log-android.html",
+    "original_file": "doc--zh-cn--develop--diagnostics--log-android.md"
+  },
+  {
+    "title": "iOS/macOS/visionOS 上的日志分析",
+    "rel_path": "diagnostics/log-ios.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/diagnostics/log-ios.html",
+    "original_file": "doc--zh-cn--develop--diagnostics--log-ios.md"
+  },
+  {
+    "title": "微信小程序上的日志分析",
+    "rel_path": "diagnostics/log-wechat.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/diagnostics/log-wechat.html",
+    "original_file": "doc--zh-cn--develop--diagnostics--log-wechat.md"
+  },
+  {
+    "title": "Windows 上的日志分析",
+    "rel_path": "diagnostics/log-windows.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/diagnostics/log-windows.html",
+    "original_file": "doc--zh-cn--develop--diagnostics--log-windows.md"
+  },
+  {
+    "title": "头显设备录屏：记录沉浸式 AR/MR 体验",
+    "rel_path": "diagnostics/recordings-headsets.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/diagnostics/recordings-headsets.html",
+    "original_file": "doc--zh-cn--develop--diagnostics--recordings-headsets.md"
+  },
+  {
+    "title": "截图与录屏：记录 AR 视觉异常的重要手段",
+    "rel_path": "diagnostics/recordings.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/diagnostics/recordings.html",
+    "original_file": "doc--zh-cn--develop--diagnostics--recordings.md"
+  },
+  {
+    "title": "录制 EIF 数据：复现 AR 问题的高保真依据",
+    "rel_path": "diagnostics/simulation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/diagnostics/simulation.html",
+    "original_file": "doc--zh-cn--develop--diagnostics--simulation.md"
+  },
+  {
+    "title": "AR 驱动的 3D 渲染",
+    "rel_path": "fundamentals/fundamentals.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/fundamentals/fundamentals.html",
+    "original_file": "doc--zh-cn--develop--fundamentals--fundamentals.md"
+  },
+  {
+    "title": "EasyAR 增强现实入门",
+    "rel_path": "getting-started/ar.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/getting-started/ar.html",
+    "original_file": "doc--zh-cn--develop--getting-started--ar.md"
+  },
+  {
+    "title": "EasyAR 的头显支持",
+    "rel_path": "headsets/headsets.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/headsets/headsets.html",
+    "original_file": "doc--zh-cn--develop--headsets--headsets.md"
+  },
+  {
+    "title": "设备与平台支持",
+    "rel_path": "image-tracking/devices.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/image-tracking/devices.html",
+    "original_file": "doc--zh-cn--develop--image-tracking--devices.md"
+  },
+  {
+    "title": "平面图像跟踪简介",
+    "rel_path": "image-tracking/intro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/image-tracking/intro.html",
+    "original_file": "doc--zh-cn--develop--image-tracking--intro.md"
+  },
+  {
+    "title": "平面跟踪与运动跟踪结合",
+    "rel_path": "image-tracking/motion-fusion.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/image-tracking/motion-fusion.html",
+    "original_file": "doc--zh-cn--develop--image-tracking--motion-fusion.md"
+  },
+  {
+    "title": "EasyAR Sense 许可证",
+    "rel_path": "license-sense.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/license-sense.html",
+    "original_file": "doc--zh-cn--develop--license-sense.md"
+  },
+  {
+    "title": "诊断与修复：应用中内容跳动和飘移的问题",
+    "rel_path": "mega/content-drift.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/mega/content-drift.html",
+    "original_file": "doc--zh-cn--develop--mega--content-drift.md"
+  },
+  {
+    "title": "诊断与修复：应用中内容不显示的问题",
+    "rel_path": "mega/content-nodisplay.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/mega/content-nodisplay.html",
+    "original_file": "doc--zh-cn--develop--mega--content-nodisplay.md"
+  },
+  {
+    "title": "支持的设备和平台应用",
+    "rel_path": "mega/devices.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/mega/devices.html",
+    "original_file": "doc--zh-cn--develop--mega--devices.md"
+  },
+  {
+    "title": "Mega 常见问题",
+    "rel_path": "mega/faq.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/mega/faq.html",
+    "original_file": "doc--zh-cn--develop--mega--faq.md"
+  },
+  {
+    "title": "采集模拟运行数据",
+    "rel_path": "mega/input-recording.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/mega/input-recording.html",
+    "original_file": "doc--zh-cn--develop--mega--input-recording.md"
+  },
+  {
+    "title": "EasyAR Mega 简介",
+    "rel_path": "mega/intro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/mega/intro.html",
+    "original_file": "doc--zh-cn--develop--mega--intro.md"
+  },
+  {
+    "title": "我的定位库可以使用了吗？",
+    "rel_path": "mega/localization-verify.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/mega/localization-verify.html",
+    "original_file": "doc--zh-cn--develop--mega--localization-verify.md"
+  },
+  {
+    "title": "导航场景最佳实践",
+    "rel_path": "mega/navigation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/mega/navigation.html",
+    "original_file": "doc--zh-cn--develop--mega--navigation.md"
+  },
+  {
+    "title": "问题报告与反馈",
+    "rel_path": "mega/report.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/mega/report.html",
+    "original_file": "doc--zh-cn--develop--mega--report.md"
+  },
+  {
+    "title": "EasyAR 运动跟踪与 ARKit/ARCore/华为 AR Engine 的关系",
+    "rel_path": "motion-tracking/comparison.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/motion-tracking/comparison.html",
+    "original_file": "doc--zh-cn--develop--motion-tracking--comparison.md"
+  },
+  {
+    "title": "谷歌 ARCore 与运动跟踪",
+    "rel_path": "motion-tracking/devices-arcore.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/motion-tracking/devices-arcore.html",
+    "original_file": "doc--zh-cn--develop--motion-tracking--devices-arcore.md"
+  },
+  {
+    "title": "华为 AR Engine 与运动跟踪",
+    "rel_path": "motion-tracking/devices-arengine.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/motion-tracking/devices-arengine.html",
+    "original_file": "doc--zh-cn--develop--motion-tracking--devices-arengine.md"
+  },
+  {
+    "title": "EasyAR 运动跟踪支持的设备",
+    "rel_path": "motion-tracking/devices-easyar.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/motion-tracking/devices-easyar.html",
+    "original_file": "doc--zh-cn--develop--motion-tracking--devices-easyar.md"
+  },
+  {
+    "title": "运动跟踪支持的设备",
+    "rel_path": "motion-tracking/devices.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/motion-tracking/devices.html",
+    "original_file": "doc--zh-cn--develop--motion-tracking--devices.md"
+  },
+  {
+    "title": "什么是运动跟踪功能？",
+    "rel_path": "motion-tracking/intro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/motion-tracking/intro.html",
+    "original_file": "doc--zh-cn--develop--motion-tracking--intro.md"
+  },
+  {
+    "title": "为其他功能提供数据的运动跟踪",
+    "rel_path": "motion-tracking/motion-tracking-and-easyar.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/motion-tracking/motion-tracking-and-easyar.html",
+    "original_file": "doc--zh-cn--develop--motion-tracking--motion-tracking-and-easyar.md"
+  },
+  {
+    "title": "在 3D 引擎中使用 EasyAR",
+    "rel_path": "native/fundamentals/3dengine.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/3dengine.html",
+    "original_file": "doc--zh-cn--develop--native--fundamentals--3dengine.md"
+  },
+  {
+    "title": "3D 空间内容展示",
+    "rel_path": "native/fundamentals/contents.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/contents.html",
+    "original_file": "doc--zh-cn--develop--native--fundamentals--contents.md"
+  },
+  {
+    "title": "EasyAR 坐标系",
+    "rel_path": "native/fundamentals/coordinates.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/coordinates.html",
+    "original_file": "doc--zh-cn--develop--native--fundamentals--coordinates.md"
+  },
+  {
+    "title": "AR 数据流",
+    "rel_path": "native/fundamentals/dataflow.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/dataflow.html",
+    "original_file": "doc--zh-cn--develop--native--fundamentals--dataflow.md"
+  },
+  {
+    "title": "库加载和初始化",
+    "rel_path": "native/fundamentals/initialization.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/initialization.html",
+    "original_file": "doc--zh-cn--develop--native--fundamentals--initialization.md"
+  },
+  {
+    "title": "在进行增强现实开发前选择一款 3D 引擎",
+    "rel_path": "native/getting-started/choosing-an-engine.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/choosing-an-engine.html",
+    "original_file": "doc--zh-cn--develop--native--getting-started--choosing-an-engine.md"
+  },
+  {
+    "title": "在 Android 应用中启用 EasyAR 功能",
+    "rel_path": "native/getting-started/enable-easyar-android.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/enable-easyar-android.html",
+    "original_file": "doc--zh-cn--develop--native--getting-started--enable-easyar-android.md"
+  },
+  {
+    "title": "在 iOS 应用中启用 EasyAR 功能",
+    "rel_path": "native/getting-started/enable-easyar-ios.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/enable-easyar-ios.html",
+    "original_file": "doc--zh-cn--develop--native--getting-started--enable-easyar-ios.md"
+  },
+  {
+    "title": "运行 EasyAR Android 样例",
+    "rel_path": "native/getting-started/quickstart-android.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/quickstart-android.html",
+    "original_file": "doc--zh-cn--develop--native--getting-started--quickstart-android.md"
+  },
+  {
+    "title": "运行 EasyAR 的 iOS 样例",
+    "rel_path": "native/getting-started/quickstart-ios.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/quickstart-ios.html",
+    "original_file": "doc--zh-cn--develop--native--getting-started--quickstart-ios.md"
+  },
+  {
+    "title": "运行 EasyAR Windows 样例",
+    "rel_path": "native/getting-started/quickstart-windows.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/quickstart-windows.html",
+    "original_file": "doc--zh-cn--develop--native--getting-started--quickstart-windows.md"
+  },
+  {
+    "title": "选择 EasyAR Sense 发布版本",
+    "rel_path": "native/getting-started/variants.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/variants.html",
+    "original_file": "doc--zh-cn--develop--native--getting-started--variants.md"
+  },
+  {
+    "title": "EasyAR Sense 1.0 发行说明",
+    "rel_path": "native/release-notes/release-notes-1_0.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-1_0.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-1_0.md"
+  },
+  {
+    "title": "EasyAR Sense 1.1 发行说明",
+    "rel_path": "native/release-notes/release-notes-1_1.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-1_1.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-1_1.md"
+  },
+  {
+    "title": "EasyAR Sense 1.2 发行说明",
+    "rel_path": "native/release-notes/release-notes-1_2.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-1_2.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-1_2.md"
+  },
+  {
+    "title": "EasyAR Sense 1.3 发行说明",
+    "rel_path": "native/release-notes/release-notes-1_3.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-1_3.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-1_3.md"
+  },
+  {
+    "title": "EasyAR Sense 2.0 发行说明",
+    "rel_path": "native/release-notes/release-notes-2_0.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-2_0.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-2_0.md"
+  },
+  {
+    "title": "EasyAR Sense 2.1 发行说明",
+    "rel_path": "native/release-notes/release-notes-2_1.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-2_1.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-2_1.md"
+  },
+  {
+    "title": "EasyAR Sense 2.2 发行说明",
+    "rel_path": "native/release-notes/release-notes-2_2.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-2_2.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-2_2.md"
+  },
+  {
+    "title": "EasyAR Sense 2.3 发行说明",
+    "rel_path": "native/release-notes/release-notes-2_3.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-2_3.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-2_3.md"
+  },
+  {
+    "title": "EasyAR Sense 3.0 发行说明",
+    "rel_path": "native/release-notes/release-notes-3_0.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-3_0.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-3_0.md"
+  },
+  {
+    "title": "EasyAR Sense 3.1 发行说明",
+    "rel_path": "native/release-notes/release-notes-3_1.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-3_1.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-3_1.md"
+  },
+  {
+    "title": "EasyAR Sense 4.0 发行说明",
+    "rel_path": "native/release-notes/release-notes-4_0.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-4_0.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-4_0.md"
+  },
+  {
+    "title": "EasyAR Sense 4.1 发行说明",
+    "rel_path": "native/release-notes/release-notes-4_1.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-4_1.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-4_1.md"
+  },
+  {
+    "title": "EasyAR Sense 4.2 发行说明",
+    "rel_path": "native/release-notes/release-notes-4_2.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-4_2.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-4_2.md"
+  },
+  {
+    "title": "EasyAR Sense 4.3 发行说明",
+    "rel_path": "native/release-notes/release-notes-4_3.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-4_3.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-4_3.md"
+  },
+  {
+    "title": "EasyAR Sense 4.4 发行说明",
+    "rel_path": "native/release-notes/release-notes-4_4.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-4_4.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-4_4.md"
+  },
+  {
+    "title": "EasyAR Sense 4.5 发行说明",
+    "rel_path": "native/release-notes/release-notes-4_5.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-4_5.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-4_5.md"
+  },
+  {
+    "title": "EasyAR Sense 4.6 发行说明",
+    "rel_path": "native/release-notes/release-notes-4_6.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-4_6.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-4_6.md"
+  },
+  {
+    "title": "EasyAR Sense 4.7 发行说明",
+    "rel_path": "native/release-notes/release-notes-4_7.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-4_7.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes-4_7.md"
+  },
+  {
+    "title": "EasyAR Sense 发行说明",
+    "rel_path": "native/release-notes/release-notes.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes.html",
+    "original_file": "doc--zh-cn--develop--native--release-notes--release-notes.md"
+  },
+  {
+    "title": "3D 物体跟踪简介",
+    "rel_path": "object-tracking/intro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/object-tracking/intro.html",
+    "original_file": "doc--zh-cn--develop--object-tracking--intro.md"
+  },
+  {
+    "title": "3D 模型准备与优化",
+    "rel_path": "object-tracking/model-requirements.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/object-tracking/model-requirements.html",
+    "original_file": "doc--zh-cn--develop--object-tracking--model-requirements.md"
+  },
+  {
+    "title": "物体跟踪与运动跟踪结合",
+    "rel_path": "object-tracking/motion-fusion.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/object-tracking/motion-fusion.html",
+    "original_file": "doc--zh-cn--develop--object-tracking--motion-fusion.md"
+  },
+  {
+    "title": "EasyAR 开发简介",
+    "rel_path": "overview.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/overview.html",
+    "original_file": "doc--zh-cn--develop--overview.md"
+  },
+  {
+    "title": "平面检测支持的设备和平台",
+    "rel_path": "plane-detection/devices.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/plane-detection/devices.html",
+    "original_file": "doc--zh-cn--develop--plane-detection--devices.md"
+  },
+  {
+    "title": "EasyAR 平面检测",
+    "rel_path": "plane-detection/intro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/plane-detection/intro.html",
+    "original_file": "doc--zh-cn--develop--plane-detection--intro.md"
+  },
+  {
+    "title": "录制 EIF 文件并用于模拟运行",
+    "rel_path": "simulation/simulation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/simulation/simulation.html",
+    "original_file": "doc--zh-cn--develop--simulation--simulation.md"
+  },
+  {
+    "title": "EasyAR 稀疏空间地图与 ARKit/ARCore 的区别",
+    "rel_path": "sparse-spatial-mapping/comparison.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/sparse-spatial-mapping/comparison.html",
+    "original_file": "doc--zh-cn--develop--sparse-spatial-mapping--comparison.md"
+  },
+  {
+    "title": "稀疏空间地图支持的设备和平台",
+    "rel_path": "sparse-spatial-mapping/devices.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/sparse-spatial-mapping/devices.html",
+    "original_file": "doc--zh-cn--develop--sparse-spatial-mapping--devices.md"
+  },
+  {
+    "title": "EasyAR 稀疏空间地图",
+    "rel_path": "sparse-spatial-mapping/intro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/sparse-spatial-mapping/intro.html",
+    "original_file": "doc--zh-cn--develop--sparse-spatial-mapping--intro.md"
+  },
+  {
+    "title": "表面跟踪支持的设备和平台",
+    "rel_path": "surface-tracking/devices.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/surface-tracking/devices.html",
+    "original_file": "doc--zh-cn--develop--surface-tracking--devices.md"
+  },
+  {
+    "title": "EasyAR 表面跟踪",
+    "rel_path": "surface-tracking/intro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/surface-tracking/intro.html",
+    "original_file": "doc--zh-cn--develop--surface-tracking--intro.md"
+  },
+  {
+    "title": "CameraDeviceFrameSource 组件参考",
+    "rel_path": "unity/cameras/comp-CameraDeviceFrameSource.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/comp-CameraDeviceFrameSource.html",
+    "original_file": "doc--zh-cn--develop--unity--cameras--comp-CameraDeviceFrameSource.md"
+  },
+  {
+    "title": "InertialCameraDeviceFrameSource 组件参考",
+    "rel_path": "unity/cameras/comp-InertialCameraDeviceFrameSource.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/comp-InertialCameraDeviceFrameSource.html",
+    "original_file": "doc--zh-cn--develop--unity--cameras--comp-InertialCameraDeviceFrameSource.md"
+  },
+  {
+    "title": "ThreeDofCameraDeviceFrameSource 组件参考",
+    "rel_path": "unity/cameras/comp-ThreeDofCameraDeviceFrameSource.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/comp-ThreeDofCameraDeviceFrameSource.html",
+    "original_file": "doc--zh-cn--develop--unity--cameras--comp-ThreeDofCameraDeviceFrameSource.md"
+  },
+  {
+    "title": "创建图像和设备运动数据输入扩展",
+    "rel_path": "unity/cameras/external-device-frame-source.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/external-device-frame-source.html",
+    "original_file": "doc--zh-cn--develop--unity--cameras--external-device-frame-source.md"
+  },
+  {
+    "title": "Unity 中的自定义相机实现 —— 外部帧数据源",
+    "rel_path": "unity/cameras/external-frame-source.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/external-frame-source.html",
+    "original_file": "doc--zh-cn--develop--unity--cameras--external-frame-source.md"
+  },
+  {
+    "title": "创建图像输入扩展",
+    "rel_path": "unity/cameras/external-image-stream-frame-source.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/external-image-stream-frame-source.html",
+    "original_file": "doc--zh-cn--develop--unity--cameras--external-image-stream-frame-source.md"
+  },
+  {
+    "title": "外部帧数据源的输入帧数据要求",
+    "rel_path": "unity/cameras/external-input-frame.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/external-input-frame.html",
+    "original_file": "doc--zh-cn--develop--unity--cameras--external-input-frame.md"
+  },
+  {
+    "title": "内置 Frame Source 组件",
+    "rel_path": "unity/cameras/frame-source-builtin.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/frame-source-builtin.html",
+    "original_file": "doc--zh-cn--develop--unity--cameras--frame-source-builtin.md"
+  },
+  {
+    "title": "添加一组帧数据源",
+    "rel_path": "unity/cameras/frame-source-group.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/frame-source-group.html",
+    "original_file": "doc--zh-cn--develop--unity--cameras--frame-source-group.md"
+  },
+  {
+    "title": "Unity 中的摄像头及输入帧数据来源 —— 帧数据源（Frame Source）",
+    "rel_path": "unity/cameras/frame-source.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/frame-source.html",
+    "original_file": "doc--zh-cn--develop--unity--cameras--frame-source.md"
+  },
+  {
+    "title": "Workflow\\_FrameSource\\_CameraDevice 示例详解",
+    "rel_path": "unity/cameras/sample-camera-device.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/sample-camera-device.html",
+    "original_file": "doc--zh-cn--develop--unity--cameras--sample-camera-device.md"
+  },
+  {
+    "title": "Diagnostics Controller 组件参考",
+    "rel_path": "unity/diagnostics/comp-DiagnosticsController.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/comp-DiagnosticsController.html",
+    "original_file": "doc--zh-cn--develop--unity--diagnostics--comp-DiagnosticsController.md"
+  },
+  {
+    "title": "开发者模式",
+    "rel_path": "unity/diagnostics/developer-mode.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/developer-mode.html",
+    "original_file": "doc--zh-cn--develop--unity--diagnostics--developer-mode.md"
+  },
+  {
+    "title": "Unity 开发中的问题诊断和报告",
+    "rel_path": "unity/diagnostics/diagnostics.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/diagnostics.html",
+    "original_file": "doc--zh-cn--develop--unity--diagnostics--diagnostics.md"
+  },
+  {
+    "title": "录制 EED dump 文件",
+    "rel_path": "unity/diagnostics/event-dump.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/event-dump.html",
+    "original_file": "doc--zh-cn--develop--unity--diagnostics--event-dump.md"
+  },
+  {
+    "title": "问题报告",
+    "rel_path": "unity/diagnostics/report.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/report.html",
+    "original_file": "doc--zh-cn--develop--unity--diagnostics--report.md"
+  },
+  {
+    "title": "UI 消息",
+    "rel_path": "unity/diagnostics/ui-messages.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/ui-messages.html",
+    "original_file": "doc--zh-cn--develop--unity--diagnostics--ui-messages.md"
+  },
+  {
+    "title": "适用于 target 和 origin 的 active 控制策略",
+    "rel_path": "unity/fundamentals/active-control.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/active-control.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--active-control.md"
+  },
+  {
+    "title": "EasyAR 项目中的 AR Foundation 场景配置和用法",
+    "rel_path": "unity/fundamentals/arfoundation-scene-setup.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/arfoundation-scene-setup.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--arfoundation-scene-setup.md"
+  },
+  {
+    "title": "在 EasyAR 项目中启用 AR Foundation",
+    "rel_path": "unity/fundamentals/arfoundation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/arfoundation.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--arfoundation.md"
+  },
+  {
+    "title": "配置 camera",
+    "rel_path": "unity/fundamentals/camera-configs.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/camera-configs.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--camera-configs.md"
+  },
+  {
+    "title": "AR 场景中的 Unity 摄像机",
+    "rel_path": "unity/fundamentals/camera.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/camera.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--camera.md"
+  },
+  {
+    "title": "选择合适的中心模式",
+    "rel_path": "unity/fundamentals/center-mode-choosing.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/center-mode-choosing.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--center-mode-choosing.md"
+  },
+  {
+    "title": "AR Session 的中心模式",
+    "rel_path": "unity/fundamentals/center-mode.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/center-mode.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--center-mode.md"
+  },
+  {
+    "title": "AR Session 组件参考",
+    "rel_path": "unity/fundamentals/comp-ARSession.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/comp-ARSession.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--comp-ARSession.md"
+  },
+  {
+    "title": "使用 License Key 初始化 EasyAR Sense",
+    "rel_path": "unity/fundamentals/initialization.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/initialization.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--initialization.md"
+  },
+  {
+    "title": "AR 驱动的 Unity 应用基础",
+    "rel_path": "unity/fundamentals/intro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/intro.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--intro.md"
+  },
+  {
+    "title": "创建 XR Origin",
+    "rel_path": "unity/fundamentals/origin-creation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/origin-creation.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--origin-creation.md"
+  },
+  {
+    "title": "Unity AR 的运动跟踪中心 —— XR Origin",
+    "rel_path": "unity/fundamentals/origin.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/origin.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--origin.md"
+  },
+  {
+    "title": "Workflow\\_ARSession 示例详解",
+    "rel_path": "unity/fundamentals/sample-arsession.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/sample-arsession.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--sample-arsession.md"
+  },
+  {
+    "title": "判断 session 可用性和设备支持",
+    "rel_path": "unity/fundamentals/session-assemble.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/session-assemble.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--session-assemble.md"
+  },
+  {
+    "title": "访问 session 中的 AR 功能组件",
+    "rel_path": "unity/fundamentals/session-components.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/session-components.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--session-components.md"
+  },
+  {
+    "title": "创建和配置 AR session",
+    "rel_path": "unity/fundamentals/session-creation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/session-creation.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--session-creation.md"
+  },
+  {
+    "title": "session 的流程控制",
+    "rel_path": "unity/fundamentals/session-ctrl.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/session-ctrl.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--session-ctrl.md"
+  },
+  {
+    "title": "获取 session 的运行结果",
+    "rel_path": "unity/fundamentals/session-output.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/session-output.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--session-output.md"
+  },
+  {
+    "title": "设备支持和 session 报告",
+    "rel_path": "unity/fundamentals/session-report.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/session-report.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--session-report.md"
+  },
+  {
+    "title": "Unity AR 的入口 —— AR Session",
+    "rel_path": "unity/fundamentals/session.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/session.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--session.md"
+  },
+  {
+    "title": "EasyAR 配置",
+    "rel_path": "unity/fundamentals/setup-easyar.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/setup-easyar.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--setup-easyar.md"
+  },
+  {
+    "title": "Player 配置",
+    "rel_path": "unity/fundamentals/setup-player.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/setup-player.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--setup-player.md"
+  },
+  {
+    "title": "获取 target 的状态",
+    "rel_path": "unity/fundamentals/target-state.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/target-state.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--target-state.md"
+  },
+  {
+    "title": "Unity AR 的跟踪目标 —— target",
+    "rel_path": "unity/fundamentals/target.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/target.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--target.md"
+  },
+  {
+    "title": "Unity 兼容性",
+    "rel_path": "unity/fundamentals/unity-compatibility.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/unity-compatibility.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--unity-compatibility.md"
+  },
+  {
+    "title": "在 Unity 场景中自动切换 Unity XR 物体",
+    "rel_path": "unity/fundamentals/unity-xr-switch.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/unity-xr-switch.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--unity-xr-switch.md"
+  },
+  {
+    "title": "EasyAR 对 Unity XR 框架的支持",
+    "rel_path": "unity/fundamentals/unity-xr.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/unity-xr.html",
+    "original_file": "doc--zh-cn--develop--unity--fundamentals--unity-xr.md"
+  },
+  {
+    "title": "充分利用 UI 诊断信息和工具",
+    "rel_path": "unity/getting-started/diagnostics.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/getting-started/diagnostics.html",
+    "original_file": "doc--zh-cn--develop--unity--getting-started--diagnostics.md"
+  },
+  {
+    "title": "导入 EasyAR 插件以启用 AR 功能",
+    "rel_path": "unity/getting-started/enable-easyar.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/getting-started/enable-easyar.html",
+    "original_file": "doc--zh-cn--develop--unity--getting-started--enable-easyar.md"
+  },
+  {
+    "title": "使用示例快速入门 EasyAR Unity 开发",
+    "rel_path": "unity/getting-started/quickstart.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/getting-started/quickstart.html",
+    "original_file": "doc--zh-cn--develop--unity--getting-started--quickstart.md"
+  },
+  {
+    "title": "使用 AllSamplesLauncher 快速体验 EasyAR 样例",
+    "rel_path": "unity/getting-started/sample-launcher.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/getting-started/sample-launcher.html",
+    "original_file": "doc--zh-cn--develop--unity--getting-started--sample-launcher.md"
+  },
+  {
+    "title": "配置 AR 场景",
+    "rel_path": "unity/getting-started/scene.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/getting-started/scene.html",
+    "original_file": "doc--zh-cn--develop--unity--getting-started--scene.md"
+  },
+  {
+    "title": "配置 Universal Render Pipeline（URP）",
+    "rel_path": "unity/getting-started/universal-render-pipeline.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/getting-started/universal-render-pipeline.html",
+    "original_file": "doc--zh-cn--develop--unity--getting-started--universal-render-pipeline.md"
+  },
+  {
+    "title": "在 EasyAR 项目中启用头显支持",
+    "rel_path": "unity/headsets/enable-headset.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/enable-headset.html",
+    "original_file": "doc--zh-cn--develop--unity--headsets--enable-headset.md"
+  },
+  {
+    "title": "运行验证（bring-up）头显扩展",
+    "rel_path": "unity/headsets/extension-bring-up.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/extension-bring-up.html",
+    "original_file": "doc--zh-cn--develop--unity--headsets--extension-bring-up.md"
+  },
+  {
+    "title": "发布扩展包",
+    "rel_path": "unity/headsets/extension-dist.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/extension-dist.html",
+    "original_file": "doc--zh-cn--develop--unity--headsets--extension-dist.md"
+  },
+  {
+    "title": "让头显支持 EasyAR",
+    "rel_path": "unity/headsets/extension-imp.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/extension-imp.html",
+    "original_file": "doc--zh-cn--develop--unity--headsets--extension-imp.md"
+  },
+  {
+    "title": "头显扩展包模板简介",
+    "rel_path": "unity/headsets/extension-template.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/extension-template.html",
+    "original_file": "doc--zh-cn--develop--unity--headsets--extension-template.md"
+  },
+  {
+    "title": "EasyAR Unity 头显扩展包",
+    "rel_path": "unity/headsets/extension.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/extension.html",
+    "original_file": "doc--zh-cn--develop--unity--headsets--extension.md"
+  },
+  {
+    "title": "Unity 中的 EasyAR 头显支持",
+    "rel_path": "unity/headsets/headsets.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/headsets.html",
+    "original_file": "doc--zh-cn--develop--unity--headsets--headsets.md"
+  },
+  {
+    "title": "在 XR 头显或眼镜上使用 EasyAR 样例",
+    "rel_path": "unity/headsets/samples.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/samples.html",
+    "original_file": "doc--zh-cn--develop--unity--headsets--samples.md"
+  },
+  {
+    "title": "如何在 Apple Vision Pro 上使用 EasyAR 能力",
+    "rel_path": "unity/headsets/setup-visionpro.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/setup-visionpro.html",
+    "original_file": "doc--zh-cn--develop--unity--headsets--setup-visionpro.md"
+  },
+  {
+    "title": "XREAL 工程配置方法",
+    "rel_path": "unity/headsets/setup-xreal.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/setup-xreal.html",
+    "original_file": "doc--zh-cn--develop--unity--headsets--setup-xreal.md"
+  },
+  {
+    "title": "BlockController 组件参考",
+    "rel_path": "unity/mega/comp-BlockController.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/comp-BlockController.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--comp-BlockController.md"
+  },
+  {
+    "title": "BlockHolder 组件参考",
+    "rel_path": "unity/mega/comp-BlockHolder.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/comp-BlockHolder.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--comp-BlockHolder.md"
+  },
+  {
+    "title": "BlockRootController 组件参考",
+    "rel_path": "unity/mega/comp-BlockRootController.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/comp-BlockRootController.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--comp-BlockRootController.md"
+  },
+  {
+    "title": "MegaTrackerFrameFilter 组件参考",
+    "rel_path": "unity/mega/comp-MegaTrackerFrameFilter.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/comp-MegaTrackerFrameFilter.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--comp-MegaTrackerFrameFilter.md"
+  },
+  {
+    "title": "如何使用 Mega Studio 创建与实景精确对齐的 3D 内容",
+    "rel_path": "unity/mega/content-realworld-alignment.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/content-realworld-alignment.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--content-realworld-alignment.md"
+  },
+  {
+    "title": "导入最新版本的 EasyAR 插件以启用 Mega 功能",
+    "rel_path": "unity/mega/enable-mega.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/enable-mega.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--enable-mega.md"
+  },
+  {
+    "title": "在 Unity 中使用 EasyAR Mega 实现遮挡",
+    "rel_path": "unity/mega/occlusion.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/occlusion.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--occlusion.md"
+  },
+  {
+    "title": "现场使用和模拟运行",
+    "rel_path": "unity/mega/onsite-and-simulation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/onsite-and-simulation.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--onsite-and-simulation.md"
+  },
+  {
+    "title": "使用示例快速入门 EasyAR Mega Unity 开发",
+    "rel_path": "unity/mega/quickstart.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/quickstart.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--quickstart.md"
+  },
+  {
+    "title": "适用于 Mega 的 AR Session 最佳实践",
+    "rel_path": "unity/mega/session-best-practice.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/session-best-practice.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--session-best-practice.md"
+  },
+  {
+    "title": "添加 Mega 跟踪目标",
+    "rel_path": "unity/mega/target.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/target.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--target.md"
+  },
+  {
+    "title": "控制 Mega 跟踪过程",
+    "rel_path": "unity/mega/tracker.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/tracker.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--tracker.md"
+  },
+  {
+    "title": "使用 PC 摄像头快速跑通 Mega （一种快捷但不推荐的远程调试方式）",
+    "rel_path": "unity/mega/verify-pc-camera.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/verify-pc-camera.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--verify-pc-camera.md"
+  },
+  {
+    "title": "使用 session 验证工具模拟运行使用 Mega 能力的 AR 工程",
+    "rel_path": "unity/mega/verify-session-tool.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/mega/verify-session-tool.html",
+    "original_file": "doc--zh-cn--develop--unity--mega--verify-session-tool.md"
+  },
+  {
+    "title": "ARCore、AR Engine 版本兼容性",
+    "rel_path": "unity/motion-tracking/3rdparty-compatibility.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/motion-tracking/3rdparty-compatibility.html",
+    "original_file": "doc--zh-cn--develop--unity--motion-tracking--3rdparty-compatibility.md"
+  },
+  {
+    "title": "ARCoreFrameSource 组件参考",
+    "rel_path": "unity/motion-tracking/comp-ARCoreFrameSource.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/motion-tracking/comp-ARCoreFrameSource.html",
+    "original_file": "doc--zh-cn--develop--unity--motion-tracking--comp-ARCoreFrameSource.md"
+  },
+  {
+    "title": "AREngineFrameSource 组件参考",
+    "rel_path": "unity/motion-tracking/comp-AREngineFrameSource.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/motion-tracking/comp-AREngineFrameSource.html",
+    "original_file": "doc--zh-cn--develop--unity--motion-tracking--comp-AREngineFrameSource.md"
+  },
+  {
+    "title": "ARKitFrameSource 组件参考",
+    "rel_path": "unity/motion-tracking/comp-ARKitFrameSource.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/motion-tracking/comp-ARKitFrameSource.html",
+    "original_file": "doc--zh-cn--develop--unity--motion-tracking--comp-ARKitFrameSource.md"
+  },
+  {
+    "title": "MotionTrackerFrameSource 组件参考",
+    "rel_path": "unity/motion-tracking/comp-MotionTrackerFrameSource.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/motion-tracking/comp-MotionTrackerFrameSource.html",
+    "original_file": "doc--zh-cn--develop--unity--motion-tracking--comp-MotionTrackerFrameSource.md"
+  },
+  {
+    "title": "EasyAR Sense Unity Plugin 版本 4 发行说明",
+    "rel_path": "unity/release-notes/release-notes-v4.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/release-notes/release-notes-v4.html",
+    "original_file": "doc--zh-cn--develop--unity--release-notes--release-notes-v4.md"
+  },
+  {
+    "title": "EasyAR Sense Unity Plugin 发行说明",
+    "rel_path": "unity/release-notes/release-notes.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/release-notes/release-notes.html",
+    "original_file": "doc--zh-cn--develop--unity--release-notes--release-notes.md"
+  },
+  {
+    "title": "FramePlayer 组件参考",
+    "rel_path": "unity/simulation/comp-FramePlayer.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/simulation/comp-FramePlayer.html",
+    "original_file": "doc--zh-cn--develop--unity--simulation--comp-FramePlayer.md"
+  },
+  {
+    "title": "FrameRecorder 组件参考",
+    "rel_path": "unity/simulation/comp-FrameRecorder.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/simulation/comp-FrameRecorder.html",
+    "original_file": "doc--zh-cn--develop--unity--simulation--comp-FrameRecorder.md"
+  },
+  {
+    "title": "在 Unity 中使用 EIF 文件模拟运行",
+    "rel_path": "unity/simulation/playback.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/simulation/playback.html",
+    "original_file": "doc--zh-cn--develop--unity--simulation--playback.md"
+  },
+  {
+    "title": "在 Unity 中录制 EIF 文件",
+    "rel_path": "unity/simulation/recording.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/simulation/recording.html",
+    "original_file": "doc--zh-cn--develop--unity--simulation--recording.md"
+  },
+  {
+    "title": "Unity AR 模拟运行",
+    "rel_path": "unity/simulation/simulation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/simulation/simulation.html",
+    "original_file": "doc--zh-cn--develop--unity--simulation--simulation.md"
+  },
+  {
+    "title": "使用 session 验证工具",
+    "rel_path": "unity/simulation/tool.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/unity/simulation/tool.html",
+    "original_file": "doc--zh-cn--develop--unity--simulation--tool.md"
+  },
+  {
+    "title": "图像云识别 Web 开发者指南",
+    "rel_path": "web/cloud-recognition/guide.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/web/cloud-recognition/guide.html",
+    "original_file": "doc--zh-cn--develop--web--cloud-recognition--guide.md"
+  },
+  {
+    "title": "图像云识别 Web 开发快速入门",
+    "rel_path": "web/cloud-recognition/quickstart.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/web/cloud-recognition/quickstart.html",
+    "original_file": "doc--zh-cn--develop--web--cloud-recognition--quickstart.md"
+  },
+  {
+    "title": "图像云识别 Web 示例",
+    "rel_path": "web/cloud-recognition/sample.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/web/cloud-recognition/sample.html",
+    "original_file": "doc--zh-cn--develop--web--cloud-recognition--sample.md"
+  },
+  {
+    "title": "在 Web 中使用 EasyAR",
+    "rel_path": "web/getting-started/quickstart.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/web/getting-started/quickstart.html",
+    "original_file": "doc--zh-cn--develop--web--getting-started--quickstart.md"
+  },
+  {
+    "title": "图像云识别微信小程序开发者指南",
+    "rel_path": "wechat/cloud-recognition/guide.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/cloud-recognition/guide.html",
+    "original_file": "doc--zh-cn--develop--wechat--cloud-recognition--guide.md"
+  },
+  {
+    "title": "图像云识别微信小程序开发快速入门",
+    "rel_path": "wechat/cloud-recognition/quickstart.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/cloud-recognition/quickstart.html",
+    "original_file": "doc--zh-cn--develop--wechat--cloud-recognition--quickstart.md"
+  },
+  {
+    "title": "图像云识别微信小程序示例说明",
+    "rel_path": "wechat/cloud-recognition/sample.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/cloud-recognition/sample.html",
+    "original_file": "doc--zh-cn--develop--wechat--cloud-recognition--sample.md"
+  },
+  {
+    "title": "微信小程序问题报告",
+    "rel_path": "wechat/diagnostics/report.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/diagnostics/report.html",
+    "original_file": "doc--zh-cn--develop--wechat--diagnostics--report.md"
+  },
+  {
+    "title": "在微信小程序中使用 AR",
+    "rel_path": "wechat/getting-started/quickstart.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/getting-started/quickstart.html",
+    "original_file": "doc--zh-cn--develop--wechat--getting-started--quickstart.md"
+  },
+  {
+    "title": "使用 Unity 编辑器创建并上传标注",
+    "rel_path": "wechat/mega/content-annotation-creation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-annotation-creation.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--content-annotation-creation.md"
+  },
+  {
+    "title": "如何在 xr-frame 运行时加载 AR 场景下的 3D 内容",
+    "rel_path": "wechat/mega/content-load.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-load.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--content-load.md"
+  },
+  {
+    "title": "如何使用 Unity 上的 Mega Studio 创建与实景精确对齐的 3D 内容",
+    "rel_path": "wechat/mega/content-realworld-alignment.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-realworld-alignment.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--content-realworld-alignment.md"
+  },
+  {
+    "title": "如何使用 Unity 上的 Mega Studio 摆放 3D 内容",
+    "rel_path": "wechat/mega/content-simple.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-simple.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--content-simple.md"
+  },
+  {
+    "title": "在 Unity 编辑器中模拟运行",
+    "rel_path": "wechat/mega/content-simulation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-simulation.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--content-simulation.md"
+  },
+  {
+    "title": "如何安装 Unity 并使用 Mega Studio",
+    "rel_path": "wechat/mega/content-unity-setup.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-unity-setup.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--content-unity-setup.md"
+  },
+  {
+    "title": "完整运行微信小程序 Mega 插件示例工程",
+    "rel_path": "wechat/mega/fullstart.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/fullstart.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--fullstart.md"
+  },
+  {
+    "title": "将 Mega 插件接入您的微信小程序",
+    "rel_path": "wechat/mega/integration.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/integration.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--integration.md"
+  },
+  {
+    "title": "微信小程序 Mega 插件已知问题与限制",
+    "rel_path": "wechat/mega/known-issues.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/known-issues.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--known-issues.md"
+  },
+  {
+    "title": "使用 Mega 插件实现遮挡",
+    "rel_path": "wechat/mega/occlusion.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/occlusion.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--occlusion.md"
+  },
+  {
+    "title": "快速运行微信小程序 Mega 插件示例工程",
+    "rel_path": "wechat/mega/quickstart.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/quickstart.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--quickstart.md"
+  },
+  {
+    "title": "EasyAR Mega 微信小程序插件发布日志",
+    "rel_path": "wechat/mega/release-notes.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/release-notes.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--release-notes.md"
+  },
+  {
+    "title": "微信小程序 Mega 插件示例工程说明",
+    "rel_path": "wechat/mega/sample.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/sample.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--sample.md"
+  },
+  {
+    "title": "AR Session 屏幕旋转适配",
+    "rel_path": "wechat/mega/session-device-orientation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/session-device-orientation.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--session-device-orientation.md"
+  },
+  {
+    "title": "如何记录与转发 AR Session dump 文件",
+    "rel_path": "wechat/mega/session-dump.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/session-dump.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--session-dump.md"
+  },
+  {
+    "title": "AR Session 非现场使用",
+    "rel_path": "wechat/mega/session-gnss-simulation.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/session-gnss-simulation.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--session-gnss-simulation.md"
+  },
+  {
+    "title": "平面 AR 追踪器异常处理",
+    "rel_path": "wechat/mega/session-plane-detection-error.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/session-plane-detection-error.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--session-plane-detection-error.md"
+  },
+  {
+    "title": "AR Session 流程控制",
+    "rel_path": "wechat/mega/session-state.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/session-state.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--session-state.md"
+  },
+  {
+    "title": "Mega 微信小程序插件上的 AR Session 概念与流程",
+    "rel_path": "wechat/mega/session.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/session.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--session.md"
+  },
+  {
+    "title": "MegaTracker 云服务鉴权",
+    "rel_path": "wechat/mega/tracker-access.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/tracker-access.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--tracker-access.md"
+  },
+  {
+    "title": "MegaTracker 传感器外部控制",
+    "rel_path": "wechat/mega/tracker-external-sensor.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/tracker-external-sensor.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--tracker-external-sensor.md"
+  },
+  {
+    "title": "使用 Mega Landmark 服务",
+    "rel_path": "wechat/mega/tracker-landmark.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/tracker-landmark.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--tracker-landmark.md"
+  },
+  {
+    "title": "MegaTracker 的概念与工作流",
+    "rel_path": "wechat/mega/tracker.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/tracker.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--tracker.md"
+  },
+  {
+    "title": "在 xr-frame 微信小程序上播放透明视频",
+    "rel_path": "wechat/mega/transparent-video.md",
+    "source": "https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/transparent-video.html",
+    "original_file": "doc--zh-cn--develop--wechat--mega--transparent-video.md"
+  }
+]

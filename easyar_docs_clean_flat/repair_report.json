@@ -1,0 +1,1514 @@
+{
+  "total_files": 215,
+  "total_removed_noise_lines": 860,
+  "total_callouts_rewritten": 327,
+  "total_code_tick_lines_removed": 610,
+  "total_tables_recovered": 1,
+  "files": [
+    {
+      "file": "doc--zh-cn--develop--apikey-auth.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 5,
+      "code_tick_lines_removed": 20,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--apikey.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--cameras--cameras.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--cameras--custom-camera.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--cloud-recognition--image-recognition-with-tracking.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--cloud-recognition--intro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 4,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--cloud-recognition--management-adding.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 38,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--cloud-recognition--management-deletion.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 32,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--cloud-recognition--management-gallery.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 32,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--cloud-recognition--management-grading.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 32,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--cloud-recognition--management.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--compliance--data-access.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 1
+    },
+    {
+      "file": "doc--zh-cn--develop--compliance--guide.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--compliance--intro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--dense-spatial-mapping--devices.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--dense-spatial-mapping--intro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--devices-crs.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--devices-sense.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--diagnostics--crash-android.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--diagnostics--crash-ios.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 8,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--diagnostics--crash-windows.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 6,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--diagnostics--diagnostics.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--diagnostics--log-android.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--diagnostics--log-ios.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--diagnostics--log-wechat.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--diagnostics--log-windows.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--diagnostics--recordings-headsets.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--diagnostics--recordings.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--diagnostics--simulation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 4,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--fundamentals--fundamentals.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--getting-started--ar.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--headsets--headsets.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--image-tracking--devices.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--image-tracking--intro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--image-tracking--motion-fusion.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--license-sense.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--mega--content-drift.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--mega--content-nodisplay.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--mega--devices.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--mega--faq.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--mega--input-recording.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--mega--intro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--mega--localization-verify.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--mega--navigation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--mega--report.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--motion-tracking--comparison.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--motion-tracking--devices-arcore.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--motion-tracking--devices-arengine.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--motion-tracking--devices-easyar.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--motion-tracking--devices.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--motion-tracking--intro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--motion-tracking--motion-tracking-and-easyar.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--fundamentals--3dengine.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--fundamentals--contents.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--fundamentals--coordinates.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--fundamentals--dataflow.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--fundamentals--initialization.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--getting-started--choosing-an-engine.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--getting-started--enable-easyar-android.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 28,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--getting-started--enable-easyar-ios.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--getting-started--quickstart-android.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--getting-started--quickstart-ios.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--getting-started--quickstart-windows.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--getting-started--variants.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-1_0.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-1_1.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-1_2.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-1_3.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-2_0.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-2_1.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-2_2.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-2_3.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-3_0.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-3_1.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-4_0.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-4_1.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-4_2.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-4_3.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-4_4.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-4_5.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-4_6.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes-4_7.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--native--release-notes--release-notes.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--object-tracking--intro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--object-tracking--model-requirements.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--object-tracking--motion-fusion.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--overview.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--plane-detection--devices.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--plane-detection--intro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--simulation--simulation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--sparse-spatial-mapping--comparison.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--sparse-spatial-mapping--devices.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--sparse-spatial-mapping--intro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--surface-tracking--devices.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--surface-tracking--intro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--cameras--comp-CameraDeviceFrameSource.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--cameras--comp-InertialCameraDeviceFrameSource.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--cameras--comp-ThreeDofCameraDeviceFrameSource.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--cameras--external-device-frame-source.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 26,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--cameras--external-frame-source.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--cameras--external-image-stream-frame-source.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 5,
+      "code_tick_lines_removed": 26,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--cameras--external-input-frame.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 6,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--cameras--frame-source-builtin.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--cameras--frame-source-group.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 6,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--cameras--frame-source.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--cameras--sample-camera-device.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--diagnostics--comp-DiagnosticsController.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--diagnostics--developer-mode.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--diagnostics--diagnostics.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--diagnostics--event-dump.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--diagnostics--report.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--diagnostics--ui-messages.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--active-control.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--arfoundation-scene-setup.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 6,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--arfoundation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 6,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--camera-configs.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--camera.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--center-mode-choosing.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 6,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--center-mode.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--comp-ARSession.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--initialization.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--intro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--origin-creation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--origin.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--sample-arsession.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--session-assemble.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 8,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--session-components.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 6,
+      "code_tick_lines_removed": 18,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--session-creation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 5,
+      "code_tick_lines_removed": 18,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--session-ctrl.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 12,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--session-output.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 9,
+      "code_tick_lines_removed": 10,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--session-report.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--session.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 10,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--setup-easyar.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 8,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--setup-player.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--target-state.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--target.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--unity-compatibility.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--unity-xr-switch.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--fundamentals--unity-xr.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--getting-started--diagnostics.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--getting-started--enable-easyar.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--getting-started--quickstart.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 13,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--getting-started--sample-launcher.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--getting-started--scene.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--getting-started--universal-render-pipeline.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 5,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--headsets--enable-headset.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--headsets--extension-bring-up.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 10,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--headsets--extension-dist.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--headsets--extension-imp.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--headsets--extension-template.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--headsets--extension.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--headsets--headsets.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--headsets--samples.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--headsets--setup-visionpro.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 9,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--headsets--setup-xreal.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--comp-BlockController.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--comp-BlockHolder.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--comp-BlockRootController.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--comp-MegaTrackerFrameFilter.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--content-realworld-alignment.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--enable-mega.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 4,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--occlusion.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--onsite-and-simulation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--quickstart.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 8,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--session-best-practice.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--target.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 7,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--tracker.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 6,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--verify-pc-camera.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--mega--verify-session-tool.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--motion-tracking--3rdparty-compatibility.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--motion-tracking--comp-ARCoreFrameSource.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--motion-tracking--comp-AREngineFrameSource.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--motion-tracking--comp-ARKitFrameSource.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--motion-tracking--comp-MotionTrackerFrameSource.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--release-notes--release-notes-v4.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--release-notes--release-notes.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--simulation--comp-FramePlayer.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--simulation--comp-FrameRecorder.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--simulation--playback.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 6,
+      "code_tick_lines_removed": 16,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--simulation--recording.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 9,
+      "code_tick_lines_removed": 16,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--simulation--simulation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--unity--simulation--tool.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 4,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--web--cloud-recognition--guide.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 16,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--web--cloud-recognition--quickstart.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 6,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--web--cloud-recognition--sample.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 26,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--web--getting-started--quickstart.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--cloud-recognition--guide.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--cloud-recognition--quickstart.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--cloud-recognition--sample.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 6,
+      "code_tick_lines_removed": 12,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--diagnostics--report.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--getting-started--quickstart.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--content-annotation-creation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--content-load.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 10,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--content-realworld-alignment.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 4,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--content-simple.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--content-simulation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--content-unity-setup.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--fullstart.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--integration.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 18,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--known-issues.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 8,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--occlusion.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 3,
+      "code_tick_lines_removed": 6,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--quickstart.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 6,
+      "code_tick_lines_removed": 6,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--release-notes.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 1,
+      "code_tick_lines_removed": 0,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--sample.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 7,
+      "code_tick_lines_removed": 16,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--session-device-orientation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--session-dump.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--session-gnss-simulation.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--session-plane-detection-error.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--session-state.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 10,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--session.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--tracker-access.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--tracker-external-sensor.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--tracker-landmark.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 6,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--tracker.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 0,
+      "code_tick_lines_removed": 2,
+      "table_recovered": 0
+    },
+    {
+      "file": "doc--zh-cn--develop--wechat--mega--transparent-video.md",
+      "removed_noise_lines": 4,
+      "callouts_rewritten": 2,
+      "code_tick_lines_removed": 4,
+      "table_recovered": 0
+    }
+  ]
+}
