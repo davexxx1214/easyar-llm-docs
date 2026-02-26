@@ -100,7 +100,7 @@ def write_topics(output_dir: Path, docs: list[dict[str, str]]) -> None:
 
 def write_readme(output_dir: Path, docs: list[dict[str, str]]) -> None:
     lines = [
-        "# easyar_docs_clean",
+        f"# {output_dir.name}",
         "",
         "这是从爬取文档清洗重组后的可读版本。",
         "",
@@ -151,11 +151,11 @@ def run(input_dir: Path, output_dir: Path, manifest_file: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Restructure EasyAR docs into readable folders.")
-    parser.add_argument("--input", default="easyar_docs_clean_flat", help="Input normalized flat docs dir.")
-    parser.add_argument("--output", default="easyar_docs_clean", help="Output structured docs dir.")
+    parser.add_argument("--input", default="easyar_docs", help="Input normalized flat docs dir.")
+    parser.add_argument("--output", default="easyar_docs_structured", help="Output structured docs dir.")
     parser.add_argument(
         "--manifest",
-        default="easyar_docs_clean/manifest.json",
+        default="easyar_docs_structured/manifest.json",
         help="Output manifest json path.",
     )
     args = parser.parse_args()

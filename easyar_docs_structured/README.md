@@ -1,4 +1,4 @@
-# easyar_docs_clean
+# easyar_docs_structured
 
 这是从爬取文档清洗重组后的可读版本。
 

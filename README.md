@@ -2,7 +2,7 @@
 
 把 EasyAR 爬取文档整理成：
 - 清洗后的基础文档（`easyar_docs`）
-- 人类可读的分层手册（`easyar_docs_clean`）
+- 人类可读的分层手册（`easyar_docs_structured`）
 - 可直接喂给 LLM 的 Markdown 输入包（`easyar_docs_pack`）
 
 ## 基础目录
@@ -13,13 +13,13 @@
 ## 一键执行（2 步）
 
 ```powershell
-python tools/restructure_easyar_docs.py --input easyar_docs --output easyar_docs_clean
+python tools/restructure_easyar_docs.py --input easyar_docs --output easyar_docs_structured
 python tools/build_easyar_pack.py
 ```
 
 ## 输出目录
 
-- `easyar_docs_clean`：按主题/路径重组后的可读文档目录
+- `easyar_docs_structured`：按主题/路径重组后的可读文档目录
   - `README.md`：阅读说明
   - `SUMMARY.md`：目录总览
   - `TOPICS.md`：主题索引

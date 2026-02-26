@@ -163,7 +163,7 @@ def run(input_dir: Path, output_dir: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build LLM-friendly markdown packs from structured docs.")
-    parser.add_argument("--input", default="easyar_docs_clean", help="Input structured docs directory.")
+    parser.add_argument("--input", default="easyar_docs_structured", help="Input structured docs directory.")
     parser.add_argument("--output", default="easyar_docs_pack", help="Output pack directory.")
     args = parser.parse_args()
     run(Path(args.input), Path(args.output))
