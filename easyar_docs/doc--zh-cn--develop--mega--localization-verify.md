@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/mega/localization-verify.html
+original_file: doc--zh-cn--develop--mega--localization-verify.md
+normalized_at: 2026-02-27
 ---
-
-我的定位库可以使用了吗？ | EasyAR 文档
-**
-##### Table of Contents
-**
 # 我的定位库可以使用了吗？
 恭喜您！现在您已经对 Mega 的工作原理、适用场景、设备支持等方面有了一个了解，并已学会获取和使用 APIKey，那么您的应用已经具备了实现高精度空间定位的基础。
 ## 开始之前

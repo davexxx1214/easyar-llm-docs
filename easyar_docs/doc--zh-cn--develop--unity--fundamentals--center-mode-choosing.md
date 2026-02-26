@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/center-mode-choosing.html
+original_file: doc--zh-cn--develop--unity--fundamentals--center-mode-choosing.md
+normalized_at: 2026-02-27
 ---
-
-选择合适的中心模式 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 选择合适的中心模式
 选择合适的中心模式对于内容制作来说至关重要。通过以下内容，您将了解如何获取和修改中心模式，以及选择合适中心模式的建议。
 ## 开始之前
@@ -18,11 +15,10 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/center-mode-c
 在脚本中，可以在 session 成功组装后通过 [ARSession.AvailableCenterMode](../../../api/unity/easyar.ARSession.html#u_easyar_ARSession_AvailableCenterMode) 属性来获取当前 session 中可用的中心模式列表。
 比如，下面的代码展示了如何判断某个中心模式是否在当前 session 中可用：
 ```
-`if (Session.AvailableCenterMode.Contains(mode))
+if (Session.AvailableCenterMode.Contains(mode))
 {
 // mode 在当前 session 中可用
 }
-`
 ```
 ## 修改中心模式
 打开 Inspector 面板，在 `Center` 下拉菜单中选择需要的中心模式。
@@ -30,12 +26,11 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/center-mode-c
 在脚本中，可以通过 [ARSession.CenterMode](../../../api/unity/easyar.ARSession.html#u_easyar_ARSession_CenterMode) 属性来修改中心模式。
 比如，下面的代码展示了如何在可用的中心模式之间循环切换：
 ```
-`while (true)
+while (true)
 {
 Session.CenterMode = (ARSession.ARCenterMode)(((int)Session.CenterMode + 1) % Enum.GetValues(typeof(ARSession.ARCenterMode)).Length);
 if (Session.AvailableCenterMode.Contains(Session.CenterMode)) { break; }
 }
-`
 ```
 session 每帧更新时会判断当前中心模式是否有效，如果有效，session 会立即尝试使用新的中心模式。
 >
@@ -49,8 +44,7 @@ session 每帧更新时会判断当前中心模式是否有效，如果有效，
 >
 session 更新时，如果修改后的中心模式在当前 session 中无效，[CenterMode](../../../api/unity/easyar.ARSession.html#u_easyar_ARSession_CenterMode) 属性会被自动修改为第一个可用的中心模式（通常是 [FirstTarget](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_FirstTarget) 或 [SessionOrigin](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_SessionOrigin)），并在日志中输出一行警告信息：
 ```
-`Center mode {Value} is unavailable in this session, reset to {NewValue}.
-`
+Center mode {Value} is unavailable in this session, reset to {NewValue}.
 ```
 ## 如何选择中心模式
 与现实世界中的物体进行对齐是 AR 内容制作的核心需求，而中心模式决定了 session 以哪个物体作为参考点来计算场景中其它物体的位置和朝向。因此，选择合适的中心模式对于内容制作来说至关重要。
@@ -84,13 +78,13 @@ session 更新时，如果修改后的中心模式在当前 session 中无效，
 * 使用 Rokid 设备时，尽量不要使用 UXR。使用 XRI 可以确保大多数中心模式可用。
 * 在不支持 [FirstTarget](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_FirstTarget) 和 [SpecificTarget](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_SpecificTarget) 模式的头显上，需要注意使用 Mega 或图像跟踪等绝大部分功能内容都是做不到相对 Unity 世界坐标系静止的。
 ## 每个中心模式都能正确显示的内容
-##### 警告
+> **警告**
 在 Unity AR 中，任何存在于 Unity 世界坐标系下且未根据 session 组件调整 transform 的物体都可能无法正确显示。
 如果世界坐标系下放置了一些模型，那这些模型的位置和朝向可能与现实世界中任何物体都没有对应关系，实际运行效果可能碰巧正常，也可能看上去像是浮在空中或者到处乱动。
 要保证内容在任何中心模式下都能正确显示，正确的做法是：
 * 始终把要显示的内容放在对应的 `target` 节点下，或者放在 `XR Origin` 节点下（如果内容需要跟随 XR Origin 运动）
 * 或者通过手动方式对齐内容和 `target` 或 `XR Origin` 的位置和朝向，但需要在 [ARSession.PostSessionUpdate](../../../api/unity/easyar.ARSession.html#u_easyar_ARSession_PostSessionUpdate) 事件后操作
-##### 注意
+> **注意**
 这么做并不能保证所有内容元素都工作正常，因为 Unity 的某些功能只能在世界坐标系下工作（比如物理系统），选择合适的中心模式仍然是重要的。
 ## 相关主题
 * [获取 session 的运行结果](session-output.html)

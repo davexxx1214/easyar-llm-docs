@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/motion-tracking/comp-AREngineFrameSource.html
+original_file: doc--zh-cn--develop--unity--motion-tracking--comp-AREngineFrameSource.md
+normalized_at: 2026-02-27
 ---
-
-AREngineFrameSource 组件参考 | EasyAR 文档
-**
-##### Table of Contents
-**
 # AREngineFrameSource 组件参考
 >
 [> 切换到 API

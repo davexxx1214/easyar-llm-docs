@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/origin.html
+original_file: doc--zh-cn--develop--unity--fundamentals--origin.md
+normalized_at: 2026-02-27
 ---
-
-Unity AR 的运动跟踪中心 —— XR Origin | EasyAR 文档
-**
-##### Table of Contents
-**
 # Unity AR 的运动跟踪中心 —— XR Origin
 XR Origin 是 Unity 中运动跟踪功能的核心概念。在现代 AR 应用中，运动跟踪正在逐步成为必不可少的功能。通过运动跟踪，应用可以在不借助其它识别物的前提下了解用户在现实世界中的位置和朝向，从而实现沉浸式的 AR 体验。通过以下内容，您将了解 XR Origin 的基本概念、组成和生命周期，以及在什么情况下需要使用 XR Origin。
 ## 开始之前
@@ -73,7 +70,7 @@ session 运行时，如果场景中没有正确的 XR Origin Child 结构，XR O
 Unity XR 框架提供的 XR Origin 主要为以下两种情况提供支持：
 * 您已经在项目中使用了 AR Foundation，并希望与 EasyAR 同时工作或根据设备支持情况在两者之间切换。
 * 您所使用的头显 SDK 使用了 Unity XR 框架提供的 XR Origin 组件。
-##### 注意
+> **注意**
 当 Unity XR 的核心包 `com.unity.xr.core-utils` 未被导入到工程中时，如果场景中的摄像机处于与 Unity XR 框架提供的 XR Origin 相同的层级结构中（Camera 及名为 Camera Offset 父节点），session 会假定这个结构是 Unity XR 框架创建的并使用它。这样做是为了给场景提供最大限度的兼容性，即：使用 AR Foundation 创建的场景，在 AR Foundation 未被导入工程中时，AR Foundation 不会工作但剩余的 AR 功能仍能正常工作。除了只有 AR Foundation 能提供的功能之外，这甚至不影响整个 AR 应该的功能性和设备兼容性。
 大多数的 EasyAR 的示例场景都使用了这种方式来保证在没有 AR Foundation 的情况下仍然可以运行，且在 AR Foundation 存在时可以展示与 AR Foundation 的协同工作能力。
 在 AR Foundation 的定义中，它的 XR Origin 是 XR 场景中跟踪空间的中心。不过需要注意的是，在 AR Foundation 的概念中，运动跟踪被作为必选功能，它所描述的 XR 场景中的跟踪就是运动跟踪。

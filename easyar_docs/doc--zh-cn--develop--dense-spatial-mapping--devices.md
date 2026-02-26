@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/dense-spatial-mapping/devices.html
+original_file: doc--zh-cn--develop--dense-spatial-mapping--devices.md
+normalized_at: 2026-02-27
 ---
-
-稠密空间地图支持的设备和平台 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 稠密空间地图支持的设备和平台
 本章介绍稠密空间地图（Dense Spatial Map）功能支持的设备硬件要求和开发平台。
 ## 稠密空间地图支持的设备

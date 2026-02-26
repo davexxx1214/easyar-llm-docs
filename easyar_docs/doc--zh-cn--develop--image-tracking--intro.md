@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/image-tracking/intro.html
+original_file: doc--zh-cn--develop--image-tracking--intro.md
+normalized_at: 2026-02-27
 ---
-
-平面图像跟踪简介 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 平面图像跟踪简介
 平面图像跟踪（Planar Image Tracking）用于检测与跟踪日常生活中有纹理的平面物体。所谓“平面”的物体，可以是一本书、一张名片或一幅海报这样的小物体，也可以是一面涂鸦墙这样的大型目标。这类物品或事物具有平坦表面、丰富且不重复的纹理。
 本篇将概述平面图像检测与跟踪的基本原理、预期效果及平台适配方案，帮助您快速理解功能边界与开发要点。

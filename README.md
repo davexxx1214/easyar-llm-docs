@@ -1,25 +1,24 @@
 # easyar-llm-docs
 
 把 EasyAR 爬取文档整理成：
+- 清洗后的基础文档（`easyar_docs`）
 - 人类可读的分层手册（`easyar_docs_clean`）
 - 可直接喂给 LLM 的 Markdown 输入包（`easyar_docs_pack`）
 
-## 输入目录
+## 基础目录
 
-- 原始文档：`easyar_docs/*.md`
-- 原始清单：`easyar_docs/_manifest.json`
+- `easyar_docs/*.md`：清洗后的扁平文档
+- `easyar_docs/repair_report.json`：清洗修复报告
 
-## 一键执行（3 步）
+## 一键执行（2 步）
 
 ```powershell
-python tools/normalize_easyar_docs.py
-python tools/restructure_easyar_docs.py
+python tools/restructure_easyar_docs.py --input easyar_docs --output easyar_docs_clean
 python tools/build_easyar_pack.py
 ```
 
 ## 输出目录
 
-- `easyar_docs_clean_flat`：清洗后的扁平文件与修复报告 `repair_report.json`
 - `easyar_docs_clean`：按主题/路径重组后的可读文档目录
   - `README.md`：阅读说明
   - `SUMMARY.md`：目录总览

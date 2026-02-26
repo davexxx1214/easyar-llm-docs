@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/comp-DiagnosticsController.html
+original_file: doc--zh-cn--develop--unity--diagnostics--comp-DiagnosticsController.md
+normalized_at: 2026-02-27
 ---
-
-Diagnostics Controller 组件参考 | EasyAR 文档
-**
-##### Table of Contents
-**
 # Diagnostics Controller 组件参考
 >
 [> 切换到 API

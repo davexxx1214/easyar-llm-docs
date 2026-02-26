@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/tracker-access.html
+original_file: doc--zh-cn--develop--wechat--mega--tracker-access.md
+normalized_at: 2026-02-27
 ---
-
-MegaTracker 云服务鉴权 | EasyAR 文档
-**
-##### Table of Contents
-**
 # MegaTracker 云服务鉴权
 这篇文章介绍了如何指定 MegaTracker 使用云服务时的鉴权方式。
 ## 开始之前
@@ -14,7 +11,7 @@ MegaTracker 云服务鉴权 | EasyAR 文档
 ## 使用 API Key 和 API Secret 鉴权
 这种方式适用于传统的密钥对验证。你需要使用 [APIKeyAccessData](../../../api/wechat/easyar.IMegaSystem.html#w_easyar_IMegaSystem_APIKeyAccessData_member) 来构造 [MegaTrackerConfigs](../../../api/wechat/easyar.MegaTrackerConfigs.html) 中的 `access` 对象。
 ```
-`const apiKeyAccess = new mega.APIKeyAccessData(
+const apiKeyAccess = new mega.APIKeyAccessData(
 settings.MegaTrackerAppID, // Mega 定位服务 AppID
 settings.MegaTrackerServerAddress, // Mega 定位服务地址
 settings.EasyARAPIKey, // APIKey 字符串
@@ -28,7 +25,6 @@ megaTrackerConfigs: megaTrackerConfigs,
 licenseKey: settings.EasyARLicenseKey
 };
 session = megaComponent.createSession(sessionConfigs);
-`
 ```
 >
 > 这个例子中先使用配置中的云定位库
@@ -58,7 +54,7 @@ session = megaComponent.createSession(sessionConfigs);
 最终用 xr-frame 场景中挂载的 [EasyARMegaComponent](../../../api/wechat/easyar.EasyARMegaComponent.html) 的 [createSession(sessionConfigs)](../../../api/wechat/easyar.EasyARMegaComponent.html#w_easyar_EasyARMegaComponent_createSession_member_1_) 方法创建 session。
 当 Token 过期时，必须调用 [updateToken(apiToken)](../../../api/wechat/easyar.MegaTracker.html#w_easyar_MegaTracker_updateToken_member_1_) 进行更新，否则 Mega 服务将不可用，定位结果中的状态始终为 [ApiTokenExpired](../../../api/wechat/easyar.MegaLocalizationStatus.html#w_easyar_MegaLocalizationStatus_ApiTokenExpired_member)。
 ```
-`const tokenAccess = new mega.TokenAccessData(
+const tokenAccess = new mega.TokenAccessData(
 settings.MegaTrackerAppID, // Mega 定位服务 AppID
 settings.MegaTrackerServerAddress, // Mega 定位服务地址
 "your\_api\_token" // APIToken 字符串
@@ -71,7 +67,6 @@ megaTrackerConfigs: megaTrackerConfigs,
 licenseKey: settings.EasyARLicenseKey
 };
 session = megaComponent.createSession(sessionConfigs);
-`
 ```
 >
 > 这个例子演示了如何使用

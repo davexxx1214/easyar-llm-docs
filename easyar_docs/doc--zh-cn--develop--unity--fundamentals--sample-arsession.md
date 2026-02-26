@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/sample-arsession.html
+original_file: doc--zh-cn--develop--unity--fundamentals--sample-arsession.md
+normalized_at: 2026-02-27
 ---
-
-Workflow\_ARSession 示例详解 | EasyAR 文档
-**
-##### Table of Contents
-**
 # Workflow\_ARSession 示例详解
 `Workflow\_ARSession` 是一个**轻量级**的 AR 会话管理示例，旨在展示如何以最小依赖构建一个完整的 AR 应用流程。该示例同时支持 **AR Foundation 兼容模式** 和 **简易模式** ，您可以根据项目需求灵活选择。
 ## 使用方法
@@ -15,8 +12,8 @@ Workflow\_ARSession 示例详解 | EasyAR 文档
 |`ARFoundationCompatibleSceneSetup`|已使用或计划集成 **AR Foundation** 的项目|需完成 [AR Foundation 配置](arfoundation.html)|
 |`SimpleSceneSetup`|**不依赖 AR Foundation**，直接使用 EasyAR 原生能力|无额外依赖，适合轻量级 AR 应用|
 ### 构建与运行
-1. 将 `Workflow\_ARSession` 添加至菜单栏 `File` &gt; `Build Settings` 或 `Build Profiles` &gt; `Scene List` 中。
-2. 根据所选目标平台（如 Android 或 iOS），在 `Project Settings` &gt; `Player` 中确认构建选项。
+1. 将 `Workflow\_ARSession` 添加至菜单栏 `File` > `Build Settings` 或 `Build Profiles` > `Scene List` 中。
+2. 根据所选目标平台（如 Android 或 iOS），在 `Project Settings` > `Player` 中确认构建选项。
 3. 构建到真机并运行。
 应用启动后，将自动初始化摄像头并等待识别目标。
 ## 识别目标与获取方法
@@ -40,6 +37,6 @@ Workflow\_ARSession 示例详解 | EasyAR 文档
 * **添加物体跟踪**：替换 `ImageTracker` 为 `ObjectTracker`，加载 `.obj` 模型文件；
 * **接入云识别**：使用 `CloudRecognizer` 替代本地目标列表；
 * **多目标支持**：从单个图像目标扩展为多个图像，系统将自动处理并发跟踪。
-##### 提示
+> **提示**
 更多功能组件请 [访问AR功能组件](session-components.html)。
 通过 `Workflow\_ARSession`，您可快速掌握 EasyAR 的核心工作流，并以此为基础构建生产级 AR 应用。

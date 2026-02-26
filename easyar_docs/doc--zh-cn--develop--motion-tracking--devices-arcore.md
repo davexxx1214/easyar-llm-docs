@@ -1,17 +1,14 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/motion-tracking/devices-arcore.html
+original_file: doc--zh-cn--develop--motion-tracking--devices-arcore.md
+normalized_at: 2026-02-27
 ---
-
-谷歌 ARCore 与运动跟踪 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 谷歌 ARCore 与运动跟踪
 谷歌的 ARCore 是用于在 Android 上的增强现实引擎。其为部分 Android 机型提供包括运动跟踪在内的多项能力。在 Unity 上为保证最佳效果，在 ARCore 支持的机型上，EasyAR Sense 默认选择 ARCore 的运动跟踪功能而不是 EasyAR 内置的 `Motion Tracker` 功能。
 ## ARCore 支持的机型和功能
 与其他的 [运动跟踪](intro.html) 功能类似，ARCore 需要设备至少具备摄像头、陀螺仪和加速度计，而且经过谷歌标定并认证才可运行。
 ARCore 官方支持的机型列表需要查阅 ARCore 官方文档（[中文](https://developers.google.cn/ar/devices?hl=zh-cn) / [English](https://developers.google.com/ar/devices)）。
-##### 注意
+> **注意**
 需要注意的是，在支持机型上，需要安装额外的 `Google Play Services for AR` App 才可以运行 ARCore 功能，在部分机型可能已经预装，部分机型需要用户自行安装。
 ## 在 EasyAR 中调用 ARCore
 在 EasyAR 使用 ARCore，支持的机型并不与官方机型一致, 主要体现在部分官方支持列表内的机型 ARCore 实测效果异常。可以通过 `ARCoreCameraDevice` 的 `isAvailable` 方法判断这些有问题的机型，然后禁用 ARCore。

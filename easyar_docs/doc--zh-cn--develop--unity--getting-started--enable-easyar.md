@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/getting-started/enable-easyar.html
+original_file: doc--zh-cn--develop--unity--getting-started--enable-easyar.md
+normalized_at: 2026-02-27
 ---
-
-导入 EasyAR 插件以启用 AR 功能 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 导入 EasyAR 插件以启用 AR 功能
 本教程介绍如何在 Unity 中启用 EasyAR 插件。
 ## 使用兼容的 Unity 版本
@@ -25,14 +22,14 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/getting-started/enable-eas
 * 在弹出的窗口中单击左上角的 `+` 号， 选择 `Install Package from tarball ...`。
 * 在弹出的对话框中选择前述 `.tgz` 文件。
 ![ImportUnityPlugin](https://doc-asset.easyar.com/develop/unity/getting-started/media/import_easyar_unity_plugin.png)
-##### 注意
+> **注意**
 `.tgz` 文件在导入 Unity 后不能被删除或移动到另一个位置，需要在导入前将这个文件放在合适的地方。通常建议放在 Unity 项目 `Packages` 文件夹内，方便版本管理。
 ## 填写许可证（License Key）
-从 Unity 菜单中选择 `EasyAR` &gt; `Sense` &gt; `Configuration` 调出 EasyAR Sense 设置界面。
+从 Unity 菜单中选择 `EasyAR` > `Sense` > `Configuration` 调出 EasyAR Sense 设置界面。
 ![FillInKey](https://doc-asset.easyar.com/develop/unity/getting-started/media/fill_in_licence_key.png)
 在 `EasyAR Sense License` 下的输入框中填入 EasyAR Sense License。
 ![FillInKey2](https://doc-asset.easyar.com/develop/unity/getting-started/media/fill-in-key2.png)
-##### 提示
+> **提示**
 EasyAR Sense License 可以从 EasyAR 开发中心（[中文](https://portal.easyar.cn/sdk/list)，[英文](https://portal.easyar.cn/sdk/list)） 创建。初次使用可以按以下步骤创建：
 ![](https://doc-asset.easyar.com/develop/unity/getting-started/media/license.png)
 * 创建 `EasyAR Sense 4.x 个人版`
@@ -40,7 +37,7 @@ EasyAR Sense License 可以从 EasyAR 开发中心（[中文](https://portal.eas
 * 应用名称随意填写，Bundle ID 和 Package Name 填写 `com.mycompany.myproject`
 * 选择刚创建的 License，进入之后点击右侧复制按钮
 ![copykey](https://doc-asset.easyar.com/develop/unity/getting-started/media/copykey.png)
-##### 注意
+> **注意**
 Bundle ID 和 Package Name 后续可以更改，但次数有限。如果您有明确的应用包名，也可以填写您自己的包名。
 个人版创建没有个数限制，其它类型可以正式使用时按需创建。
 ## 后续步骤

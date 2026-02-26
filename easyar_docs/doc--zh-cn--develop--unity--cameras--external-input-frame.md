@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/external-input-frame.html
+original_file: doc--zh-cn--develop--unity--cameras--external-input-frame.md
+normalized_at: 2026-02-27
 ---
-
-外部帧数据源的输入帧数据要求 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 外部帧数据源的输入帧数据要求
 为使外部帧数据源正常工作，最重要的工作同时也是最棘手的部分是确保数据正确性。本文介绍了外部帧数据源的输入帧数据要求。
 ## 开始之前
@@ -36,7 +33,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/external-input-fra
 * API 调用线程：3D 引擎的 game thread 或任何其它线程（如果使用到的所有外部 API 都是线程安全的）
 Unity 中 API 调用示例如下：
 ```
-`void TryInputCameraFrameData()
+void TryInputCameraFrameData()
 {
 double timestamp;
 if (timestamp == curTimestamp) { return; }
@@ -58,10 +55,9 @@ using (var image = Image.create(buffer, format, size.x, size.y, pixelSize.x, pix
 HandleCameraFrameData(deviceCamera, timestamp, image, cameraParameters, historicalHeadPose, trackingStatus);
 }
 }
-`
 ```
 ```
-`void TryInputCameraFrameData()
+void TryInputCameraFrameData()
 {
 double timestamp;
 if (timestamp == curTimestamp) { return; }
@@ -83,7 +79,6 @@ using (var image = Image.create(buffer, format, size.x, size.y, pixelSize.x, pix
 HandleCameraFrameData(timestamp, image, cameraParameters);
 }
 }
-`
 ```
 ## 渲染帧数据
 数据需求：
@@ -93,28 +88,27 @@ HandleCameraFrameData(timestamp, image, cameraParameters);
 无。
 数据时间：
 * 上屏时刻。TimeWarp 不计算在内。相同时刻的 device pose 数据会由外部（比如设备 SDK）用来设置虚拟摄像机的 transform 以渲染当前帧。
-##### 注意
+> **注意**
 TimeWarp（有时也称为 Reprojection 或 ATW/PTW）是 VR/AR 头显中常用的一种降低延迟的技术。它会在渲染完成后，根据最新的头部位姿对图像进行再次扭曲变换，以补偿渲染期间产生的头部运动。EasyAR 需要的是渲染开始时用于设置虚拟摄像机的位姿对应的时刻，而不是 TimeWarp 后实际上屏的时刻。
 数据使用：
 * API 调用时间：3D 引擎的每个渲染帧
 * API 调用线程：3D 引擎的 game thread
 Unity 中 API 调用示例如下：
 ```
-`private void InputRenderFrameMotionData()
+private void InputRenderFrameMotionData()
 {
 double timestamp = 0e-9;
 var headPose = new Pose();
 MotionTrackingStatus trackingStatus = (MotionTrackingStatus)(-1);
 HandleRenderFrameData(timestamp, headPose, trackingStatus);
 }
-`
 ```
 ## 数据要求细节
 物理相机图像数据：
 * 图像坐标系：在传感器水平时获取的数据也应是水平的。数据应该以左上角为原点，行优先存储。图像不应翻转或颠倒。
 * 图像 FPS：正常 30 或 60 fps 的数据都可以。如果高 fps 有特殊影响，为达到合理的算法效果，最小可接受帧率为 2。建议使用高于 2 的 fps，通常情况下使用原始数据帧率即可。
 * 图像尺寸：为获取更好的计算结果，最大边应为 960 或更大。正常不鼓励在数据链路中进行耗时的图像缩放，建议直接使用原始数据，除非完整大小的数据拷贝时间已经长得无法接受。图像分辨率不能小于 640\*480。
-* 像素格式：优先跟踪效果并综合考虑性能，通常格式优先顺序为 YUV &gt; RGB &gt; RGBA &gt; Gray （YUV中的Y分量）。在使用 YUV 数据时，需要完整的数据定义，包括数据封装和填充细节。相较单通道图像而言，使用彩色图像 Mega 的效果会更好，但其它功能影响不大。
+* 像素格式：优先跟踪效果并综合考虑性能，通常格式优先顺序为 YUV > RGB > RGBA > Gray （YUV中的Y分量）。在使用 YUV 数据时，需要完整的数据定义，包括数据封装和填充细节。相较单通道图像而言，使用彩色图像 Mega 的效果会更好，但其它功能影响不大。
 * 数据访问：数据指针或等价实现。最好在数据链路中消除所有可能的非必须拷贝。HandleRenderFrameData 中 EasyAR 复制一份数据，之后异步使用，该同步调用完成后就不再使用图像数据。注意数据所有权。
 时间戳：
 * 所有时间戳都应时钟同步，最好是硬件同步。数据单位是秒，但精度要求达到纳秒或尽可能高。

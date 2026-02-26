@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/mega/content-nodisplay.html
+original_file: doc--zh-cn--develop--mega--content-nodisplay.md
+normalized_at: 2026-02-27
 ---
-
-诊断与修复：应用中内容不显示的问题 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 诊断与修复：应用中内容不显示的问题
 “我能看到真实世界，但虚拟内容没有出现。” 这是 AR 开发中最常见的问题之一。这个问题可能源于多个环节，从 Mega 定位本身到您的渲染逻辑都有可能。
 本篇将引导您系统地排查和解决这个问题。
@@ -29,7 +26,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/mega/content-nodisplay.html
 ### **步骤二：检查应用内部的渲染与内容逻辑**
 如果步骤一确认 Mega 定位服务本身是正常的，那么问题就出在您的应用代码中。请检查以下几点：
 1. **内容是否摆在正确的节点之下**：
-* 您是否正确将 3D 物体摆放在工具自动生成的 `MegaBlocks` &gt; `Block\_\*` 节点之下？
+* 您是否正确将 3D 物体摆放在工具自动生成的 `MegaBlocks` > `Block\_\*` 节点之下？
 * 检查内容与 Block 节点的层级关系，以确保在运行时虚拟内容的渲染位置是正确的。
 * **MegaTracker 的 Block Root 是否正确设置**：
 * 展开 `AR Session`，检查 `Mega Tracker` 中的 `Block Root` 是否为工具生成的 `MegaBlocks` 节点。
@@ -62,7 +59,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/mega/content-nodisplay.html
 * **原因四：到达算法能力边界**
 Mega 定位基于先进的计算机视觉、AI 等算法，但其并不是万能的，存在一定的算法能力边界。当在某些场景或点位出现定位持续失败时，可通过录屏、录制 EIF 数据等方式与我们进行反馈，帮助我们持续改进和迭代算法。
 另外，需要特别说明的是，Mega 定位需要一个过程，通常在 1-2 秒左右。考虑到现实场景的复杂性如网络拥堵、高并发、手机发热降频等情形，该时间可能会更久。因此，在应用中可以设计一个清晰的加载/等待界面，告知用户“正在定位中...”，避免用户因等待而误以为服务挂了或定位不到。
-##### 注意
+> **注意**
 * 首次定位通常比后续定位慢，因为系统在初次定位成功后需要加载相应的内容。这是正常现象。
 * 快速移动设备会可能导致定位丢失。请引导用户平稳移动设备。
 ## 总结与最佳实践

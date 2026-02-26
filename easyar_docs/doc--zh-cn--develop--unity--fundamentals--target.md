@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/target.html
+original_file: doc--zh-cn--develop--unity--fundamentals--target.md
+normalized_at: 2026-02-27
 ---
-
-Unity AR 的跟踪目标 —— target | EasyAR 文档
-**
-##### Table of Contents
-**
 # Unity AR 的跟踪目标 —— target
 target 在 Unity 中表达了各种可跟踪的物体。通过以下内容，您将了解 Unity AR 中的跟踪对象 target 的基本概念、状态和生命周期。
 ## 开始之前

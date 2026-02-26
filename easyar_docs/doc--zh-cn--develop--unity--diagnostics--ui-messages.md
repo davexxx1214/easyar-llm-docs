@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/ui-messages.html
+original_file: doc--zh-cn--develop--unity--diagnostics--ui-messages.md
+normalized_at: 2026-02-27
 ---
-
-UI 消息 | EasyAR 文档
-**
-##### Table of Contents
-**
 # UI 消息
 EasyAR Sense Unity Plugin 运行时有三类消息。
 * 运行异常，包含 Sense Error、Session Error、Error、Warning
@@ -13,7 +10,7 @@ EasyAR Sense Unity Plugin 运行时有三类消息。
 * EasyAR Mega 开发特殊异常
 您可以根据需要调整前两类消息的输出方式。可以通过 session 上的 [DiagnosticsController](../../../api/unity/easyar.DiagnosticsController.html) 组件在编辑器中配置，或是使用 [DiagnosticsController.MessageOutput](../../../api/unity/easyar.DiagnosticsController.html#u_easyar_DiagnosticsController_MessageOutput) 接口在脚本中配置。
 ![diagnostics ui messages](https://doc-asset.easyar.com/develop/unity/getting-started/media/diagnostics-message.png)
-##### 提示
+> **提示**
 在 4000 版本中，如果场景由老版本插件创建，打开场景时 [DiagnosticsController](../../../api/unity/easyar.DiagnosticsController.html) 会被自动添加到 session 中。部分 Unity 版本中可能不会自动添加，在这些 Unity 版本中，[DiagnosticsController](../../../api/unity/easyar.DiagnosticsController.html) 会在运行时自动以默认值创建。
 ## 运行异常
 插件运行时有时会收到内部组件发现的一些问题，以消息形式出现在系统中。这些消息有些可能是无法继续使用的严重故障，有些可能是故意触发的，有些可能是设备不受支持等等，按严重级别从高到低分为如下几类：
@@ -25,7 +22,7 @@ EasyAR Sense Unity Plugin 运行时有三类消息。
 可以在编辑器或脚本中控制这些消息如何展示，可以选择的输出模式如下：
 * [UIAndLog](../../../api/unity/easyar.DiagnosticsController.MessageOutputMode.html#u_easyar_DiagnosticsController_MessageOutputMode_UIAndLog)：输出到UI和日志。在头显上显示在眼前5米处。
 * [Log](../../../api/unity/easyar.DiagnosticsController.MessageOutputMode.html#u_easyar_DiagnosticsController_MessageOutputMode_Log)：输出到系统日志。
-##### 提示
+> **提示**
 * 建议在开发测试阶段使用默认配置 [UIAndLog](../../../api/unity/easyar.DiagnosticsController.MessageOutputMode.html#u_easyar_DiagnosticsController_MessageOutputMode_UIAndLog)。
 * 建议在发布时将选项改成 [Log](../../../api/unity/easyar.DiagnosticsController.MessageOutputMode.html#u_easyar_DiagnosticsController_MessageOutputMode_Log)， 也可以保留 [UIAndLog](../../../api/unity/easyar.DiagnosticsController.MessageOutputMode.html#u_easyar_DiagnosticsController_MessageOutputMode_UIAndLog)，但这些UI消息通常对终端用户是不友好的。
 * 建议在运行前 [判断 session 可用性和设备支持](../fundamentals/session-assemble.html) 并对不支持的设备进行合理提示。
@@ -46,7 +43,7 @@ Session Error 是当前 ARSession 无法继续工作的错误。修改配置并�
 * [UI](../../../api/unity/easyar.DiagnosticsController.SessionDumpOutputMode.html#u_easyar_DiagnosticsController_SessionDumpOutputMode_UI)：显示在 UI 并每帧更新。在头显上，显示在眼前5米处。
 * [Log](../../../api/unity/easyar.DiagnosticsController.SessionDumpOutputMode.html#u_easyar_DiagnosticsController_SessionDumpOutputMode_Log)：输出到系统日志，由于每帧都输出，对运行性能是有影响的，建议在开发或测试时使用。
 * [None](../../../api/unity/easyar.DiagnosticsController.SessionDumpOutputMode.html#u_easyar_DiagnosticsController_SessionDumpOutputMode_None)：不输出。
-##### 提示
+> **提示**
 * 建议在开发测试阶段使用默认配置 [UI](../../../api/unity/easyar.DiagnosticsController.SessionDumpOutputMode.html#u_easyar_DiagnosticsController_SessionDumpOutputMode_UI)，上面显示的信息是与 EasyAR 工作人员进行沟通所必不可少的。
 * 建议在正式上线后再修改为 [None](../../../api/unity/easyar.DiagnosticsController.SessionDumpOutputMode.html#u_easyar_DiagnosticsController_SessionDumpOutputMode_None)，并保留打开 [UI](../../../api/unity/easyar.DiagnosticsController.SessionDumpOutputMode.html#u_easyar_DiagnosticsController_SessionDumpOutputMode_UI) 的软件开关，或通过其它系统进行数据收集。在向 EasyAR 反馈问题时， EasyAR 会向您或您的用户索取这些信息，以判断应用运行状态。
 * 在绝大多数情况下，应用上线后运行出问题，应用端还是需要首先进行问题排查和分析，在排除应用问题并获取足够信息后反馈的问题才能较好解决。日志收集和分析的第三方 SDK 和平台比较多，建议上线前使用。如果您没有使用这些平台的经验或资源，保留打开 [UI](../../../api/unity/easyar.DiagnosticsController.SessionDumpOutputMode.html#u_easyar_DiagnosticsController_SessionDumpOutputMode_UI) 的开关（比如使用隐藏开关）让用户反馈看到的信息将是比较简单的。

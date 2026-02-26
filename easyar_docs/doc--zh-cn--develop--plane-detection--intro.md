@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/plane-detection/intro.html
+original_file: doc--zh-cn--develop--plane-detection--intro.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR 平面检测 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR 平面检测
 EasyAR 平面检测是在运行 EasyAR 运动跟踪时，自动检测环境中的水平面或者竖直面，提供虚拟物体放置等功能。
 ## EasyAR 平面检测原理
@@ -37,7 +34,7 @@ EasyAR 会在连续帧中对已检测到的平面进行验证和更新：
 为了保证用户使用平面检测的效果，遵循以下实践能提升用户体验。
 * 引导用户缓慢移动，避免静止不动、快速运动或者原地旋转。
 * 避免无纹理、纯色、镜面等视觉难以识别的平面。
-##### 注意
+> **注意**
 平面检测是 EasyAR 识别环境中水平或竖直平面的功能，表面跟踪并不检测或者识别场景中的平面结构，需要进行区分。
 ## 延伸阅读
 * [平面检测支持的设备](devices.html)

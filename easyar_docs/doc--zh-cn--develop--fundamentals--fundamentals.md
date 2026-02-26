@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/fundamentals/fundamentals.html
+original_file: doc--zh-cn--develop--fundamentals--fundamentals.md
+normalized_at: 2026-02-27
 ---
-
-AR 驱动的 3D 渲染 | EasyAR 文档
-**
-##### Table of Contents
-**
 # AR 驱动的 3D 渲染
 AR 应用的开发需要解决一个基础问题，就是 AR 内容的渲染。本文会以平面图像跟踪为例，描述 AR 应用的基本模块、流程和渲染实现。
 ## 典型的 AR 应用流程
@@ -14,13 +11,12 @@ AR 应用的开发需要解决一个基础问题，就是 AR 内容的渲染。�
 *例如上图是一个平面图形跟踪的 AR 应用*
 以下为应用流程示意图。
 ```
-`flowchart TD
+flowchart TD
 CameraDevice[Camera Device]
 Tracker[Tracker]
 Renderer[Renderer]
-CameraDevice --&gt;|Image Frame| Tracker
-Tracker --&gt;|Image Frame + Tracked Pose| Renderer
-`
+CameraDevice -->|Image Frame| Tracker
+Tracker -->|Image Frame + Tracked Pose| Renderer
 ```
 流程中有以下一些模块。
 |模块|作用|

@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/mega/quickstart.html
+original_file: doc--zh-cn--develop--unity--mega--quickstart.md
+normalized_at: 2026-02-27
 ---
-
-使用示例快速入门 EasyAR Mega Unity 开发 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 使用示例快速入门 EasyAR Mega Unity 开发
 本教程介绍如何配置并运行 EasyAR Mega Unity 示例，以快速入门 EasyAR Mega 开发。
 ## 开始之前
@@ -16,20 +13,20 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/mega/quickstart.html
 ## 示例使用方法（六步走）
 下面将分六个步骤介绍如何配置并运行 EasyAR Mega 的核心示例 `MegaBlock\_Basic`。
 ### 第一步：导入示例
-##### 注意
+> **注意**
 如果通过 `\*\*All Samples\*\*` 导入了全部示例，需要跳过此步骤。
-1. 使用菜单 `Window` &gt; `Package Manager` 打开 Package Manager，选中 `EasyAR Sense Unity Plugin`, 在右侧的 **Samples** 中展开所有示例。
+1. 使用菜单 `Window` > `Package Manager` 打开 Package Manager，选中 `EasyAR Sense Unity Plugin`, 在右侧的 **Samples** 中展开所有示例。
 2. 选择示例（如 `MegaBlock\_Basic`），点击 **Import**。
 ![Import Sample](https://doc-asset.easyar.com/develop/unity/mega/media/sample-import.png)
-##### 注意
+> **注意**
 * 本教程不能直接适用于头显设备，但在开发头显设备之前，需要使用手机开发了解流程。
 * 如果您先前已经导入过旧版 SDK 的示例，在升级 SDK 之后需先删除旧示例再重新导入。
 ### 第二步：填写 License Key 并配置 Mega 云定位服务
-1. 菜单栏选择 `EasyAR` &gt; `Sense` &gt; `Configuration`；
+1. 菜单栏选择 `EasyAR` > `Sense` > `Configuration`；
 ![License Guide](https://doc-asset.easyar.com/develop/unity/mega/media/fill-license-where.png)
 2. 在打开的 **Project Settings** 面板中粘贴您的 License Key；
 ![Fill License](https://doc-asset.easyar.com/develop/unity/mega/media/fill-license-text.png)
-##### 提示
+> **提示**
 EasyAR Sense License 可以从 [EasyAR 开发中心](https://www.easyar.cn/view/login.html) 创建。初次使用可以按以下步骤创建：
 ![](https://doc-asset.easyar.com/develop/unity/mega/media/license.png)
 * 创建 `EasyAR Sense 4.x 个人版`
@@ -37,12 +34,12 @@ EasyAR Sense License 可以从 [EasyAR 开发中心](https://www.easyar.cn/view/
 * 应用名称随意填写，Bundle ID 和 Package Name 填写 `com.mycompany.myproject`
 * 选择刚创建的 License，进入之后点击右侧复制按钮
 ![copykey](https://doc-asset.easyar.com/develop/unity/getting-started/media/copykey.png)
-##### 注意
+> **注意**
 Bundle ID 和 Package Name 后续可以更改，但次数有限。如果您有明确的应用包名，也可以填写您自己的包名。
 个人版创建没有个数限制，其它类型可以正式使用时按需创建。
 1. 将您的 Mega 云定位库的各项信息配置到 **Project Settings** 面板中的 `Mega Block` 项；
 ![Mega Config Guide](https://doc-asset.easyar.com/develop/unity/mega/media/fill-mega-config-where.png)
-##### 提示
+> **提示**
 Mega 云定位库配置可以从EasyAR开发中心获取。
 ![Mega Config Detail](https://doc-asset.easyar.com/develop/unity/mega/media/mega-config-detail.png)
 确保您的 `API Key` 具有 `Mega Block` 的权限，如果没有需要进行更改或重新创建。
@@ -65,36 +62,36 @@ Mega 云定位库配置可以从EasyAR开发中心获取。
 5. 摆放 3D 内容
 此时，您可以参考 Block 摆放 3D 物体。
 ![Place 3D Object](https://doc-asset.easyar.com/develop/unity/mega/media/annotate-in-block.png)
-##### 注意
-* 3D 物体必需摆放在工具自动生成的 `MegaBlocks` &gt; `Block\_\*` 节点之下，以确保在运行时虚拟内容的渲染位置是正确的。
+> **注意**
+* 3D 物体必需摆放在工具自动生成的 `MegaBlocks` > `Block\_\*` 节点之下，以确保在运行时虚拟内容的渲染位置是正确的。
 * 请不要修改 `Block\_\*` 节点的名字和 `local transform`，它由工具自动管理。
 ### 第四步：配置 MegaTracker
 1. 配置 **Block Root**；
 展开 `AR Session` ，选择 `Mega Block Tracker` 并设置 `Block Root` 为工具生成的 `MegaBlocks` 节点。
 ![Set Block Root](https://doc-asset.easyar.com/develop/unity/mega/media/set-block-root.png)
 ### 第五步：修改 Player 配置
-依次在 Unity 菜单 `File` &gt; `Build Settings` &gt; `Player Settings`，点击安卓图标，调出 Android 平台 相应的设置。
+依次在 Unity 菜单 `File` > `Build Settings` > `Player Settings`，点击安卓图标，调出 Android 平台 相应的设置。
 ![switchtoandroid](https://doc-asset.easyar.com/develop/unity/getting-started/media/android-switch-unity.png)
 * 修改 Package Name 为 License Key 页面显示的 Package Name
 ![androidPackageName](https://doc-asset.easyar.com/develop/unity/getting-started/media/android-package_name.png)
-##### 提示
+> **提示**
 比如，如果您在创建 License Key 时填写的 Package Name 是 `com.mycompany.myproject`，则必须填写这里 Package Name 为 `com.mycompany.myproject`，否则会运行失败。
 * 修改 Minimum API Level 为 `API Level 21` 或更高版本
 ![androidAPILevel](https://doc-asset.easyar.com/develop/unity/getting-started/media/android-api-level.png)
 * 修改 Scripting Backend 为 `IL2CPP`，并在 `Target Architecture` 中勾选 `ARM64`
 ![androidarm64](https://doc-asset.easyar.com/develop/unity/getting-started/media/android-64bit.png)
-依次在 Unity 菜单 `File` &gt; `Build Settings` &gt; `Player Settings`，点击 `iOS` 调出 iOS 平台相关设置面板。
+依次在 Unity 菜单 `File` > `Build Settings` > `Player Settings`，点击 `iOS` 调出 iOS 平台相关设置面板。
 ![switchtoios](https://doc-asset.easyar.com/develop/unity/getting-started/media/ios-swicth-unity.png)
 * 修改 Bundle ID 为 License Key 页面显示的 Bundle ID
 ![iosbundleid](https://doc-asset.easyar.com/develop/unity/getting-started/media/ios-bundle-id.png)
-##### 提示
+> **提示**
 比如，如果您在创建 License Key 时填写的 Bundle ID 是 `com.mycompany.myproject`，则必须填写这里 Bundle ID 为 `com.mycompany.myproject`，否则会运行失败。
 * 修改 `Architecture` 为 `ARM64`
 ![iosarm64](https://doc-asset.easyar.com/develop/unity/getting-started/media/ios-arm64.png)
 * 添加 `Camera Usage Description` 和 `Location Usage Description`，字符串内容可以随意填写，但必须添加。
 ![ioscamerapermission](https://doc-asset.easyar.com/develop/unity/mega/media/ios-permissions.png)
 ### 第六步：构建并运行
-1. 添加当前场景至 `File` &gt; `Build Settings` 或 `Build Profiles` &gt; `Scene List` 中；
+1. 添加当前场景至 `File` > `Build Settings` 或 `Build Profiles` > `Scene List` 中；
 2. 切换到目标平台（如Android / iOS），检查包名（Bundle ID）与 License Key 是否一致；
 ![Switch Platform](https://doc-asset.easyar.com/develop/unity/mega/media/build-switch-platform.png)
 3. 点击 **Build And Run**。

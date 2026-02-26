@@ -1,17 +1,14 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/diagnostics/log-wechat.html
+original_file: doc--zh-cn--develop--diagnostics--log-wechat.md
+normalized_at: 2026-02-27
 ---
-
-微信小程序上的日志分析 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 微信小程序上的日志分析
 本文介绍了在微信小程序 AR 环境下进行日志获取和分析的完整流程。
 ## 使用微信小程序 vConsole
 由于微信小程序 AR 只能在实机运行和调试，使用 vConsole 观察实时输出是调试的关键，基础用法可参考[微信小程序官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/usability/vConsole.html)。
 ### 实机调试中如何启用 vConsole
-在 AR 界面点击右上角**第一个按钮** &gt; 点击下方工具栏中的**开发调试** &gt; 点击**打开调试** &gt; 在弹出窗口中点击 **确定**以重启小程序。
+在 AR 界面点击右上角**第一个按钮** > 点击下方工具栏中的**开发调试** > 点击**打开调试** > 在弹出窗口中点击 **确定**以重启小程序。
 ![打开调试](https://doc-asset.easyar.com/develop/diagnostics/media/diagnostics-log-wechat01.png)
 ![重新打开后生效](https://doc-asset.easyar.com/develop/diagnostics/media/diagnostics-log-wechat02.png)
 此后界面上会持续显示 **vConsole** 悬浮按钮。
@@ -58,7 +55,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/diagnostics/log-wechat.html
 * **传入 `false`**：停止记录，并返回生成的 **文件临时路径 (tempFilePath)**。
 通常建议将记录逻辑与 UI 按钮绑定，在开始记录时通过 [wx.showToast()](https://developers.weixin.qq.com/miniprogram/dev/api/ui/interaction/wx.showToast.html) 方法提示记录开始，在记录结束时通过 [wx.shareFileMessage()](https://developers.weixin.qq.com/miniprogram/dev/api/share/wx.shareFileMessage.html) 方法将记录的文件通过微信聊天转发。
 ```
-`/\*\*
+/\*\*
 \* 处理 Session 记录逻辑
 \* @param signal true 为开始记录，false 为结束记录并转发
 \*/
@@ -93,14 +90,13 @@ duration: 2000
 }
 })
 }
-`
 ```
 >
 > 这个例子演示了如何在 xr-frame 组件中使用
 `> session.dumpLog()
 `> 方法记录并转发日志文件，并且给出相应的 Toast 提示。
 >
-##### 重要事项
+> **重要事项**
 如果使用 Mega 时遇到定位或跟踪相关的问题而不是程序异常，除了日志外，**请务必提供当时的录屏文件和 session dump 文件**。纯日志文件仅能提供侧面参考，录屏与 dump 数据才是排查问题的**核心依据**。
 ## 相关主题
 * [如何记录与转发 Mega AR Session 的 dump 文件](../wechat/mega/session-dump.html)。

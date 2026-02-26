@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/diagnostics/diagnostics.html
+original_file: doc--zh-cn--develop--diagnostics--diagnostics.md
+normalized_at: 2026-02-27
 ---
-
-问题诊断和报告 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 问题诊断和报告
 本章主要描述构建AR应用时可能遇到的问题、主要的分析方法，以及报告问题所需要收集的信息和联系途径。
 ## AR 场景中问题分析的挑战

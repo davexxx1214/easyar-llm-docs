@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/known-issues.html
+original_file: doc--zh-cn--develop--wechat--mega--known-issues.md
+normalized_at: 2026-02-27
 ---
-
-微信小程序 Mega 插件已知问题与限制 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 微信小程序 Mega 插件已知问题与限制
 这篇文章介绍了 Mega 小程序插件在使用过程中的已知问题和限制。
 ## 微信已知问题
@@ -19,21 +16,19 @@ AR Session 需要等待 xr-frame ARTracker 初始化完成的原因 请见 [Mega
 * **状态参考**：[微信小程序 AR 追踪器状态文档](https://developers.weixin.qq.com/miniprogram/dev/component/xr-frame/ar/tracker.html#获取追踪状态)。
 * **监听示例**：
 ```
-`&lt;xr-ar-tracker id="xrARTracker" mode="Plane" bind:ar-tracker-state="handleARTrackerState"&gt;&lt;/xr-ar-tracker&gt;
-`
+<xr-ar-tracker id="xrARTracker" mode="Plane" bind:ar-tracker-state="handleARTrackerState"></xr-ar-tracker>
 ```
 ```
-`handleARTrackerState({detail}) {
+handleARTrackerState({detail}) {
 if (detail.value.state == xrFrameSystem.EARTrackerState.Detected) {
 console.log('Plane is now detected by XR-Frame ARTracker.');
 }
 }
-`
 ```
 ### 节点的 worldPosition 在当前帧不会被立刻更新
 这个例子中 `trs.worldPosition` 未被及时更新：
 ```
-`public onTick(delta, data) {
+public onTick(delta, data) {
 const trs = this.el.getComponent(xrFrameSystem.Transform);
 // 更新前该节点的 WorldPosition
 console.log(`World Position before update: ${trs.worldPosition.x}, ${trs.worldPosition.y}, ${trs.worldPosition.z}`);
@@ -47,7 +42,6 @@ console.log(`World Position after update: ${trs.worldPosition.x}, ${trs.worldPos
 // 该节点的 LocalPosition 被更新
 console.log(`Local Position after update: ${trs.Position.x}, ${trs.Position.y}, ${trs.Position.z}`);
 }
-`
 ```
 在开发中建议一直使用 LocalTransform ， 即 `el.getComponent(xrFrameSystem.Transform).position` 和 `el.getComponent(xrFrameSystem.Transform).rotation`。
 ### 屏幕方向切换异常
@@ -62,13 +56,12 @@ console.log(`Local Position after update: ${trs.Position.x}, ${trs.Position.y}, 
 * **快速判断方法**：
 1. 扫描微信小程序官方 Sample 二维码。
 ![微信小程序官方 Sample 二维码](https://doc-asset.easyar.com/develop/wechat/mega/media/prerequisites01.png)
-2. 进入小程序后，导航至 **接口** &gt; **VisionKit 视觉能力** &gt; **水平面 AR-v2**，即可快速判断当前设备是否支持。
+2. 进入小程序后，导航至 **接口** > **VisionKit 视觉能力** > **水平面 AR-v2**，即可快速判断当前设备是否支持。
 如果需要在不支持 VisionKit 的设备上使用 Mega 服务，请参考[导航场景最佳实践](../../mega/navigation.html) 使用支持几乎所有设备的**视＋ AR 导航产品**。
 ### PlaneMode 强制配置
 受部分微信接口支持限制，**planeMode** 必须设置为 **1** 。
 ```
-`&lt;xr-scene ar-system="modes:Plane; planeMode: 1" bind:ready="handleReady"&gt;
-`
+<xr-scene ar-system="modes:Plane; planeMode: 1" bind:ready="handleReady">
 ```
 ### GPS 功能限制
 暂不支持通过 GPS 对齐 Block。

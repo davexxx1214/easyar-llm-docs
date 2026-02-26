@@ -1,14 +1,11 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/motion-tracking/devices-arengine.html
+original_file: doc--zh-cn--develop--motion-tracking--devices-arengine.md
+normalized_at: 2026-02-27
 ---
-
-华为 AR Engine 与运动跟踪 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 华为 AR Engine 与运动跟踪
 华为的 AR Engine 是用于在 HarmonyOS/Android 上的增强现实应用的引擎。其为部分华为机型提供包括运动跟踪在内的多项能力。在 Unity 上，为保证最佳效果，在 AR Engine 支持的机型上，EasyAR Sense 默认选择 AR Engine 的运动跟踪功能而不是 EasyAR 内置的运动跟踪（Motion Tracker）。
-##### 重要事项
+> **重要事项**
 这里所列的列表，是 EasyAR 实际测试并验证可用的，其他型号均不支持，注意与 AR Engine 官方支持的机型列表进行区分。
 经过 EasyAR 验证通过可以正常使用 AR Engine 运动跟踪功能的机型如下:(截止 2026年 1月)
 |设备型号|代号|

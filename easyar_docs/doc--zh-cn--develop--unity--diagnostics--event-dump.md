@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/event-dump.html
+original_file: doc--zh-cn--develop--unity--diagnostics--event-dump.md
+normalized_at: 2026-02-27
 ---
-
-录制 EED dump 文件 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 录制 EED dump 文件
 EED（EasyAR Event Dump）文件可用于抓取一些运行时的关键数据提供给 EasyAR 技术支持进行问题分析，例如一些跟踪器的跟踪结果、程序与 Mega 服务之间的网络请求等。通常在使用 [EIF 文件](../../simulation/simulation.html) 无法重现问题的时候使用。
 ## 使用开发者模式面板录制
@@ -21,13 +18,13 @@ EED（EasyAR Event Dump）文件可用于抓取一些运行时的关键数据提
 ![diagnostics eed ios](https://doc-asset.easyar.com/develop/unity/diagnostics/media/diagnostics-eed-ios.png)
 使用示例时，可以将 iOS 设备连接到 Mac 设备，然后从 Mac 设备的 Finder 中找到 iOS 设备示例应用中录制完成的 EED 文件。
 ![diagnostics eed ios 2](https://doc-asset.easyar.com/develop/unity/diagnostics/media/diagnostics-eed-ios-2.png)
-如果无法在 Finder 中找到文件，可以在 Xcode 主菜单的 `Window -&gt; Devices and Simulators` 中，选中应用，点击 `…`，选择 `Download Container…`，也可以获得 EED 文件。
+如果无法在 Finder 中找到文件，可以在 Xcode 主菜单的 `Window -> Devices and Simulators` 中，选中应用，点击 `…`，选择 `Download Container…`，也可以获得 EED 文件。
 ![diagnostics eed ios 3](https://doc-asset.easyar.com/develop/unity/diagnostics/media/diagnostics-eed-ios-3.png)
 ## 使用脚本录制
 可以使用 [EventDumpRecorder.start(string, int)](../../../api/unity/easyar.EventDumpRecorder.html#u_easyar_EventDumpRecorder_start_System_String_System_Int32_) 开始录制 EED 文件，使用 [EventDumpRecorder.stop()](../../../api/unity/easyar.EventDumpRecorder.html#u_easyar_EventDumpRecorder_stop) 停止录制。
 比如，下面的代码展示了如何在脚本中录制 EED 文件：
 ```
-`EventDumpRecorder eedRecorder;
+EventDumpRecorder eedRecorder;
 bool RecordEED(bool on)
 {
 if (on)
@@ -45,7 +42,6 @@ eedRecorder = null;
 }
 return true;
 }
-`
 ```
 ## 相关主题
 * [开发者模式](developer-mode.html)

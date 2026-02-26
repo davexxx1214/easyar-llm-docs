@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-grading.html
+original_file: doc--zh-cn--develop--cloud-recognition--management-grading.md
+normalized_at: 2026-02-27
 ---
-
-图像识别难度评级 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 图像识别难度评级
 在将图像正式添加到云识别（CRS）图库之前，**最佳实践**是预先对其进行质量评估。
 如果目标图的可识别区域过少（如白墙、纯色色块）或纹理过于简单，其识别成功率将大幅降低。本章将详细介绍 CRS 的评级机制，帮助您筛选高质量的 AR 识别素材。
@@ -16,7 +13,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-gra
 |**3**|一般|识别率可能受光照或角度影响，建议优化纹理。|
 |**4**|较差|极难识别，不建议作为生产环境的识别图。|
 |**-1**|错误|图片格式不支持或文件损坏。|
-##### 重要事项
+> **重要事项**
 **实际测试原则**：如果图库内目标总数较少，即使评级分稍高，在特定环境下可能依然可用。建议以实际真机测试效果为准。
 ### 核心综合指标
 我们主要关注以下两个综合指标，这两个指标有单独的 API 接口，给出综合评级：
@@ -65,22 +62,20 @@ source: https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-gra
 * **测试图片**: JPEG/PNG 格式，大小不得超过 **2 MB**
 * 先将本地目标图片转为 Base64（macOS / Linux），结果存入 image\_base64.txt
 ```
-`base64 -i ./target.jpg | tr -d '\\n' &gt; image\_base64.txt
-`
+base64 -i ./target.jpg | tr -d '\\n' > image\_base64.txt
 ```
 * 请替换占位符为实际参数，并运行 curl 脚本
 * Your-Server-side-URL → 实际 API Host
 * Your-Token → 实际的 API Key Authorization Token
 * Your-CRS-AppId → 您的 appId
 ```
-`curl -X POST "https://&lt;Your-Server-side-URL&gt;/grade/detail" \\
+curl -X POST "https://<Your-Server-side-URL>/grade/detail" \\
 -H "Content-Type: application/json" \\
--H "Authorization: &lt;YOUR-TOKEN&gt;" \\
+-H "Authorization: <YOUR-TOKEN>" \\
 -d '{
-"appId": "&lt;Your-CRS-AppId&gt;",
+"appId": "<Your-CRS-AppId>",
 "image": "'"$(cat image\_base64.txt)"'"
 }'
-`
 ```
 下载 Java 示例代码
 * [Java Samples Download](https://github.com/EasyAR-CRS/java-sdk)
@@ -92,7 +87,7 @@ Step 2. 修改全局变量，替换你准备清单里的认证参数
 * Server-end URL
 * IMAGE\_PATH : 待上传目标图文件
 ```
-`import okhttp3.\*;
+import okhttp3.\*;
 import org.json.JSONObject;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -112,7 +107,7 @@ DETAIL,
 DETECTION,
 TRACKING
 }
-private static final Map&lt;GradeType, String&gt; GRADE\_URL = new HashMap&lt;GradeType, String&gt;(){
+private static final Map<GradeType, String> GRADE\_URL = new HashMap<GradeType, String>(){
 {
 put(GradeType.DETAIL, "/grade/detail") ;
 put(GradeType.DETECTION, "/grade/detection") ;
@@ -145,7 +140,6 @@ gradeResp = new JSONObject(new Grade().grade(accessInfo, IMAGE\_PATH, GradeType.
 System.out.println("Tracking grade: " + gradeResp.getJSONObject(Common.KEY\_RESULT).get(Common.KEY\_GRADE));
 }
 }
-`
 ```
 Step 3. 运行 Main
 下载 NodeJS 示例代码
@@ -154,20 +148,18 @@ Step 1. 配置密钥文件 keys.json
 * CRS AppId
 * API Key / API Secret
 ```
-`{
+{
 "appId": "--here is your appId for CRS App Instance for SDK 4--",
 "apiKey": "--here is your api key which is create from website and which has crs permission--",
 "apiSecret": "--here is your api secret which is create from website--"
 }
-`
 ```
 Step 2. 运行，指定测试图片、密钥文件以及 Server-end URL
 ```
-`node bin/grade test.jpeg -t &lt;Server-end-URL&gt; -c keys.json
-`
+node bin/grade test.jpeg -t <Server-end-URL> -c keys.json
 ```
 ```
-`var argv = require('yargs')
+var argv = require('yargs')
 .usage('Usage: $0 [image] -t [host] -c [keys]')
 .demand(1)
 .default('t', 'http://localhost:8888').alias('t', 'host')
@@ -189,7 +181,6 @@ console.log(resp);
 .fail(function(err) {
 console.log(err);
 });
-`
 ```
 下载 Php 示例代码
 * [PHP Samples Download](https://github.com/EasyAR-CRS/php-sdk)
@@ -200,7 +191,7 @@ Step 2. 修改全局变量，替换你准备清单里的认证参数
 * Server-end URL
 * imageFilePath : 待上传目标图文件路径
 ```
-`&lt;?php
+<?php
 include 'EasyARClientSdkCRS.php';
 $apiKey = 'API Key';
 $apiSecret = 'API Secret';
@@ -209,23 +200,21 @@ $crsCloudUrl = 'https://cn1-crs.easyar.com';
 $imageFilePath = '1.jpg'
 $sdk = new EasyARClientSdkCRS($apiKey, $apiSecret, $crsAppId, $crsCloudUrl);
 $image = base64\_encode(file\_get\_contents($imageFilePath));
-$rs = $sdk-&gt;detection($image);
-if ($rs-&gt;statusCode == 0) {
-print\_r($rs-&gt;result-&gt;grade);
+$rs = $sdk->detection($image);
+if ($rs->statusCode == 0) {
+print\_r($rs->result->grade);
 } else {
 print\_r($rs);
 }
-`
 ```
 Step 3. 运行 php demo.php
 新建相关代码文件 grade.py，修改全局变量，然后运行
 ```
-`pip install requests
+pip install requests
 python grade.py
-`
 ```
 ```
-`import time
+import time
 import hashlib
 import requests
 import base64
@@ -260,16 +249,14 @@ print(f"Status: {response.status\_code}")
 print(f"Response: {response.text}")
 if \_\_name\_\_ == "\_\_main\_\_":
 main()
-`
 ```
 新建相关代码文件 main.go，修改全局变量，然后运行
 ```
-`go run main.go
-`
+go run main.go
 ```
 `main.go:`
 ```
-`package main
+package main
 import (
 "bytes"
 "crypto/sha256"
@@ -324,22 +311,21 @@ defer resp.Body.Close()
 body, \_ := io.ReadAll(resp.Body)
 fmt.Printf("Response: %s\\n", string(body))
 }
-`
 ```
 在 Cargo.toml 中添加 reqwest, tokio, sha2, hex 依赖。
 执行 cargo run。
 ```
-`use sha2::{Sha256, Digest};
+use sha2::{Sha256, Digest};
 use std::collections::BTreeMap;
 use std::time::{SystemTime, UNIX\_EPOCH};
 use base64::{Engine as \_, engine::general\_purpose};
-const API\_KEY: &amp;str = "YOUR\_API\_KEY";
-const API\_SECRET: &amp;str = "YOUR\_API\_SECRET";
-const APP\_ID: &amp;str = "YOUR\_APP\_ID";
-const HOST: &amp;str = "https://crs-cn1.easyar.com";
-const IMAGE\_PATH: &amp;str = "test.jpg";
+const API\_KEY: &str = "YOUR\_API\_KEY";
+const API\_SECRET: &str = "YOUR\_API\_SECRET";
+const APP\_ID: &str = "YOUR\_APP\_ID";
+const HOST: &str = "https://crs-cn1.easyar.com";
+const IMAGE\_PATH: &str = "test.jpg";
 #[tokio::main]
-async fn main() -&gt; Result&lt;(), Box&lt;dyn std::error::Error&gt;&gt; {
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
 let img\_bytes = std::fs::read(IMAGE\_PATH)?;
 let img\_b64 = general\_purpose::STANDARD.encode(img\_bytes);
 let ts\_raw = SystemTime::now().duration\_since(UNIX\_EPOCH)?.as\_millis();
@@ -348,11 +334,11 @@ let ts\_str = ts\_raw.to\_string();
 let mut params = BTreeMap::new();
 params.insert("apiKey", API\_KEY);
 params.insert("appId", APP\_ID);
-params.insert("timestamp", &amp;ts\_str);
-params.insert("image", &amp;img\_b64);
+params.insert("timestamp", &ts\_str);
+params.insert("image", &img\_b64);
 // 2. Build sign string
 let mut builder = String::new();
-for (k, v) in &amp;params {
+for (k, v) in &params {
 builder.push\_str(k);
 builder.push\_str(v);
 }
@@ -369,22 +355,20 @@ body.insert("timestamp".into(), ts\_raw.into());
 body.insert("signature".into(), signature.into());
 let client = reqwest::Client::new();
 let res = client.post(format!("{}/grade/detection", HOST))
-.json(&amp;body)
+.json(&body)
 .send()
 .await?;
 println!("Response: {}", res.text().await?);
 Ok(())
 }
-`
 ```
 创建 .NET 控制台项目。
 ```
-`dotnet new console
+dotnet new console
 dotnet run
-`
 ```
 ```
-`using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -402,7 +386,7 @@ static async System.Threading.Tasks.Task Main() {
 string timestamp = DateTimeOffset.Now.ToUnixTimeMilliseconds().ToString();
 string imageBase64 = Convert.ToBase64String(File.ReadAllBytes(IMAGE\_PATH));
 // 1. Prepare data for signing
-var data = new SortedDictionary&lt;string, string&gt; {
+var data = new SortedDictionary<string, string> {
 { "apiKey", API\_KEY },
 { "appId", APP\_ID },
 { "timestamp", timestamp },
@@ -431,7 +415,6 @@ byte[] bytes = SHA256.HashData(Encoding.UTF8.GetBytes(str));
 return BitConverter.ToString(bytes).Replace("-", "").ToLower();
 }
 }
-`
 ```
 * 运行环境
 * Unity 2020 LTS 以上版本
@@ -440,18 +423,17 @@ return BitConverter.ToString(bytes).Replace("-", "").ToLower();
 Step 1：准备图片文件
 * 在 Unity 项目中创建目录：
 ```
-`Assets/
+Assets/
 └── StreamingAssets/
 | └── target.jpg
 └── Scripts/
 └── GrageImage.cs
-`
 ```
 * 按照 Assets 目录名
 * 创建脚本 GrageImage.cs，复制下面示例代码
 * 准备一张图片目标测试图
 ```
-`using System;
+using System;
 using System.IO;
 using System.Text;
 using UnityEngine;
@@ -463,7 +445,7 @@ public class GrageImage : MonoBehaviour
 public string apiUrl = "https://Your-Server-end-URL" + "/grade/detection";
 public string authorizationToken = "YOUR API KEY AUTH TOKEN";
 public string imageFilePath = "target.jpg"; // StreamingAssets
-public string crsAppId = "&lt;Your-CRS-AppId&gt;";
+public string crsAppId = "<Your-CRS-AppId>";
 private void Start()
 {
 StartCoroutine(Grade());
@@ -512,7 +494,6 @@ public string appId;
 public string image;
 }
 }
-`
 ```
 * 在 Unity Editor 中：
 * 创建一个空 GameObject

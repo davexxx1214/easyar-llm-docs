@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/overview.html
+original_file: doc--zh-cn--develop--overview.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR 开发简介 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR 开发简介
 EasyAR 让 AR 开发变得简单高效。使用 EasyAR，您可以轻松地将增强现实功能集成到各种平台的应用中。
 ## EasyAR 产品概览
@@ -15,7 +12,7 @@ EasyAR 为 AR 开发提供了三大产品：`EasyAR Mega`、`EasyAR CRS`（Cloud
 * `EasyAR Sense` 是增强现实 SDK，提供跨平台的 AR 集成能力。
 下图从产品结构上做了细分：
 ```
-`block
+block
 columns 1
 block:groupTitle
 Title["EasyAR 产品结构简图"]
@@ -29,21 +26,20 @@ end
 block:groupSDK
 SDK["SDK"]
 Sense["Sense"]
-SenseUnity["Sense&lt;br&gt;Unity Plugin"]
-MegaWeChat["Mega&lt;br&gt;WeChat MiniProgram Plugin"]
+SenseUnity["Sense<br>Unity Plugin"]
+MegaWeChat["Mega<br>WeChat MiniProgram Plugin"]
 end
 block:groupService
 Service["云服务"]
-Mega["Mega&lt;br&gt;Service"]
-SpatialMap["SpatialMap&lt;br&gt;Service"]
-CRS["Cloud Recognition&lt;br&gt;Service"]
+Mega["Mega<br>Service"]
+SpatialMap["SpatialMap<br>Service"]
+CRS["Cloud Recognition<br>Service"]
 end
 style groupTitle fill:none,stroke:none,stroke-width:0px
 style Title fill:none,stroke:none,stroke-width:0px
 style Tool fill:none,stroke:none,stroke-width:0px
 style SDK fill:none,stroke:none,stroke-width:0px
 style Service fill:none,stroke:none,stroke-width:0px
-`
 ```
 * **云服务**提供大规模识别定位能力
 * **Mega Service**：`EasyAR Mega` 的核心部件。
@@ -61,25 +57,25 @@ style Service fill:none,stroke:none,stroke-width:0px
 > 比如：
 >
 >
-* > 开发涂涂乐应用时，可以使用
-**> Sense Unity Plugin
-**> 在 Unity 中开发跨平台应用，跟踪图像并渲染 3D 模型。
+> 开发涂涂乐应用时，可以使用
+> Sense Unity Plugin
+> 在 Unity 中开发跨平台应用，跟踪图像并渲染 3D 模型。
 >
-* > 开发 Live 照片应用时，可以使用
-**> Sense
-**> 开发 Android 和 iOS 原生应用识别跟踪照片并播放视频；或使用
-**> Cloud Recognition Service
-**> 提供海量照片的云端识别服务，并在微信小程序中直接调用该服务接口实现照片识别功能。
+> 开发 Live 照片应用时，可以使用
+> Sense
+> 开发 Android 和 iOS 原生应用识别跟踪照片并播放视频；或使用
+> Cloud Recognition Service
+> 提供海量照片的云端识别服务，并在微信小程序中直接调用该服务接口实现照片识别功能。
 >
-* > 开发 AR 导航应用时，可以使用
-**> Mega Service
-**> 来实现大场景定位；使用
-**> Sense Unity Plugin
-**> 在 Unity 中调用 EasyAR Mega 的接口和 EasyAR Sense 的运动跟踪功能实现 AR 导航能力；使用
-**> Mega Studio
-**> 来加载真实世界模型并辅助导航路线的摆放；使用
-**> Mega Toolbox
-**> 来快速验证定位跟踪效果。
+> 开发 AR 导航应用时，可以使用
+> Mega Service
+> 来实现大场景定位；使用
+> Sense Unity Plugin
+> 在 Unity 中调用 EasyAR Mega 的接口和 EasyAR Sense 的运动跟踪功能实现 AR 导航能力；使用
+> Mega Studio
+> 来加载真实世界模型并辅助导航路线的摆放；使用
+> Mega Toolbox
+> 来快速验证定位跟踪效果。
 >
 >
 `EasyAR Mega` 提供了这些 AR 能力，可以用于构建各种手机应用、微信小程序等多种平台的 AR 应用：
@@ -101,7 +97,7 @@ style Service fill:none,stroke:none,stroke-width:0px
 * **图像云识别**
 ## 开发不同平台的 AR 应用
 使用 EasyAR 可以在不同平台上开发 AR 应用。
-### Unity `（推荐）`
+### Unity （推荐）
 使用 Unity 开发 AR 应用是比较推荐的一种方式。使用 Unity 可以高效地开发跨平台 3D 内容和交互。
 ![alt text](https://doc-asset.easyar.com/develop/media/unity.png)
 使用 Unity 开发的 AR 应用可以使用以下功能：

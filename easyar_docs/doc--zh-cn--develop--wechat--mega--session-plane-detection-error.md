@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/session-plane-detection-error.html
+original_file: doc--zh-cn--develop--wechat--mega--session-plane-detection-error.md
+normalized_at: 2026-02-27
 ---
-
-平面 AR 追踪器异常处理 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 平面 AR 追踪器异常处理
 这篇文章介绍了如何通过注册回调处理微信平面 AR 追踪器的异常。
 ## 开始之前
@@ -20,14 +17,13 @@ source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/session-plane-detect
 ## 设置平面检测异常时的行为
 通过 [setPlaneDetectionErrorBehavior(behavior)](../../../api/wechat/easyar.EasyARSession.html#w_easyar_EasyARSession_setPlaneDetectionErrorBehavior_member_1_) 注册异常处理回调。当检测到异常时，该回调会被触发，开发者可在其中实现自定义提示，隐藏 3D 内容或其他处理逻辑。
 ```
-`session.setPlaneDetectionErrorBehavior(() =&gt; {
+session.setPlaneDetectionErrorBehavior(() => {
 wx.showToast({
 icon: 'none',
 title: `微信平面检测结果异常，请将相机对着平面来回移动以恢复跟踪`,
 duration: 2000,
 });
 });
-`
 ```
 >
 > 这个例子中使用 session 的

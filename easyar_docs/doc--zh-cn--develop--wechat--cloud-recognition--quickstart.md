@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/cloud-recognition/quickstart.html
+original_file: doc--zh-cn--develop--wechat--cloud-recognition--quickstart.md
+normalized_at: 2026-02-27
 ---
-
-图像云识别微信小程序开发快速入门 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 图像云识别微信小程序开发快速入门
 本篇将带大家快速开发微信小程序上基于 EasyAR 图像云识别的 AR 应用，通过本文介绍，开发者可以掌握如何在微信小程序环境中集成 EasyAR 的云识别能力，并利用 XR-FRAME 框架构建交互式 AR 体验。
 ## 开发准备
@@ -36,7 +33,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/wechat/cloud-recognition/quickst
 * 选择“启动手机端自动预览”。
 * 点击“编译并预览”
 ![image](https://doc-asset.easyar.com/develop/wechat/cloud-recognition/media/crs-wx-27.jpg)
-##### 提示
+> **提示**
 不要使用“真机调试”。
 * 在手机上的运行效果。
 ![image](https://doc-asset.easyar.com/develop/wechat/cloud-recognition/media/crs-wx-demo-1.jpg)

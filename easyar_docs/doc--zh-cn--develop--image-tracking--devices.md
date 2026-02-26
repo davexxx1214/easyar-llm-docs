@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/image-tracking/devices.html
+original_file: doc--zh-cn--develop--image-tracking--devices.md
+normalized_at: 2026-02-27
 ---
-
-设备与平台支持 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 设备与平台支持
 本篇详细说明平面图像跟踪功能所支持的设备、操作系统、硬件要求，以及该功能同运动跟踪、自定义相机相结合使用时的相关支持情况，帮助开发者评估项目可行性并提前准备软硬件环境。
 ## 支持的设备和平台
@@ -40,7 +37,7 @@ EasyAR Sense 不依赖大量系统 API，因此新发布的 Android/iOS 版本�
 * **iOS**: 支持 ARKit 的设备。
 * **Android**: 支持 ARCore/AR Engine/EasyAR Motion Tracker 的设备。
 * **Windows/macOS**: 通常无内置传感器，需外接设备或放弃运动融合。
-##### 提示
+> **提示**
 对于 EasyAR 支持的 [XR 头显设备](../headsets/headsets.html#supportlist)，运动融合功能天然支持。
 ### 注意事项
 * 平面图像跟踪与运动融合可独立使用。若仅需图像识别，无需额外传感器。

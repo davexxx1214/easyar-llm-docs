@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/devices-sense.html
+original_file: doc--zh-cn--develop--devices-sense.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Sense 支持的系统和设备 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Sense 支持的系统和设备
 EasyAR Sense支持不同的硬件设备、操作系统和开发平台的支持，不同的功能对于设备的硬件或者系统功能要求可能存在差异。
 ## EasyAR Sense支持的操作系统

@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/cameras/custom-camera.html
+original_file: doc--zh-cn--develop--cameras--custom-camera.md
+normalized_at: 2026-02-27
 ---
-
-自定义相机 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 自定义相机
 在一些情况下，内置支持的摄像头不能满足需求，此时可能需要考虑使用自定义相机，自定义相机可以支持从外部获得图像数据输入到 AR 系统中，供跟踪器使用。自定义相机可以由您自行实现图像数据获取。
 可用平台：Unity、原生

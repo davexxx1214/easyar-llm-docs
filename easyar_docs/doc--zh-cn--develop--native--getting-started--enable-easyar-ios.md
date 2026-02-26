@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/enable-easyar-ios.html
+original_file: doc--zh-cn--develop--native--getting-started--enable-easyar-ios.md
+normalized_at: 2026-02-27
 ---
-
-在 iOS 应用中启用 EasyAR 功能 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 在 iOS 应用中启用 EasyAR 功能
 本章介绍如何在 Xcode 中配置 EasyAR 的 iOS 工程 ， 而不需使用 Unity 等 3D 引擎。
 ## 准备工作
@@ -23,8 +20,7 @@ EasyAR 不使用 bitcode 也不提供 bitcode 兼容性, 需要在配置中禁�
 3. 初始化 EasyAR
 使用 `easyar\_Engine` 的 `initialize:` 方法来初始化 EasyAR 。您可以添加初始化代码如下
 ```
-`[easyar\_Engine initialize:key];
-`
+[easyar\_Engine initialize:key];
 ```
 4. 隐私配置
 由于 AR 要使用摄像头，隐私配置需要添加 `Privacy - Camera Usage Description`，
@@ -43,7 +39,7 @@ EasyAR Sense Swift API 是以源代码形式提供的，这样可以提供最好
 XCode 自动生成的 EasyARSwift.h 文件并没有被使用，可以安全删除。
 3. 在 build settings 中配置 `Objective-C Bridging Header`
 ![bridgeheader](https://doc-asset.easyar.com/develop/native/getting-started/media/bridgingheader.png)
-##### 注意
+> **注意**
 这个选项在导入 swift 文件之前不会显示在 XCode 选项中，所以请一定先导入 Swift 代码再进行配置更改。
 4. 导入 `easyar.xcframework` 到 EasyARSwift 工程中
 ![addxframework3](https://doc-asset.easyar.com/develop/native/getting-started/media/xfframework.png)

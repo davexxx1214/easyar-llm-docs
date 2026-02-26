@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/choosing-an-engine.html
+original_file: doc--zh-cn--develop--native--getting-started--choosing-an-engine.md
+normalized_at: 2026-02-27
 ---
-
-在进行增强现实开发前选择一款 3D 引擎 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 在进行增强现实开发前选择一款 3D 引擎
 AR 开发的第一步是选择合适的 3D 引擎，这一章介绍为什么需要 3D 引擎、AR 开发中常见的 3D 引擎及各自优缺点。
 ## 为什么 AR 需要 3D 引擎

@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/sample-camera-device.html
+original_file: doc--zh-cn--develop--unity--cameras--sample-camera-device.md
+normalized_at: 2026-02-27
 ---
-
-Workflow\_FrameSource\_CameraDevice 示例详解 | EasyAR 文档
-**
-##### Table of Contents
-**
 # Workflow\_FrameSource\_CameraDevice 示例详解
 `Workflow\_FrameSource\_CameraDevice` 是一个专注于 **帧输入源（Frame Source）底层控制** 的示例场景，展示了如何使用 `CameraDeviceFrameSource` 获取摄像头的原始图像流，并进行一些基础控制。
 ## 使用方法
@@ -27,7 +24,7 @@ Workflow\_FrameSource\_CameraDevice 示例详解 | EasyAR 文档
 8. 点击 `CameraImage` 可以切换是否显示当前摄像头画面。
 9. 点击 `Camera` 可以 **关闭/打开** 当前摄像头，关闭后画面将保持关闭前的状态不变。
 10. 通过 `NextCamera` 按钮动态切换 **前置/后置摄像头**。
-##### 提示
+> **提示**
 更多 FrameSource 详情，请参阅：
 * [内置Frame Source参考](frame-source-builtin.html)
 * [自定义相机和外部帧输入](external-frame-source.html)

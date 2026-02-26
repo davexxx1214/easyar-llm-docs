@@ -1,13 +1,10 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/setup-easyar.html
+original_file: doc--zh-cn--develop--unity--fundamentals--setup-easyar.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR 配置 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR 配置
-EasyAR 配置页面可以从 Unity 菜单 `EasyAR &gt; Sense &gt; Configuration` 或 `Edit &gt; Project Settings &gt; EasyAR` 进入。
+EasyAR 配置页面可以从 Unity 菜单 `EasyAR > Sense > Configuration` 或 `Edit > Project Settings > EasyAR` 进入。
 ![alt text](https://doc-asset.easyar.com/develop/unity/getting-started/media/fill_in_licence_key.png)
 这里包含所有对 EasyAR Sense Unity Plugin 的全局配置
 ![alt text](https://doc-asset.easyar.com/develop/unity/fundamentals/media/settings-easyar.png)
@@ -19,9 +16,9 @@ EasyAR Sense License 相关配置。
 ### LicenseKey
 EasyAR Sense License Key。使用 EasyAR 功能必须填写可用的 license。
 仅当使用接口手动初始化 EasyAR Sense 时可留空。
-##### 注意
+> **注意**
 在头显设备（Vision Pro、XREAL、Pico、Rokid 等）设备上使用时，需要使用 EasyAR XR License。
-##### 注意
+> **注意**
 在自定义相机或头显上使用试用产品（个人版 license、试用版 XR license 或试用版 Mega 服务等）时，EasyAR Sense 每次启动后会在 100 秒（Mega 用户可经由 EasyAR 商务在审批后调整时间长度）后停止响应。使用付费版本的 EasyAR Sense 和付费的 EasyAR Mega 服务没有这个限制。
 ### Verify When Build
 在构建 Unity 工程时验证 license Key。
@@ -33,9 +30,9 @@ EasyAR Sense License 相关配置。
 ### LicenseKey
 EasyAR Sense License Key。使用 EasyAR 功能必须填写可用的 license。
 仅当使用接口手动初始化 EasyAR Sense 时可留空。
-##### 注意
+> **注意**
 在头显设备（Vision Pro、XREAL、Pico、Rokid 等）设备上使用时，需要使用 EasyAR XR License。
-##### 注意
+> **注意**
 在自定义相机或头显上使用试用产品（个人版 license、试用版 XR license 或试用版 Mega 服务等）时，EasyAR Sense 每次启动后会在 100 秒（Mega 用户可经由 EasyAR 商务在审批后调整时间长度）后停止响应。使用付费版本的 EasyAR Sense 和付费的 EasyAR Mega 服务没有这个限制。
 ### Verify When Build
 在构建 Unity 工程时验证 license Key。
@@ -52,7 +49,7 @@ Unity XR 框架（AR Foundation 等）相关配置。
 ### AR Foundation Support
 AR Foundation 支持开关，建议保持打开。
 在极个别情况下，比如需要使用 AR Foundation 4 或 AR Foundation 更新导致编译出错，可以关闭这个选项，但插件内所有与 AR Foundation 相关的功能将同时禁用。
-##### 注意
+> **注意**
 修改此选项之后脚本会自动重新编译。
 ### Unity XR Auto Switch
 自动切换 Unity XR（比如 AR Foundation）物体的功能配置。
@@ -70,9 +67,9 @@ EasyAR Mega 功能配置。
 ### InertialCameraDevice Support
 只读选项，显示当前配置下惯导功能是否可用以及 ONNX 运行时信息。
 如果显示信息不符合需求，需要视情况修改 `Lib Variants` 以及 `ONNX Runtime (Bundled)` 选项。
-### Mega Block &gt; Localization Service Access [Global]
+### Mega Block > Localization Service Access [Global]
 全局 Mega Block 定位服务器配置。
-### Mega Landmark &gt; Localization Service Access [Global]
+### Mega Landmark > Localization Service Access [Global]
 全局 Mega Landmark 定位服务器配置。
 ## Spatial Map
 EasyAR 空间地图功能配置。
@@ -87,7 +84,7 @@ EasyAR 图像跟踪功能配置。
 * `Enable Target Data File` ：开启 [ImageTargetController.Source](../../../api/unity/easyar.ImageTargetController.html#u_easyar_ImageTargetController_Source) 类型为 [ImageTargetController.TargetDataFileSourceData](../../../api/unity/easyar.ImageTargetController.TargetDataFileSourceData.html) 的 target 的 Gizmos。
 * `Enable Target` ：开启 [ImageTargetController.Source](../../../api/unity/easyar.ImageTargetController.html#u_easyar_ImageTargetController_Source) 类型为 [ImageTargetController.TargetSourceData](../../../api/unity/easyar.ImageTargetController.TargetSourceData.html) 的 target 的 Gizmos。
 * `Enable Texture 2D` ：开启 [ImageTargetController.Source](../../../api/unity/easyar.ImageTargetController.html#u_easyar_ImageTargetController_Source) 类型为 [ImageTargetController.Texture2DSourceData](../../../api/unity/easyar.ImageTargetController.Texture2DSourceData.html) 的 target 的 Gizmos。
-### Cloud Recognition (CRS) &gt; Service Access [Global]
+### Cloud Recognition (CRS) > Service Access [Global]
 全局云识别服务器配置。
 ## Object Tracking
 EasyAR 物体跟踪功能配置。
@@ -103,12 +100,12 @@ ARCore 提供了在部分 Android 设备上的运动跟踪能力，可以阅读 
 * `Optional`: ARCore 功能在支持 ARCore 并安装了 Google Play Services for AR 的设备上可以使用。
 * `Required`: 应用将只能在支持 ARCore 并安装了 Google Play Services for AR 的设备上运行。
 * `External`: 如果在使用 `AR Foundation` 或其它 ARCore SDK 分发，可以使用这个选项。这样随 EasyAR 一起分发的 ARCore SDK 将不会使用。也可以使用这个选项来完全排除 ARCore SDK 在应用中的使用。
-##### 小心
+> **小心**
 如果把 `ARCore SDK` 设置为 `Required`，或是在 AR Foundation 的 ARCore 配置中将 `Requirement` 设置为 `Required`，并在不支持 ARCore 的设备上安装了打包后的应用，设备会错误地报告 ARCore 是可用的并以 ARCore 运行。这会造成一个假象，似乎这些设备正在运行 ARCore 并且运行不正常（黑屏或其它异常情况），但这是错误的。
 出现这个现象的原因是由于 Google Play 商店阻止在不受支持的设备上安装标记 ARCore 为必需的应用，所以这些应用总是假设它们正在受支持的设备上运行。
 正常配置下，这些设备会在 session 组装时判断 ARCore 不受支持并使用 EasyAR 的功能。
 关于 `Optional` 和 `Required` 的详细说明及上线 Google Play Store 应用需要做的其它配置可以参考 Google 的说明（[中国大陆](https://developers.google.cn/ar/develop/java/enable-arcore)，[国际](https://developers.google.com/ar/develop/java/enable-arcore)）。
-##### 注意
+> **注意**
 在 EasyAR Sense Unity Plugin 中，ARCore 的支持所需的库文件和配置已经在插件包中，但要在手机上运行，仍需在手机上安装 [Google Play Services for AR](https://play.google.com/store/apps/details?id=com.google.ar.core) 。
 有三种不同来源的 ARCore SDK 可以使用：
 * 使用随插件分发的 ARCore SDK
@@ -122,7 +119,7 @@ ARCore 提供了在部分 Android 设备上的运动跟踪能力，可以阅读 
 ![alt text](https://doc-asset.easyar.com/develop/unity/fundamentals/media/settings-arcore-warn.png)
 这时需要修改项目配置，使用 IL2CPP 编译并选择 ARM64 支持。
 ![alt text](https://doc-asset.easyar.com/develop/unity/getting-started/media/adnroid-64bit.png)
-##### 小心
+> **小心**
 如确有需要，可以选择 `Continue and don't warn me again`，或者关闭该选项，这将关闭打包时的检查。关闭检查只是在打包时不弹出提示，但运行时在一些设备上将有可能出现异常，包括但不限于崩溃或黑屏等。
 ### AR Engine SDK
 AR Engine SDK 配置。

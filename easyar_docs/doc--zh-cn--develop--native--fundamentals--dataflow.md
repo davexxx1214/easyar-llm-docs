@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/dataflow.html
+original_file: doc--zh-cn--develop--native--fundamentals--dataflow.md
+normalized_at: 2026-02-27
 ---
-
-AR 数据流 | EasyAR 文档
-**
-##### Table of Contents
-**
 # AR 数据流
 本文介绍了 EasyAR Sense 中的数据流。EasyAR Sense 中使用组件化 API，组件之间通过数据流来连接。
 ## 输入输出数据

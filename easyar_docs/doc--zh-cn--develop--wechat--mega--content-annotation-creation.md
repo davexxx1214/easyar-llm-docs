@@ -1,18 +1,15 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-annotation-creation.html
+original_file: doc--zh-cn--develop--wechat--mega--content-annotation-creation.md
+normalized_at: 2026-02-27
 ---
-
-使用 Unity 编辑器创建并上传标注 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 使用 Unity 编辑器创建并上传标注
 这篇文章介绍了如何使用 Unity 编辑器上的 Mega Studio 创建并上传标注。
 ## 开始之前
 * 能够[在 Unity 中使用 Mega Studio](content-unity-setup.html)
 * 准备模型： 使用示例工程中使用的模型（一个憨态可掬的熊猫），或者使用 xr-frame 官方 Demo 中使用的[小机器人模型](https://dldir1.qq.com/weixin/miniprogram/RobotExpressive_aa2603d917384b68bb4a086f32dabe83.glb)，或者参考[XRFame 可加载的 GLTF 格式及支持的拓展](https://developers.weixin.qq.com/miniprogram/dev/component/xr-frame/gltf/specification.html)，准备符合 xr-frame 要求的模型文件。
 * 将模型的文件导入 Unity 。
-##### 提示
+> **提示**
 Mega 插件中已经添加了对 [com.unity.cloud.gltfast](https://docs.unity3d.com/Packages/com.unity.cloud.gltfast@6.8/manual/index.html) 的依赖，因此您可以直接将模型文件拖入 Unity Assets。
 ## 为什么需要标注
 EasyAR Mega Annotation（EMA） 可用于同步跨平台的（坐标系定义不同）空间位置。
@@ -26,7 +23,7 @@ xr-frame 环境下标注的本地坐标系： X 正方向朝后，Y 正方向朝
 2. 提升调试效率： 能够直接在 [MegaToolbox](../../../mega/reference/toolbox-wechat/intro.html) 上加载，便于快速进行真机测试与数据验证。
 ## 操作步骤
 1. **创建标注工具**
-在 Unity 的 **Hierarchy** 面板中点击右键，依次选择： **EasyAR Mega** &gt; **Tool** &gt; **Annotation Tool（Edit Mode）**。
+在 Unity 的 **Hierarchy** 面板中点击右键，依次选择： **EasyAR Mega** > **Tool** > **Annotation Tool（Edit Mode）**。
 ![annotation](https://doc-asset.easyar.com/develop/wechat/mega/media/content-annotation-creation01.png)
 创建完成后，场景中生成 EasyAR.Mega.Annotation 和 MegaBlocks 两个节点。
 选中 EasyAR.Mega.Annotation 节点，在其 **Inspector** 面板中会出现用户名/邮箱及密码输入框。
@@ -50,7 +47,7 @@ xr-frame 环境下标注的本地坐标系： X 正方向朝后，Y 正方向朝
 6. **使用模型**
 将导入的模型拖到场景节点，作为标注的子节点。
 将模型 **Inspector** 面板中的 Position 和 Rotation 全部改为 **0** ， Scale 可以根据需要自行调整。
-##### 注意
+> **注意**
 EMA 承载了所有的坐标转换逻辑。将模型 Position 和 Rotation 设为 0，是为了让模型的几何中心与标注点完全重合。所有的位移和旋转调整，都应该通过操作其父节点（标注节点）来完成。
 ![annotation](https://doc-asset.easyar.com/develop/wechat/mega/media/content-annotation-creation11.png)
 7. **[可选] 精确调整模型位置**

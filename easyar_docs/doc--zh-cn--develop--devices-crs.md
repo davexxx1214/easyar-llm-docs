@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/devices-crs.html
+original_file: doc--zh-cn--develop--devices-crs.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR CRS 支持的设备和平台应用 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR CRS 支持的设备和平台应用
 EasyAR 图像云识别 Cloud Recognition Service （CRS） 支持不同的硬件设备、操作系统和开发平台的支持。
 |设备类型|操作系统|目标平台|

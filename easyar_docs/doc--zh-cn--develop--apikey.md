@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/apikey.html
+original_file: doc--zh-cn--develop--apikey.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR 云服务 API Key 统一认证 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR 云服务 API Key 统一认证
 API Key 通过统一的身份认证机制，实现对所有 EasyAR 云服务 API 的集中访问管理，简化开发流程，提升安全性和易用性，从而显著降低开发者在服务接入、权限控制和维护管理等方面的成本与复杂度。
 ## 什么是 API Key

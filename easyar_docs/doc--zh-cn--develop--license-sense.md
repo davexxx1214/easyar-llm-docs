@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/license-sense.html
+original_file: doc--zh-cn--develop--license-sense.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Sense 许可证 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Sense 许可证
 使用 EasyAR Sense 提供的功能前，需要先获取许可证。
 ## 能力支持
@@ -29,7 +26,7 @@ EasyAR Sense 许可证 | EasyAR 文档
 |有效期限|永久|按月订阅|永久|永久|永久|
 |水印|有|无|无|无|无|
 |是否支持升级|支持升级到最新版|支持升级到最新版|支持升级到最新版|支持升级到最新版|支持升级到最新版|
-##### 注意
+> **注意**
 使用个人版运行时会显示水印（使用自定义相机和头显时除外）。
 使用 XR License 试用版时会显示水印（使用自定义相机和头显时除外），支持主流 XR 设备。
 头显和眼镜上 **仅支持使用** XR License 试用版 或 XR 正式版。

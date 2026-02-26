@@ -1,13 +1,10 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/release-notes/release-notes-v4.html
+original_file: doc--zh-cn--develop--unity--release-notes--release-notes-v4.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Sense Unity Plugin 版本 4 发行说明 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Sense Unity Plugin 版本 4 发行说明
-##### 注意
+> **注意**
 最新的 EasyAR Sense Unity Plugin 版本为 4000.0。更多信息请参阅 [发行说明](release-notes.html)。
 从版本 4 开始，过去被大家熟知的 EasyAR SDK 被赋予了一个新的名字：EasyAR Sense。EasyAR Sense 提供感知真实世界的能力。在 Unity 上，EasyAR Sense Unity Plugin 提供了一个 EasyAR Sense 的封装，方便开发者在 Unity 中使用 EasyAR Sense 的能力。
 ## 版本 4.6.5
@@ -66,8 +63,8 @@ EasyAR Sense Unity Plugin 4.6.0 带来了许多优化和改进，主要集中在
 详细更新内容如下：
 * ✨ 添加原生 Apple silicon 支持
 * ✨ 添加内建 AR Engine 支持（所有 Unity 版本可用）
-* 🚚 拆分和优化 Nreal（&gt;= 1.6）支持
-* 🚚 拆分和优化 AR Foundation（&gt;= 4.1.3）支持
+* 🚚 拆分和优化 Nreal（>= 1.6）支持
+* 🚚 拆分和优化 AR Foundation（>= 4.1.3）支持
 * ✨ 添加对 AR Foundation 5.x 包结构的兼容性
 * ✨ 添加 UnityPackage 类用于在脚本中更方便地获取包版本和名字等
 * ✨ 添加关闭所有自定义相机的选项
@@ -95,7 +92,7 @@ EasyAR Sense Unity Plugin 4.5.0 增加了一些小功能，修复了一些 bug�
 * ⚡ 优化 CloudRecognizer 或 CloudLocalizer 创建失败的错误信息
 * 🐛 修复 MotionTrackerFrameSource.CheckAvailability 在非 active 的 GameObject 上无法结束的问题
 * ⬆️ ARCore：更新 ARCore SDK 至 1.23.0
-* ⬆️ ARCore：在使用 ARCore 的构建中，Gradle 版本必需 &gt;= 5.6.4
+* ⬆️ ARCore：在使用 ARCore 的构建中，Gradle 版本必需 >= 5.6.4
 * 🔧 ARCore：使用 ARCore 的构建中，如果打包仅含 32 位的应用将会弹出警告信息
 * ⬆️ 更新 Sense 到 4.5.0
 **EasyAR Sense Unity Plugin Samples**
@@ -131,7 +128,7 @@ AR session 及其它 AR 组件的创建现在可以使用 GameObject 菜单完�
 * ✨ 添加许多有用的 GameObject 预设菜单项
 * 🔥 prefab 已经标记为过时，并将在将来的发布中删除
 * ✨ 添加更多 frame source 以扩展 AR 框架和设备支持
-* ✨ 添加 `ARCoreFrameSource` &amp; `ARKitFrameSource` &amp; `MotionTrackerFrameSource` 以替换 `VIOCameraDeviceUnion`，运行时的策略选择由更灵活的 `ARComponentPicker` 替换
+* ✨ 添加 `ARCoreFrameSource` & `ARKitFrameSource` & `MotionTrackerFrameSource` 以替换 `VIOCameraDeviceUnion`，运行时的策略选择由更灵活的 `ARComponentPicker` 替换
 * ✨ 添加 `ARFoundationFrameSource` 以支持 Unity AR Foundation
 * ✨ 添加 `HuaweiAREngineFrameSource` 以支持华为 AR Engine
 * 🔥 `VIOCameraDeviceUnion` 已经标记为过时，并将在将来的发布中删除
@@ -139,20 +136,20 @@ AR session 及其它 AR 组件的创建现在可以使用 GameObject 菜单完�
 * 🚚 `RenderCamera` 被移动到了 `FrameSource` GameObject 上
 * 🔧 AR session 中的 `Camera` 会由 `FrameSource` 在运行时进行选择
 * 🔧 `MotionTrackerFrameSource` 默认会尝试从服务器更新设备支持列表，超时时间为 2s
-* ✨ `ARCoreFrameSource` &amp; `ARKitFrameSource` 获得了可以控制自动对焦开关的能力
+* ✨ `ARCoreFrameSource` & `ARKitFrameSource` 获得了可以控制自动对焦开关的能力
 * ✨ 优化 AR session 工作量和接口
 * ✨ 添加 `ARComponentPicker` 组件来在运行时挑选可用的 frame source 及其它组件
 * ✨ 添加 `ARSession.AvailableCenterMode` 以查询在一个 session 中所有可用的中心模式
 * ✨ 添加 `ARSession.Origin` 以获取在运动跟踪功能在运行时，相机运动的相对物体
 * ✨ 添加 `ARSession.TrackingStatus` 以获取设备运动跟踪质量
-* ✨ 添加 `ARSession.State` &amp; `ARSession.StateChanged` 以查询 ARSession 的状态
+* ✨ 添加 `ARSession.State` & `ARSession.StateChanged` 以查询 ARSession 的状态
 * ✨ 优化中心模式处理
 * 🔧 一个 session 中可用的中心模式将由运行时选择的 frame source 来决定
 * 🔧 空间地图可用在所有中心模式下使用
 * 🔥 删除 `ARCenterMode.ExternalControl`，其功能被 `FrameSource.IsCameraUnderControl` == `false` 所替代
 * 🚚 重命名 `ARCenterMode.WorldRoot` 为 `ARCenterMode.SessionOrigin`
 * ✨ 优化初始化过程，尤其是首次使用体验
-* ✨ 添加 `EasyARController.Initialize` &amp; `EasyARController.Deinitialize` 接口以在启动后支持手动初始化
+* ✨ 添加 `EasyARController.Initialize` & `EasyARController.Deinitialize` 接口以在启动后支持手动初始化
 * 🔧 如果 EasyAR 库文件未加载成功，会由错误提示
 * 🔧 改善许可证校验失败的弹出信息
 * ✨ 优化构建过程，尤其是首次使用体验

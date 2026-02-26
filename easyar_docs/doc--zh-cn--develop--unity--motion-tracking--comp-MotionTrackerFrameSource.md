@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/motion-tracking/comp-MotionTrackerFrameSource.html
+original_file: doc--zh-cn--develop--unity--motion-tracking--comp-MotionTrackerFrameSource.md
+normalized_at: 2026-02-27
 ---
-
-MotionTrackerFrameSource 组件参考 | EasyAR 文档
-**
-##### Table of Contents
-**
 # MotionTrackerFrameSource 组件参考
 >
 [> 切换到 API

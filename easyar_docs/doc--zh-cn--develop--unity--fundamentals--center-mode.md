@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/center-mode.html
+original_file: doc--zh-cn--develop--unity--fundamentals--center-mode.md
+normalized_at: 2026-02-27
 ---
-
-AR Session 的中心模式 | EasyAR 文档
-**
-##### Table of Contents
-**
 # AR Session 的中心模式
 中心模式是 Unity AR 的核心概念，它决定了 session 在运行过程中选择哪个物体作为所有 AR 跟踪的参考点（中心物体），以及 session 中哪些物体可以随意移动。通过以下内容，您将了解中心模式的基本概念及其对场景中物体运动行为的影响。
 ## 开始之前
@@ -34,11 +31,11 @@ session 中的 XR Origin 和 target 都受 session 控制，以中心摄像机�
 >
 > 示意图中有三个物体，蓝色球体代表 XR Origin，蓝色锥体标代表摄像机，黄色图片代表 target。在不同的中心模式下，session 会选择不同的物体作为中心物体，图中显示了对应物体的局部坐标系。
 >
-##### 提示
+> **提示**
 如果您有使用 AR Foundation 的使用经验，可能会注意到 AR Foundation 中并不存在类似的概念。实际上，AR Foundation 的行为模式与 [SessionOrigin](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_SessionOrigin) 中心模式是一致的。
 在 session 中，`target` 和 `camera` 的相对运动关系由当前 session 控制。`XR Origin` 和 `camera` 的相对运动关系，由当前 session 控制或者第三方框架（比如 AR Foundation）控制。中心模式的存在保证了在不同的运行环境下，session 都能正确地控制场景中物体的运动行为。
 比如，如果 AR Foundation 或基于 Unity XR 的头显 SDK 控制了 `XR Origin` 和 `camera` 的相对运动关系，`XR Origin` 作为 Unity XR 框架的设计，是可以由 session 控制移动的，而 `camera` 则不行。这时 session 会限制中心模式为 [FirstTarget](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_FirstTarget) 、 [SpecificTarget](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_SpecificTarget) 或 [SessionOrigin](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_SessionOrigin)，这样对于 session 来说，中心会是 `XR Origin` 或某个 `target`，而对于 Unity XR 框架来说，中心仍然是 `XR Origin`，整个系统可以完美工作。
-##### 警告
+> **警告**
 在 Unity AR 中，任何存在于 Unity 世界坐标系下且未根据 session 组件调整 transform 的物体都可能无法正确显示。因为 session 会根据中心物体的位置和朝向来调整场景中其它物体的位置和朝向，如果有物体不受 session 控制，它们的位置和朝向就可能与 session 计算出来的位置和朝向不一致，从而导致不可预期的行为。
 比如，如果世界坐标系下放置了一个熊猫模型，这个熊猫模型的位置和朝向就可能与现实世界中任何物体都没有对应关系，看上去像是浮在空中或者到处乱动。
 正确的做法是始终把要显示的内容放在某个 `target` 节点下，或者放在 `XR Origin` 节点下（如果内容需要跟随 XR Origin 运动）。这样内容的位置和朝向就会根据 session 的计算结果进行调整，从而确保内容能够正确地叠加在现实世界中。
@@ -90,13 +87,13 @@ session 中的 XR Origin 和 target 都受 session 控制，以中心摄像机�
 > 在现实世界中，有两个不同类型的可跟踪物体：
 >
 >
-* > 一个是
-**> 圣诞树
-**> ，它是静止不动的。它是通过稀疏空间地图功能进行跟踪的。
+> 一个是
+> 圣诞树
+> ，它是静止不动的。它是通过稀疏空间地图功能进行跟踪的。
 >
-* > 另一个是一张
-**> A4 纸
-**> ，纸上事先打印好了一张图片，它是可以移动的。它是通过图像跟踪功能进行跟踪的。
+> 另一个是一张
+> A4 纸
+> ，纸上事先打印好了一张图片，它是可以移动的。它是通过图像跟踪功能进行跟踪的。
 >
 >
 > 录制视频时，观察者（手机）从圣诞树的右后方开始，绕着圣诞树移动。A4 纸在观察者前方左右摆动。
@@ -105,25 +102,25 @@ session 中的 XR Origin 和 target 都受 session 控制，以中心摄像机�
 >
 >
 * **> 圣诞树
-**> ：处于跟踪状态时在其所占据的空间叠加了
-**> 亮蓝色点云
-**> 。跟踪丢失时这些标识会消失。
+> ：处于跟踪状态时在其所占据的空间叠加了
+> 亮蓝色点云
+> 。跟踪丢失时这些标识会消失。
 >
 * **> A4 纸
-**> ：处于跟踪状态时在其正上方叠加了一个
-**> 熊猫
-**> 。
+> ：处于跟踪状态时在其正上方叠加了一个
+> 熊猫
+> 。
 `> Game
 `> 视图中还额外显示了一个与 A4 纸内容和大小完全相同的图片。跟踪丢失时这些标识会消失。
 >
 * **> XR Origin
-**> ：在其位置放置了一个
-**> 蓝色球体
-**>
+> ：在其位置放置了一个
+> 蓝色球体
+>
 * **> 摄像机
-**> ：在其位置放置了一个
-**> 蓝色锥体
-**> ，锥体的主轴与摄像机的视线方向一致。
+> ：在其位置放置了一个
+> 蓝色锥体
+> ，锥体的主轴与摄像机的视线方向一致。
 >
 >
 这些视频均是使用模拟运行数据，在 Unity 编辑器的 `Play` 模式录制的。视频左边是 `Scene` 视图，右边是 `Game` 视图。`Game` 视图的内容与用户在现实世界中手机看到的内容是一样的。

@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/mega/content-realworld-alignment.html
+original_file: doc--zh-cn--develop--unity--mega--content-realworld-alignment.md
+normalized_at: 2026-02-27
 ---
-
-如何使用 Mega Studio 创建与实景精确对齐的 3D 内容 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 如何使用 Mega Studio 创建与实景精确对齐的 3D 内容
 这篇文档将介绍如何使用 Unity 上的 Mega Studio 将虚拟物体准确地摆放在现实空间的某个位置，在 AR 体验中与现实空间精确对齐。
 ## 开始之前
@@ -26,7 +23,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/mega/content-realworld-ali
 ![全景编辑](https://doc-asset.easyar.com/develop/wechat/mega/media/content-annotation-creation15.png)
 ## 如果加载的 Block 模型不水平怎么办
 在 **Hierarchy** 面板中选择 **Block Root** ，在 **Inspector** 面板中修改 **Rotation** 直到稠密模型的朝向朝向在 Unity 编辑器中看起来正确。
-##### 重要事项
+> **重要事项**
 Block Root 是在 3D 引擎场景节点树上所有 Block 节点的父节点。
 Block Root 在世界坐标系下的 Transform **不会**影响 Block 的**本地坐标系**，也因此**不会影响作为 Block 子节点 3D 内容的渲染结果**。它的 Transform 和最终的显示效果**无关**。
 ## 如果加载的 Block 模型有破碎，缺损的部分怎么办

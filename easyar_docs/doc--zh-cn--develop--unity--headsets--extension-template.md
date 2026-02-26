@@ -1,17 +1,14 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/extension-template.html
+original_file: doc--zh-cn--develop--unity--headsets--extension-template.md
+normalized_at: 2026-02-27
 ---
-
-头显扩展包模板简介 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 头显扩展包模板简介
 `com.easyar.sense.ext.hmdtemplate` package 是为头显扩展开发提供的示例和模板。它是一个 SDK 的实现，并且包含了给应用开发者的示例。
 ## 模板内容
 这个 package 的包结构遵循了 [Unity 推荐的文件布局](https://docs.unity3d.com/Manual/cus-layout.html)：
 ```
-`.
+.
 ├── CHANGELOG.md
 ├── Documentation\~
 ├── Editor
@@ -20,7 +17,6 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/extension-templat
 ├── Runtime
 └── Samples\~
 └── Combination\_BasedOn\_HMD
-`
 ```
 其中一些比较重要的内容如下：
 * **Runtime**：存放运行时平台资产的文件夹。这是模板中最重要的文件夹。
@@ -30,14 +26,14 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/extension-templat
 ## 模板示例的创建过程
 1. [添加 AR Session](../fundamentals/session-creation.html)
 在 `Hierarchy` 视图中：
-* 在 **空白** 处点击右键，通过菜单 `EasyAR Sense` &gt; `Mega` &gt; `AR Session (Mega Block Default Preset)` 添加 [ARSession](../../../api/unity/easyar.ARSession.html)。
-* 选中 **AR Session (EasyAR)** 并点击右键，通过菜单 `EasyAR Sense` &gt; `Image Tracking` &gt; `Frame Filter : Image Tracker` 添加一个 [ImageTrackerFrameFilter](../../../api/unity/easyar.ImageTrackerFrameFilter.html) 到 session 中。
-* 选中 **AR Session (EasyAR)** 并点击右键，通过菜单 `EasyAR Sense` &gt; `SpatialMap` &gt; `Frame Filter : Dense SpatialMap Builder` 添加一个 [DenseSpatialMapBuilderFrameFilter](../../../api/unity/easyar.DenseSpatialMapBuilderFrameFilter.html) 到 session 中。
-* 选中 **AR Session (EasyAR)** 并点击右键，通过菜单 `EasyAR Sense` &gt; `SpatialMap` &gt; `Frame Filter : Sparse SpatialMap Builder` 添加一个 [SparseSpatialMapBuilderFrameFilter](../../../api/unity/easyar.SparseSpatialMapBuilderFrameFilter.html) 到 session 中。
-* 选中 **AR Session (EasyAR)** 并点击右键，通过菜单 `EasyAR Sense` &gt; `Extensions` &gt; `Frame Source : HMD Template (keep it only)` 添加并仅保留 HMD Template 这一个 [FrameSource](../../../api/unity/easyar.FrameSource.html)。
+* 在 **空白** 处点击右键，通过菜单 `EasyAR Sense` > `Mega` > `AR Session (Mega Block Default Preset)` 添加 [ARSession](../../../api/unity/easyar.ARSession.html)。
+* 选中 **AR Session (EasyAR)** 并点击右键，通过菜单 `EasyAR Sense` > `Image Tracking` > `Frame Filter : Image Tracker` 添加一个 [ImageTrackerFrameFilter](../../../api/unity/easyar.ImageTrackerFrameFilter.html) 到 session 中。
+* 选中 **AR Session (EasyAR)** 并点击右键，通过菜单 `EasyAR Sense` > `SpatialMap` > `Frame Filter : Dense SpatialMap Builder` 添加一个 [DenseSpatialMapBuilderFrameFilter](../../../api/unity/easyar.DenseSpatialMapBuilderFrameFilter.html) 到 session 中。
+* 选中 **AR Session (EasyAR)** 并点击右键，通过菜单 `EasyAR Sense` > `SpatialMap` > `Frame Filter : Sparse SpatialMap Builder` 添加一个 [SparseSpatialMapBuilderFrameFilter](../../../api/unity/easyar.SparseSpatialMapBuilderFrameFilter.html) 到 session 中。
+* 选中 **AR Session (EasyAR)** 并点击右键，通过菜单 `EasyAR Sense` > `Extensions` > `Frame Source : HMD Template (keep it only)` 添加并仅保留 HMD Template 这一个 [FrameSource](../../../api/unity/easyar.FrameSource.html)。
 ![alt text](https://doc-asset.easyar.com/develop/unity/headsets/media/template-session.png)
 * 添加 [ImageTargetController](../../../api/unity/easyar.ImageTargetController.html)
-在 `Hierarchy` 视图中，在 **空白** 处点击右键，通过菜单 `EasyAR Sense` &gt; `Image Tracking` &gt; `Target : Image Target` 添加一个 [ImageTargetController](../../../api/unity/easyar.ImageTargetController.html) 到 session 中。
+在 `Hierarchy` 视图中，在 **空白** 处点击右键，通过菜单 `EasyAR Sense` > `Image Tracking` > `Target : Image Target` 添加一个 [ImageTargetController](../../../api/unity/easyar.ImageTargetController.html) 到 session 中。
 配置 [ImageTargetController](../../../api/unity/easyar.ImageTargetController.html)：
 ![alt text](https://doc-asset.easyar.com/develop/unity/headsets/media/template-image-target.png)
 在完成上述配置之后，`Scene` 视图中显示的图像是 gizmo。这个示例中通过一个 quad 来显示同一图像的虚拟物体。

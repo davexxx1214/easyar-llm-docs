@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/developer-mode.html
+original_file: doc--zh-cn--develop--unity--diagnostics--developer-mode.md
+normalized_at: 2026-02-27
 ---
-
-开发者模式 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 开发者模式
 开发者模式用于设定是否启用运行时诊断面板。诊断面板可用于切换调试信息是否显示以及录制 EIF、EED 文件。
 ![diagnostics developer mode 1](https://doc-asset.easyar.com/develop/unity/getting-started/media/diagnostics-devmode.png)
@@ -29,10 +26,9 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/developer-mode
 可以通过设置 [DiagnosticsController.DeveloperModeSwitch](../../../api/unity/easyar.DiagnosticsController.html#u_easyar_DiagnosticsController_DeveloperModeSwitch) 为 [Custom](../../../api/unity/easyar.DiagnosticsController.DeveloperModeSwitchType.html#u_easyar_DiagnosticsController_DeveloperModeSwitchType_Custom) 并且不修改 [CustomDeveloperModeSwitch](../../../api/unity/easyar.DiagnosticsController.html#u_easyar_DiagnosticsController_CustomDeveloperModeSwitch) 来禁止开启开发者模式。
 比如，下面的代码展示了如何在脚本中禁止开启开发者模式：
 ```
-`Session.Diagnostics.DeveloperModeSwitch = DiagnosticsController.DeveloperModeSwitchType.Custom;
-`
+Session.Diagnostics.DeveloperModeSwitch = DiagnosticsController.DeveloperModeSwitchType.Custom;
 ```
-##### 提示
+> **提示**
 * 建议在开发和测试阶段使用默认配置 [Default](../../../api/unity/easyar.DiagnosticsController.DeveloperModeSwitchType.html#u_easyar_DiagnosticsController_DeveloperModeSwitchType_Default)。
 * 建议在发布上线阶段使用配置 [Default](../../../api/unity/easyar.DiagnosticsController.DeveloperModeSwitchType.html#u_easyar_DiagnosticsController_DeveloperModeSwitchType_Default) 或 [Custom](../../../api/unity/easyar.DiagnosticsController.DeveloperModeSwitchType.html#u_easyar_DiagnosticsController_DeveloperModeSwitchType_Custom)。
 * 建议在使用 [Custom](../../../api/unity/easyar.DiagnosticsController.DeveloperModeSwitchType.html#u_easyar_DiagnosticsController_DeveloperModeSwitchType_Custom) 模式时，修改 [CustomDeveloperModeSwitch](../../../api/unity/easyar.DiagnosticsController.html#u_easyar_DiagnosticsController_CustomDeveloperModeSwitch) 以提供其它方式启用诊断面板，或提供其他自定义的方式收集运行时数据。

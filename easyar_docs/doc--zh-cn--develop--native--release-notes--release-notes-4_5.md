@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-4_5.html
+original_file: doc--zh-cn--develop--native--release-notes--release-notes-4_5.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Sense 4.5 发行说明 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Sense 4.5 发行说明
 ## 4.5.0
 2022-03-04

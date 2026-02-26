@@ -1,16 +1,13 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management.html
+original_file: doc--zh-cn--develop--cloud-recognition--management.md
+normalized_at: 2026-02-27
 ---
-
-目标图像管理 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 目标图像管理
 目标图像（Targets）可以通过以下两种方式进行管理：
 * **可视化管理**：登录 EasyAR 开发中心进行手动维护。
 * **API 自动化管理**：通过调用 **Web Service REST API** 集成到自有业务系统或管理后台中。
-##### 重要事项
+> **重要事项**
 云识别服务中，目标图管理和图像识别是两个不同需求，API 对应两个不同的 Cloud URL 入口。
 ### 数据中心区域选择
 图库运行示例所在的数据中心支持以下区域选择：
@@ -31,24 +28,24 @@ source: https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management.htm
 * Cloud URL
 * Server-end URL：目标图像管理 URL 地址，https 使用 443 端口
 * Client-end URL：图像识别服务 URL 地址，https 使用 8443 端口
-##### 重要事项
+> **重要事项**
 **端口区分说明**：目标管理 API 入口（443）与移动端/Unity 调用的云识别 API 入口（8443）是两个不同的通道，配置时请务必区分。
 ### 清单各项如何获取
 * CRS AppId 查看方式：
-开发中心 -&gt; 云识别管理 -&gt; 选择图库 -&gt; 管理 -&gt; 密钥
+开发中心 -> 云识别管理 -> 选择图库 -> 管理 -> 密钥
 ![m1-appid](https://doc-asset.easyar.com/develop/cloud-recognition/media/m1-crs-appid.png)
 * API Key / API Secret 查看方式：
-开发中心 -&gt; 云服务 APIKey -&gt; 复制
+开发中心 -> 云服务 APIKey -> 复制
 ![m1-apikey](https://doc-asset.easyar.com/develop/cloud-recognition/media/m1-apikey.png)
 如您还没有 API Key，创建 APIKey，必须选中云识别（CRS） 权限。进一步了解 API Key 以及权限控制，参考主题[API Key 简介](../apikey.html)
 ![m1-apikey-cr](https://doc-asset.easyar.com/develop/cloud-recognition/media/m1-apikey-create.png)
 * Token 查看方式：
-开发中心 -&gt; 云服务 APIKey -&gt; 管理 -&gt; 选择有效期 -&gt; 生成 Token -&gt; 复制
+开发中心 -> 云服务 APIKey -> 管理 -> 选择有效期 -> 生成 Token -> 复制
 ![m1-token](https://doc-asset.easyar.com/develop/cloud-recognition/media/m1-token.png)
 若您需要自定义 Token 的有效期，可以参考 [UAC API —— 创建 Token](../apikey-auth.html) 方式，使用原始 APIKey 和 APISecret 来创建 Token
 * Cloud URL 查看方式：
 图库中目标图管理使用的是 Server-end URL 443 端口，Server-end URL
-开发中心 -&gt; 云识别管理 -&gt; 选择图库 -&gt; 管理 -&gt; 密钥 -&gt; 图库管理
+开发中心 -> 云识别管理 -> 选择图库 -> 管理 -> 密钥 -> 图库管理
 ![m1-server-url](https://doc-asset.easyar.com/develop/cloud-recognition/media/m1-server-url.png)
 ### 多端集成指引
 在实际工作流中，目标图管理通常集成在开发者的业务服务器里，或者移动端或者 Unity 里：
@@ -63,5 +60,5 @@ source: https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management.htm
 **下一主题：**
 * [图像识别难度评估](management-grading.html)
 * [创建目标图像](management-adding.html)
-##### 注意
+> **注意**
 实际工作流中，创建目标图像建议遵循最佳实现，建议认真阅读。

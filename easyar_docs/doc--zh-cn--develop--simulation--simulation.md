@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/simulation/simulation.html
+original_file: doc--zh-cn--develop--simulation--simulation.md
+normalized_at: 2026-02-27
 ---
-
-录制 EIF 文件并用于模拟运行 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 录制 EIF 文件并用于模拟运行
 **EIF 文件（EasyAR Input Frame file）** 是 EasyAR Sense 用来存储一系列输入帧数据的文件格式。本文主要描述如何录制 EIF 文件并用于模拟运行。
 ## EIF 文件和内容
@@ -14,7 +11,7 @@ EIF 文件根据不同的录制方式，存在两个实现：
 原始的 EIF 文件以 EasyAR 内部定义的数据结构逐帧存储输入帧数据，包括图像和附加信息（如 camera 参数和跟踪状态等）。这种格式不做视频压缩，而是逐帧编码（例如 JPEG 图像数据），适合精确回放。
 * EIF MKV 格式（通常扩展名为.mkveif）
 基于 MKV 封装的视频格式，在此基础上将输入帧的信息编码进 MKV 容器。视频编码使用 H.264 来压缩图像数据，同时保留输入帧其他元数据（如 IMU 传感器数据、定位数据等）作为流或附加轨道。这样可以显著减少文件体积，并便于标准视频流处理。
-##### 注意
+> **注意**
 EIF MKV 格式目前只支持 Android/iOS/macOS/visionOS 上的录制和 Windows/macOS 上的回放，传统 EIF 格式无此限制。
 ## EIF 录制和回放
 EasyAR 提供了录制和回放的一整套机制，主要通过以下组件控制：

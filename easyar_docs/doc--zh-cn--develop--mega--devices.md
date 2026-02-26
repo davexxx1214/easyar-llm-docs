@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/mega/devices.html
+original_file: doc--zh-cn--develop--mega--devices.md
+normalized_at: 2026-02-27
 ---
-
-支持的设备和平台应用 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 支持的设备和平台应用
 EasyAR Mega 旨在提供跨平台的、一致的空间计算体验。为了实现这一目标，我们对不同的设备和平台提供了专门的支持。本章将详细说明 Mega 可以在哪些设备和平台上运行，以及不同设备所能提供的体验区别。
 ## 设备、平台支持概览
@@ -37,16 +34,16 @@ Mega 云定位具备广泛的接入能力，支持各类能获取摄像头图像
 • Huawei AR Engine
 • EasyAR Motion Tracker
 |**最佳**，完整的终端融合跟踪能力，可以应对用户的各种运动模式|
-##### 注意
+> **注意**
 对于 Apple 设备，是否支持 ARKit 请参考：[ARKit 验证设备支持](https://developer.apple.com/cn/documentation/arkit/verifying_device_support_and_user_permission/)。
 对于 Android 设备，是否支持 ARCore 请参考：[支持 ARCore 的设备](https://developers.google.cn/ar/devices)。
 对于华为设备，是否支持 AR Engine 请参考：[AR Engine 运动跟踪支持的设备](../motion-tracking/devices-arengine.html)。
 对于其他设备，是否支持 EasyAR Motion Tracker 请参考：[EasyAR 运动跟踪支持的设备](../motion-tracking/devices-easyar.html)。
 对于 XR 头显设备，目前支持集成 Mega 功能的设备均具备完整的 6DoF 能力。
-##### 重要事项
+> **重要事项**
 为了保证良好的用户体验，对于使用 EasyAR Motion Tracker 的设备，Mega 功能在运行前会进行自检。具体地，程序会判断 `MotionTrackerCameraDeviceQualityLevel` 的状态：
 * ≥ `Limited`：默认 6DoF，可以手动降级成 5DoF、3DoF、0DoF
-* &lt; `Limited`：默认 5DoF，可以手动降级成 3DoF、0DoF
+* < `Limited`：默认 5DoF，可以手动降级成 3DoF、0DoF
 相关概念请参考文档：[运动跟踪简介](../motion-tracking/intro.html)。
 ## 微信小程序的额外说明
 在微信小程序内集成 Mega，对设备的要求与原生 或 Unity 开发有所不同。

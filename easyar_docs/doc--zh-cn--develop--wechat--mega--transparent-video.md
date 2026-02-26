@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/transparent-video.html
+original_file: doc--zh-cn--develop--wechat--mega--transparent-video.md
+normalized_at: 2026-02-27
 ---
-
-在 xr-frame 微信小程序上播放透明视频 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 在 xr-frame 微信小程序上播放透明视频
 ## 开始之前
 * 准备需要播放的透明视频：将透明视频上传至文件服务器并获取用于在 xr-frame 中加载的 URL。
@@ -22,7 +19,7 @@ Top-by-Bottom 是一种将 RGB 颜色帧与 Alpha 遮罩帧在**垂直方向**�
 ## 在 xr-frame 小程序上标注位置播放透明视频
 首先加载类型为 `video-texture` 的视频资源。
 ```
-`async loadAsset() {
+async loadAsset() {
 const videoTexture = {
 assetId: "fireball",
 type: "video-texture",
@@ -40,22 +37,21 @@ await scene.assets.loadAsset(videoTexture);
 console.error(`Failed to load video texture: ${err.message}`);
 }
 }
-`
 ```
 在 EMA 加载的回调中使用 `scene.createElement(xrFrameSystem.XRMesh,{})` 创建简单的几何体赋予 `easyar-video-tsbs` 材质， 并修改 `uniform` 为 `u\_baseColorMap:video-{$assetId}`。
-##### 注意
+> **注意**
 `easyar-video-tsbs` 和 `easyar-video-ttbb` 材质的加载，注册，反注册，卸载由 AR Session 控制。
 ```
-`handleEmaResult(ema: easyar.ema.v0\_5.Ema) {
+handleEmaResult(ema: easyar.ema.v0\_5.Ema) {
 const blockHolder: easyar.BlockHolder = session.blockHolder;
-ema.blocks.forEach(emaBlock =&gt; {
+ema.blocks.forEach(emaBlock => {
 const blockInfo: easyar.BlockInfo = {
 id: emaBlock.id
 };
 // 若 Block 节点不存在，创建 Block 节点
 blockHolder.holdBlock(blockInfo, easyarPlugin.toXRFrame(emaBlock.transform));
 });
-ema.annotations.forEach(annotation =&gt; {
+ema.annotations.forEach(annotation => {
 if (annotation.type !== mega.EmaV05AnnotationType.Node) {
 return;
 }
@@ -76,9 +72,8 @@ xrNode.addChild(model);
 }
 });
 }
-`
 ```
-##### 注意
+> **注意**
 在使用 `video-texture` 时，若控制台出现 `wx.createVideoDecoder with type: 'wemedia' is deprecated` 警告，请忽略。
 经与微信官方团队确认，该警告不影响使用。
 ## 后续步骤

@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/motion-tracking/comparison.html
+original_file: doc--zh-cn--develop--motion-tracking--comparison.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR 运动跟踪与 ARKit/ARCore/华为 AR Engine 的关系 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR 运动跟踪与 ARKit/ARCore/华为 AR Engine 的关系
 EasyAR 的运动跟踪（Motion Tracker）利用计算机视觉和惯性同步定位和建图（VI-SLAM）技术，在更多的手机和平板上实现六自由度（6 Degrees of Freedom, 6DoF）的实时跟踪功能。
 ## 为什么选择使用 EasyAR 运动跟踪

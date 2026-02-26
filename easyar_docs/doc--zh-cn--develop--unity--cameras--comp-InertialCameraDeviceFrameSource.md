@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/comp-InertialCameraDeviceFrameSource.html
+original_file: doc--zh-cn--develop--unity--cameras--comp-InertialCameraDeviceFrameSource.md
+normalized_at: 2026-02-27
 ---
-
-InertialCameraDeviceFrameSource 组件参考 | EasyAR 文档
-**
-##### Table of Contents
-**
 # InertialCameraDeviceFrameSource 组件参考
 >
 [> 切换到 API

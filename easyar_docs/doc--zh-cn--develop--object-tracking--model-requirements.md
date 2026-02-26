@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/object-tracking/model-requirements.html
+original_file: doc--zh-cn--develop--object-tracking--model-requirements.md
+normalized_at: 2026-02-27
 ---
-
-3D 模型准备与优化 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 3D 模型准备与优化
 本文将详细讲解如何准备符合 EasyAR 要求的 3D 模型，涵盖格式规范、工具推荐及常见问题排查，帮助开发者从源头提升跟踪成功率。
 ## 模型格式与规范
@@ -44,7 +41,7 @@ EasyAR 3D 物体跟踪仅支持 **Wavefront OBJ** 格式。使用时需遵循以
 使用 **Autodesk Maya / 3ds Max** 等建模工具创建/绘制 3D 模型并输出为 OBJ 格式。
 3. 扫描真实物体并进行 3D 重建
 使用 **Autodesk ReCap**、**Bentley ContextCapture** 等三维扫描建模软件，或者激光扫描仪对真实物体进行 3D 重建，并将重建结果导出为 OBJ 格式。
-##### 重要事项
+> **重要事项**
 模型贴图必须准确还原真实物体的视觉特征，否则识别与跟踪功能将无法正常工作。
 ## 模型最佳实践
 以下列出一些常见的在准备模型时会遇到的问题和例子，供您快速参考以便检查。

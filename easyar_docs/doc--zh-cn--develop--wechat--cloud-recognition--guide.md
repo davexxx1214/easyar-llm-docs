@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/cloud-recognition/guide.html
+original_file: doc--zh-cn--develop--wechat--cloud-recognition--guide.md
+normalized_at: 2026-02-27
 ---
-
-图像云识别微信小程序开发者指南 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 图像云识别微信小程序开发者指南
 本章主要介绍 EasyAR 云识别和微信小程序结合的常用功能以及实现方法。
 ## 功能和使用
@@ -13,10 +10,9 @@ source: https://www.easyar.cn/doc/zh-cn/develop/wechat/cloud-recognition/guide.h
 EasyAR 云识别（CRS）服务专注于海量图像库的以图搜图场景，通过云端算法实现高效目标识别，具有高性价比和低接入门槛的特点，开发者可快速集成并完成功能开发。
 ### 数据流
 ```
-`flowchart TB
-B[API 或者 EasyAR Web] --&gt; A[云识别 CRS] &lt;--&gt; D[设备端 微信小程序]
-C[虚拟内容] &lt;--&gt; D[设备端 微信小程序]
-`
+flowchart TB
+B[API 或者 EasyAR Web] --> A[云识别 CRS] <--> D[设备端 微信小程序]
+C[虚拟内容] <--> D[设备端 微信小程序]
 ```
 XR-FRAME 和云识别两者结合以后，本地设备将不再受目标图数量的限制，可以解决应用对超大范围的需求。
 ### 实现流程

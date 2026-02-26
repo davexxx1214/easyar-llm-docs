@@ -1,16 +1,13 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/diagnostics/log-ios.html
+original_file: doc--zh-cn--develop--diagnostics--log-ios.md
+normalized_at: 2026-02-27
 ---
-
-iOS/macOS/visionOS 上的日志分析 | EasyAR 文档
-**
-##### Table of Contents
-**
 # iOS/macOS/visionOS 上的日志分析
 关于 原生(iOS/macOS) 、 Unity(iOS/macOS/visionOS) 和 Unity 编辑器(macOS) 上的日志，可参考如下说明。
 ## 日志获取方法
 如果需要分析 iOS/visionOS 设备上的应用，则使用USB线将设备与 macOS 开发设备连接。如果需要分析 macOS 设备上的应用或程序，则这一步无需操作。
-在 macOS 开发设备上，打开 `Finder -&gt; Applications -&gt; Utilities -&gt; Console`。在 Console 中点击 `Start streaming`，然后运行需要分析的程序。打开应用或程序，直到 Console 中出现日志，在该日志上点右键，选择 `Show Process "&lt;应用名&gt;"`，即可查看该应用或程序进程的所有日志。
+在 macOS 开发设备上，打开 `Finder -> Applications -> Utilities -> Console`。在 Console 中点击 `Start streaming`，然后运行需要分析的程序。打开应用或程序，直到 Console 中出现日志，在该日志上点右键，选择 `Show Process "<应用名>"`，即可查看该应用或程序进程的所有日志。
 以下为一个例子。
 ![log macOS](https://doc-asset.easyar.com/develop/diagnostics/media/diagnostics-log-macos.png)
 按 `Cmd + A` 选中所有日志，然后按 `Cmd + C`，可将日志复制到剪贴板。

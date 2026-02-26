@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/headsets.html
+original_file: doc--zh-cn--develop--unity--headsets--headsets.md
+normalized_at: 2026-02-27
 ---
-
-Unity 中的 EasyAR 头显支持 | EasyAR 文档
-**
-##### Table of Contents
-**
 # Unity 中的 EasyAR 头显支持
 本文档介绍了在 Unity 中 EasyAR 头显支持的整体架构和注意事项。
 ## 开始之前
@@ -15,21 +12,21 @@ EasyAR 在 Unity 中支持头显的方式比较灵活，常见有两种方式：
 * 内置支持：通常在 EasyAR Sense 库中直接对接设备 SDK，并在 Unity 中提供对应的接口 （比如 Apple Vision Pro）
 * 扩展支持：通过 Unity 头显扩展包对接设备 SDK （比如 Pico）
 ```
-`block
+block
 columns 4
 block:groupApp:4
 block:groupAppWrapper
 space
-App1["EasyAR + Device A&lt;br&gt;App"]
+App1["EasyAR + Device A<br>App"]
 space
-App2["EasyAR&lt;br&gt;App"]
+App2["EasyAR<br>App"]
 space
-App3["EasyAR + Device B&lt;br&gt;App"]
+App3["EasyAR + Device B<br>App"]
 end
 end
 block:groupSensePluginExtension
 columns 1
-SensePluginExtension["EasyAR Sense Unity Plugin&lt;br&gt;Extension for Device A"]
+SensePluginExtension["EasyAR Sense Unity Plugin<br>Extension for Device A"]
 space
 end
 block:groupSensePlugin
@@ -49,14 +46,14 @@ space
 end
 block:groupDeviceAUnity
 columns 1
-DeviceAUnity["Device A&lt;br&gt;Unity SDK"]
+DeviceAUnity["Device A<br>Unity SDK"]
 space
 end
 block:groupSense
 columns 1
 Sense["EasyAR Sense"]
 block:groupSenseWrapper
-MDeviceB["Device B&lt;br&gt;CameraDevice"]
+MDeviceB["Device B<br>CameraDevice"]
 Others["..."]
 end
 end
@@ -70,29 +67,29 @@ columns 1
 System["Native Library"]
 block:groupSystemWrapper
 space
-DeviceA["Device A&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Library&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;"]
+DeviceA["Device A<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Library&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]
 space
 space
-DeviceB["Device B&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Library&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;"]
+DeviceB["Device B<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Library&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]
 space
 end
 end
-SensePluginExtension --&gt; App1
-SensePlugin --&gt; App1
-SensePlugin --&gt; App2
-SensePlugin --&gt; App3
-ARF --&gt; App3
-XRI --&gt; App1
-XRI --&gt; App3
-groupSense --&gt; SensePlugin
-groupDeviceAUnity --&gt; SensePluginExtension
-SensePlugin --&gt; SensePluginExtension
-DeviceA --&gt; groupDeviceAUnity
-DeviceA --&gt; XRSDK
-XRSubsystem --&gt; ARF
-XRSubsystem --&gt; XRI
-DeviceB --&gt; MDeviceB
-DeviceB --&gt; XRSDK
+SensePluginExtension --> App1
+SensePlugin --> App1
+SensePlugin --> App2
+SensePlugin --> App3
+ARF --> App3
+XRI --> App1
+XRI --> App3
+groupSense --> SensePlugin
+groupDeviceAUnity --> SensePluginExtension
+SensePlugin --> SensePluginExtension
+DeviceA --> groupDeviceAUnity
+DeviceA --> XRSDK
+XRSubsystem --> ARF
+XRSubsystem --> XRI
+DeviceB --> MDeviceB
+DeviceB --> XRSDK
 style groupApp fill:none,stroke:none,stroke-width:0px
 style groupAppWrapper fill:none,stroke:none,stroke-width:0px
 style groupSensePlugin fill:none,stroke:none,stroke-width:0px
@@ -113,27 +110,26 @@ classDef Device fill:#636,stroke:#333,color:#fff
 class groupDeviceAUnity Device
 class DeviceB Device
 class DeviceA Device
-`
 ```
 >
 > 图中：
 >
 >
-* > 设备 A 属于扩展支持
+> 设备 A 属于扩展支持
 >
 > 实践中设备 A 通常会有对应的 Unity SDK，用于对接 Unity XR SDK 或者独立实现头显渲染能力。
 >
 > 设备 A 的头显扩展包负责将 EasyAR Sense Unity Plugin 和设备 A 的 Unity SDK 对接起来，从而实现 EasyAR 在设备 A 上的运行。这个支持包可能由 EasyAR 提供，也可能由设备厂商提供。
 >
 >
-* > 设备 B 属于内置支持
+> 设备 B 属于内置支持
 >
 > 实践中设备 B 可能有也可能没有对应的 Unity SDK，取决于设备厂商的实现。比如 Apple Vision Pro 没有对应的 Unity SDK，XREAL 有对应的 Unity SDK。
 >
 >
 >
 内置支持和扩展支持的头显都支持使用了 [自定义相机](../../cameras/custom-camera.html)。
-##### 重要事项
+> **重要事项**
 在自定义相机或头显上使用试用产品（个人版 license、试用版 XR license 或试用版 Mega 服务等）时，EasyAR Sense 每次启动后会在 100 秒（Mega 用户可经由 EasyAR 商务在审批后调整时间长度）后停止响应。使用付费版本的 EasyAR Sense 和付费的 EasyAR Mega 服务没有这个限制。
 在 Unity 中，虚拟摄像机的渲染、投影矩阵 和 transform 等不受 EasyAR 控制，它们通常由设备 SDK 或 Unity XR SDK 控制。设备自身的功能，比如手势识别、眼动追踪等，仍然由设备及设备 SDK 提供。在使用时，通常需要同时使用 EasyAR 和设备 SDK。
 ## 后续步骤

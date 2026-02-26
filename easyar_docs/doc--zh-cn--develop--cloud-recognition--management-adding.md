@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-adding.html
+original_file: doc--zh-cn--develop--cloud-recognition--management-adding.md
+normalized_at: 2026-02-27
 ---
-
-创建目标图像 (Target) | EasyAR 文档
-**
-##### Table of Contents
-**
 # 创建目标图像 (Target)
 为了确保 AR 识别的稳定性和准确性，建议您上传纹理丰富、特征点明显且无模糊区域的图像。
 在开始集成前，请注意以下核心原则：
@@ -32,7 +29,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-add
 ## 通过 EasyAR Web 手动管理
 适用于验证阶段或维护少量目标图。Web 管理端采取“强制创建”模式，不会自动进行相似性校验，也不校验图片的可识别性。
 **操作步骤**：
-1. 登录 [EasyAR 开发中心](https://www.easyar.cn/view/login.html) -&gt; **云识别管理** -&gt; 选择图库 -&gt; 点击 **管理**。
+1. 登录 [EasyAR 开发中心](https://www.easyar.cn/view/login.html) -> **云识别管理** -> 选择图库 -> 点击 **管理**。
 2. 在界面中点击 **上传目标图**。
 ![Web 创建引导](https://doc-asset.easyar.com/develop/cloud-recognition/media/m2-web-create-target.png)
 1. **关键参数配置**：
@@ -51,8 +48,7 @@ API 接口参考 [创建目标图像 API](../../api/cloud/cloud-recognition/targ
 * **测试图片**（支持 JPEG/PNG 格式，需转为 Base64 字符串）
 * 先将本地目标图片转为 Base64（macOS / Linux），结果存入 image\_base64.txt
 ```
-`base64 -i ./target.jpg | tr -d '\\n' &gt; image\_base64.txt
-`
+base64 -i ./target.jpg | tr -d '\\n' > image\_base64.txt
 ```
 * 请替换占位符为实际参数，并运行 curl 脚本
 * Your-Server-side-URL → 实际 API Host
@@ -61,11 +57,11 @@ API 接口参考 [创建目标图像 API](../../api/cloud/cloud-recognition/targ
 * demo\_target → 目标名称
 * size → 目标图片宽度(cm)
 ```
-`curl -X POST "https://&lt;Your-Server-side-URL&gt;/targets" \\
+curl -X POST "https://<Your-Server-side-URL>/targets" \\
 -H "Content-Type: application/json" \\
--H "Authorization: &lt;YOUR-TOKEN&gt;" \\
+-H "Authorization: <YOUR-TOKEN>" \\
 -d '{
-"appId": "&lt;Your-CRS-AppId&gt;",
+"appId": "<Your-CRS-AppId>",
 "image": "'"$(cat image\_base64.txt)"'",
 "active": "1",
 "name": "demo\_target",
@@ -73,7 +69,6 @@ API 接口参考 [创建目标图像 API](../../api/cloud/cloud-recognition/targ
 "type": "ImageTarget",
 "allowSimilar": "1"
 }'
-`
 ```
 下载 Java 示例代码
 * [Java Samples Download](https://github.com/EasyAR-CRS/java-sdk)
@@ -85,7 +80,7 @@ Step 2. 修改全局变量，替换你准备清单里的认证参数
 * Server-end URL
 * IMAGE\_PATH : 待上传目标图文件
 ```
-`public class CreateTarget {
+public class CreateTarget {
 private static final String TARGET\_MGMT\_URL = "http://cn1.crs.easyar.com:8888";
 private static final String CRS\_APPID = "--here is your CRS AppId--";
 private static final String API\_KEY = "--here is your API Key--";
@@ -93,7 +88,7 @@ private static final String API\_SECRET = "--here is your API Secret--";
 private static final String IMAGE\_PATH = "test\_target\_image.jpg";
 public String create(Auth auth, String imgPath) throws IOException{
 byte[] image = Files.readAllBytes(Paths.get(imgPath));
-if(image.length &gt; Common.MAXIMUM\_SIZE) {
+if(image.length > Common.MAXIMUM\_SIZE) {
 System.err.println("maximum image size is 2MB");
 System.exit(-1);
 }
@@ -117,7 +112,6 @@ JSONObject createResponse = new JSONObject(new CreateTarget().create(accessInfo,
 System.out.println("created target: "+ createResponse.getString(Common.KEY\_TARGETID));
 }
 }
-`
 ```
 Step 3. 运行 Main
 下载 NodeJS 示例代码
@@ -126,23 +120,21 @@ Step 1. 配置密钥文件 keys.json
 * CRS AppId
 * API Key / API Secret
 ```
-`{
+{
 "appId": "--here is your appId for CRS App Instance for SDK 4--",
 "apiKey": "--here is your api key which is create from website and which has crs permission--",
 "apiSecret": "--here is your api secret which is create from website--"
 }
-`
 ```
 Step 2. 运行，指定测试图片、密钥文件以及 Server-end URL
 ```
-`node bin/addTarget test.jpeg -t &lt;Server-end-URL&gt; -c keys.json
-`
+node bin/addTarget test.jpeg -t <Server-end-URL> -c keys.json
 ```
 [可选] 目标图参数代码
 添加目标图的逻辑，修改代码文件 addTarget.js
 编辑目标图的参数，例如 meta，目标图名称等，对应 createTarget 方法里传入匿名 target 结构
 ```
-`var argv = require('yargs')
+var argv = require('yargs')
 .usage('Usage: $0 [image] -t [host] -c [keys]')
 .demand(1)
 .default('t', 'http://localhost:8888').alias('t', 'host')
@@ -169,33 +161,30 @@ console.log(resp.result.targetId);
 .fail(function(err) {
 console.log(err);
 });
-`
 ```
 createTarget 调用云服务接口，示例代码在 farmer.js
 ```
-`function createTarget(target) {
+function createTarget(target) {
 return Q.promise(function(resolve, reject) {
 request.post(host + '/targets')
 .send(signParams(target))
 .end(done(resolve, reject));
 });
 }
-`
 ```
 新建相关代码文件 create\_target.py，修改全局变量，然后运行
 ```
-`pip install requests
+pip install requests
 python create\_target.py
-`
 ```
 ```
-`import base64, hashlib, json, time, requests
+import base64, hashlib, json, time, requests
 APP\_ID = "your\_app\_id"
 API\_KEY = "your\_api\_key"
 API\_SECRET = "your\_api\_secret"
 IMAGE\_PATH = "test.jpg"
 API\_HOST = "https://cn1-crs.easyar.com"
-def sha256\_hex(s: str) -&gt; str:
+def sha256\_hex(s: str) -> str:
 return hashlib.sha256(s.encode()).hexdigest()
 image\_b64 = base64.b64encode(open(IMAGE\_PATH, "rb").read()).decode()
 timestamp = int(time.time() \* 1000)
@@ -220,7 +209,6 @@ headers = {
 }
 resp = requests.post(f"{API\_HOST}/targets", headers=headers, json=body)
 print(resp.text)
-`
 ```
 下载 Php 示例代码
 * [PHP Samples Download](https://github.com/EasyAR-CRS/php-sdk)
@@ -231,7 +219,7 @@ Step 2. 修改全局变量，替换你准备清单里的认证参数
 * Server-end URL
 * imageFilePath : 待上传目标图文件路径
 ```
-`&lt;?php
+<?php
 include 'EasyARClientSdkCRS.php';
 $apiKey = 'API Key';
 $apiSecret = 'API Secret';
@@ -240,44 +228,42 @@ $crsCloudUrl = 'https://cn1-crs.easyar.com';
 $imageFilePath = '1.jpg'
 $sdk = new EasyARClientSdkCRS($apiKey, $apiSecret, $crsAppId, $crsCloudUrl);
 $params = [
-'name' =&gt; 'image 1',
-'active' =&gt; '1',
-'size' =&gt; '1',
-'meta' =&gt; base64\_encode('hello world'),
-'image' =&gt; base64\_encode(file\_get\_contents($imageFilePath)),
+'name' => 'image 1',
+'active' => '1',
+'size' => '1',
+'meta' => base64\_encode('hello world'),
+'image' => base64\_encode(file\_get\_contents($imageFilePath)),
 ];
-$rs = $sdk-&gt;targetAdd($params);
-if ($rs-&gt;statusCode == 0) {
-print\_r($rs-&gt;result);
+$rs = $sdk->targetAdd($params);
+if ($rs->statusCode == 0) {
+print\_r($rs->result);
 } else {
 print\_r($rs);
 }
-`
 ```
 Step 3. 运行 php demo.php
 `Cargo.toml:`
 ```
-`[dependencies]
+[dependencies]
 reqwest = { version = "0.11", features = ["json"] }
 serde\_json = "1"
 sha2 = "0.10"
 base64 = "0.21"
 tokio = { version = "1", features = ["full"] }
-`
 ```
 `main.rs:`
 ```
-`use std::{fs, collections::BTreeMap};
+use std::{fs, collections::BTreeMap};
 use sha2::{Sha256, Digest};
 use base64::Engine;
 use reqwest::Client;
 use std::time::{SystemTime, UNIX\_EPOCH};
-const APP\_ID: &amp;str = "your\_app\_id";
-const API\_KEY: &amp;str = "your\_api\_key";
-const API\_SECRET: &amp;str = "your\_api\_secret";
-const IMAGE\_PATH: &amp;str = "test.jpg";
-const API\_HOST: &amp;str = "https://cn1-crs.easyar.com";
-fn sha256\_hex(s: &amp;str) -&gt; String {
+const APP\_ID: &str = "your\_app\_id";
+const API\_KEY: &str = "your\_api\_key";
+const API\_SECRET: &str = "your\_api\_secret";
+const IMAGE\_PATH: &str = "test.jpg";
+const API\_HOST: &str = "https://cn1-crs.easyar.com";
+fn sha256\_hex(s: &str) -> String {
 let mut h = Sha256::new();
 h.update(s.as\_bytes());
 format!("{:x}", h.finalize())
@@ -299,35 +285,32 @@ sign.insert("timestamp", timestamp.to\_string());
 sign.insert("appId", APP\_ID.into());
 sign.insert("apiKey", API\_KEY.into());
 let mut raw = String::new();
-for (k, v) in &amp;sign {
-raw.push\_str(&amp;format!("{}{}", k, v));
+for (k, v) in &sign {
+raw.push\_str(&format!("{}{}", k, v));
 }
 raw.push\_str(API\_SECRET);
 sign.insert("active", "1".into());
-sign.insert("signature", sha256\_hex(&amp;raw));
+sign.insert("signature", sha256\_hex(&raw));
 let client = Client::new();
 let resp = client.post(format!("{}/targets", API\_HOST))
 .header("Content-Type", "application/json")
 .header("appId", APP\_ID)
-.json(&amp;sign)
+.json(&sign)
 .send().await.unwrap()
 .text().await.unwrap();
 println!("{}", resp);
 }
-`
 ```
 ```
-`cargo run
-`
+cargo run
 ```
 新建相关代码文件 main.go，修改全局变量，然后运行
 ```
-`go run main.go
-`
+go run main.go
 ```
 `main.go:`
 ```
-`package main
+package main
 import (
 "bytes"
 "crypto/sha256"
@@ -383,16 +366,14 @@ buf := new(bytes.Buffer)
 buf.ReadFrom(resp.Body)
 fmt.Println(buf.String())
 }
-`
 ```
 创建 .NET 控制台项目。
 ```
-`dotnet new console
+dotnet new console
 dotnet run
-`
 ```
 ```
-`using System;
+using System;
 using System.IO;
 using System.Net.Http;
 using System.Security.Cryptography;
@@ -417,7 +398,7 @@ static void Main()
 {
 var imageB64 = Convert.ToBase64String(File.ReadAllBytes(IMAGE\_PATH));
 var timestamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-var sign = new SortedDictionary&lt;string, string&gt; {
+var sign = new SortedDictionary<string, string> {
 ["image"] = imageB64,
 ["name"] = "demo\_target",
 ["size"] = "20",
@@ -426,7 +407,7 @@ var sign = new SortedDictionary&lt;string, string&gt; {
 ["appId"] = APP\_ID,
 ["apiKey"] = API\_KEY
 };
-var builder = string.Concat(sign.Select(p =&gt; p.Key + p.Value)) + API\_SECRET;
+var builder = string.Concat(sign.Select(p => p.Key + p.Value)) + API\_SECRET;
 sign["signature"] = Sha256(builder);
 var json = JsonSerializer.Serialize(sign);
 var client = new HttpClient();
@@ -437,7 +418,6 @@ new StringContent(json, Encoding.UTF8, "application/json")
 Console.WriteLine(resp.Content.ReadAsStringAsync().Result);
 }
 }
-`
 ```
 * 运行环境
 * Unity 2020 LTS 以上版本
@@ -446,18 +426,17 @@ Console.WriteLine(resp.Content.ReadAsStringAsync().Result);
 Step 1：准备图片文件
 * 在 Unity 项目中创建目录：
 ```
-`Assets/
+Assets/
 └── StreamingAssets/
 | └── target.jpg
 └── Scripts/
 └── CreateImageTarget.cs
-`
 ```
 * 按照 Assets 目录名
 * 创建脚本 CreateImageTarget.cs，复制下面示例代码
 * 准备一张图片目标测试图
 ```
-`using System;
+using System;
 using System.IO;
 using System.Text;
 using UnityEngine;
@@ -469,7 +448,7 @@ public class CreateImageTarget : MonoBehaviour
 public string apiUrl = "https://Your-Server-end-URL" + "/targets";
 public string authorizationToken = "YOUR API KEY AUTH TOKEN";
 public string imageFilePath = "target.jpg"; // StreamingAssets
-public string crsAppId = "&lt;Your-CRS-AppId&gt;";
+public string crsAppId = "<Your-CRS-AppId>";
 private void Start()
 {
 StartCoroutine(CreateTarget());
@@ -530,7 +509,6 @@ public string type;
 public string allowSimilar;
 }
 }
-`
 ```
 * 在 Unity Editor 中：
 * 创建一个空 GameObject

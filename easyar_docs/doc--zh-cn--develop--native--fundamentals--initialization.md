@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/initialization.html
+original_file: doc--zh-cn--develop--native--fundamentals--initialization.md
+normalized_at: 2026-02-27
 ---
-
-库加载和初始化 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 库加载和初始化
 在使用 EasyAR Sense 的功能之前，需要进行初始化。初始化时，EasyAR Sense 会建立一些必要的环境，并验证 License Key。
 ## 非 Android 平台

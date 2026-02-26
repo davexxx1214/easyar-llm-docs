@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-4_0.html
+original_file: doc--zh-cn--develop--native--release-notes--release-notes-4_0.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Sense 4.0 发行说明 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Sense 4.0 发行说明
 ## 4.0.1
 2020-05-13

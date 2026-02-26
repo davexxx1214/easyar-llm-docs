@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/diagnostics/log-android.html
+original_file: doc--zh-cn--develop--diagnostics--log-android.md
+normalized_at: 2026-02-27
 ---
-
-Android 上的日志分析 | EasyAR 文档
-**
-##### Table of Contents
-**
 # Android 上的日志分析
 关于 原生(Android) 和 Unity(Android) 上的日志，可参考如下说明。
 ## 日志获取方法
@@ -13,7 +10,7 @@ Android 上的日志分析 | EasyAR 文档
 使用时可能需要开启 Android 设备的开发者模式，开启 USB 调试或无线调试，连接 USB 线或通过 WLAN 进行配对和连接。请参考 Android 调试桥（[中文](https://android-docs.cn/tools/adb) [英文](https://developer.android.com/tools/adb)）。
 以下为通过 WLAN 进行配对并连接，使用 `adb logcat` 的例子。
 ![log Android logcat](https://doc-asset.easyar.com/develop/diagnostics/media/diagnostics-log-android-logcat.png)
-连接 `adb` 后，首先使用 `adb logcat -c` 清空之前的日志，然后运行 `adb logcat &gt; log.txt` 即可将日志输出到 `log.txt` 。此时运行程序，直到出错，然后使用 `Ctrl + C` 结束日志输出。
+连接 `adb` 后，首先使用 `adb logcat -c` 清空之前的日志，然后运行 `adb logcat > log.txt` 即可将日志输出到 `log.txt` 。此时运行程序，直到出错，然后使用 `Ctrl + C` 结束日志输出。
 以下为一个日志文件的例子。
 ![log Android](https://doc-asset.easyar.com/develop/diagnostics/media/diagnostics-log-android.png)
 ## 日志的理解

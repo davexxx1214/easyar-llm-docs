@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/release-notes/release-notes.html
+original_file: doc--zh-cn--develop--unity--release-notes--release-notes.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Sense Unity Plugin 发行说明 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Sense Unity Plugin 发行说明
 我们很高兴地宣布 EasyAR Sense Unity Plugin 4000 发布。此版本标志着 EasyAR 具备了完善的 API 和与时俱进的设备支持，同时新版本发布也将比以往更加频繁。
 下载 [EasyAR Sense Unity Plugin 4000](https://www.easyar.cn/view/download.html) 以享受这些新功能和改进。
@@ -68,15 +65,15 @@ EasyAR Sense Unity Plugin 4000.0.0 迎来了大幅改变，主要集中在这几
 * 🔥 移除 ActionOne 和 BT350 等古早眼镜 sample
 * ✨ 内建支持 Apple Vision Pro
 * ✨ 支持 Metal、RealityKit 及 Hybrid 模式
-* ✨ 支持 visionOS &gt;= 2.0，支持 visionOS 26
-* ✨ 内建支持 XREAL Air2 Ultra（需要 XREAL SDK &gt;= 3.1）
+* ✨ 支持 visionOS >= 2.0，支持 visionOS 26
+* ✨ 内建支持 XREAL Air2 Ultra（需要 XREAL SDK >= 3.1）
 * ✨ 不再需要导入单独的支持包
 * ⚡ 优化 XREAL 上的运行效果
 * 🔥 移除 XREAL Light 支持
 * ✨ 通过 EasyAR Sense Unity Plugin 扩展分发 Pico 及 Rokid 等其它设备支持
 * ✨ 提供第三方设备接入的参考模板 `com.easyar.sense.ext.hmdtemplate`
-* ✨ 支持 Pico 4 Ultra Enterprise（需要 PICO Unity Integration SDK &gt;= 3.1）
-* ✨ 支持 Rokid AR Studio（需要 Rokid Unity OpenXR Plugin &gt;= 3.0.3）
+* ✨ 支持 Pico 4 Ultra Enterprise（需要 PICO Unity Integration SDK >= 3.1）
+* ✨ 支持 Rokid AR Studio（需要 Rokid Unity OpenXR Plugin >= 3.0.3）
 * ✨ 这些扩展将支持今后多个版本的 EasyAR Sense Unity Plugin
 * ✨ 支持 EasyAR XR License
 * 🔧 头显上使用 EasyAR 需要 EasyAR XR License 并保证首次联网（试用需每次联网）

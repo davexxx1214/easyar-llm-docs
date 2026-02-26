@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/3dengine.html
+original_file: doc--zh-cn--develop--native--fundamentals--3dengine.md
+normalized_at: 2026-02-27
 ---
-
-在 3D 引擎中使用 EasyAR | EasyAR 文档
-**
-##### Table of Contents
-**
 # 在 3D 引擎中使用 EasyAR
 在 3D 引擎中使用 EasyAR，需要渲染相机画面和虚拟物体。渲染虚拟物体需要和相机画面对准。相机画面渲染时，图像生成时和显示时的一些参数可能不匹配，例如物理相机的位置、朝向、画幅、宽高比等和显示器画面可能不同，在渲染时需要考虑。如果需要将 EasyAR 接到没有支持的 3D 引擎上，需要特别注意以下细节。
 ## 相机画面边界填充的剪裁
@@ -25,7 +22,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/3dengine.htm
 \\[
 \\theta = \\theta\_{phycam} + \\theta\_{screen}
 \\]
-##### 注意
+> **注意**
 当屏幕图像旋转时，需要在旋转发生后的第一帧立刻重新计算 \\(\\theta\\)，否则可能出现瞬间的屏幕图像方向不正常。
 ## 相机背景和虚拟物体的渲染
 在手机上渲染虚拟物体，需要将虚拟物体和相机画面对准。这要求我们将渲染相机和物体都放置在和真实空间完全对应的虚拟空间中，并使用物理相机相同的视场角、宽高比来进行渲染。相机画面和虚拟物体经过的透视投影变换几乎一模一样，只有一点区别，即相机画面的透视投影变换大部分是发生在物理相机中，而虚拟物体的透视投影变换完全是一个计算过程。
@@ -34,24 +31,24 @@ source: https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/3dengine.htm
 \\[
 P\_i=\\left(
 \\begin{array}{cccc}
-(-1)^{\\text{flip}} &amp; \\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; 1 &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; 1 &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} &amp; 1 \\\\
+(-1)^{\\text{flip}} & \\phantom{0} & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & 1 & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & 1 & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & \\phantom{0} & 1 \\\\
 \\end{array}
 \\right)\\left(
 \\begin{array}{cccc}
-\\cos (-\\theta ) &amp; -\\sin (-\\theta ) &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\sin (-\\theta ) &amp; \\cos (-\\theta ) &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; 1 &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} &amp; 1 \\\\
+\\cos (-\\theta ) & -\\sin (-\\theta ) & \\phantom{0} & \\phantom{0} \\\\
+\\sin (-\\theta ) & \\cos (-\\theta ) & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & 1 & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & \\phantom{0} & 1 \\\\
 \\end{array}
 \\right)\\left(
 \\begin{array}{cccc}
-s\_x &amp; \\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; s\_y &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; 1 &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} &amp; 1 \\\\
+s\_x & \\phantom{0} & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & s\_y & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & 1 & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & \\phantom{0} & 1 \\\\
 \\end{array}
 \\right)
 \\]
@@ -60,38 +57,38 @@ s\_x &amp; \\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} \\\\
 \\[
 P=P\_i\\left(
 \\begin{array}{cccc}
-1 &amp; \\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; 1 &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; -\\frac{f+n}{f-n} &amp; -\\frac{2 f n}{f-n} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; -1 &amp; \\phantom{0} \\\\
+1 & \\phantom{0} & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & 1 & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & -\\frac{f+n}{f-n} & -\\frac{2 f n}{f-n} \\\\
+\\phantom{0} & \\phantom{0} & -1 & \\phantom{0} \\\\
 \\end{array}
 \\right)\\left(
 \\begin{array}{cccc}
-\\frac{2}{w} &amp; \\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\frac{2}{h} &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; 1 &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} &amp; 1 \\\\
+\\frac{2}{w} & \\phantom{0} & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & \\frac{2}{h} & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & 1 & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & \\phantom{0} & 1 \\\\
 \\end{array}
 \\right)\\left(
 \\begin{array}{cccc}
-1 &amp; \\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; -1 &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; -1 &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} &amp; 1 \\\\
+1 & \\phantom{0} & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & -1 & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & -1 & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & \\phantom{0} & 1 \\\\
 \\end{array}
 \\right)\\left(
 \\begin{array}{cccc}
-f\_x &amp; \\phantom{0} &amp; c\_x &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; f\_y &amp; c\_y &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; 1 &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} &amp; 1 \\\\
+f\_x & \\phantom{0} & c\_x & \\phantom{0} \\\\
+\\phantom{0} & f\_y & c\_y & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & 1 & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & \\phantom{0} & 1 \\\\
 \\end{array}
 \\right)\\left(
 \\begin{array}{cccc}
-1 &amp; \\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; -1 &amp; \\phantom{0} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; -1 &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; \\phantom{0} &amp; 1 \\\\
+1 & \\phantom{0} & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & -1 & \\phantom{0} & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & -1 & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & \\phantom{0} & 1 \\\\
 \\end{array}
 \\right)
 \\]
@@ -100,10 +97,10 @@ f\_x &amp; \\phantom{0} &amp; c\_x &amp; \\phantom{0} \\\\
 \\[
 P=P\_i\\left(
 \\begin{array}{cccc}
-\\frac{2 f\_x}{w} &amp; \\phantom{0} &amp; 1-\\frac{2 c\_x}{w} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\frac{2 f\_y}{h} &amp; -1+\\frac{2 c\_y}{h} &amp; \\phantom{0} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; -\\frac{f+n}{f-n} &amp; -\\frac{2 f n}{f-n} \\\\
-\\phantom{0} &amp; \\phantom{0} &amp; -1 &amp; \\phantom{0} \\\\
+\\frac{2 f\_x}{w} & \\phantom{0} & 1-\\frac{2 c\_x}{w} & \\phantom{0} \\\\
+\\phantom{0} & \\frac{2 f\_y}{h} & -1+\\frac{2 c\_y}{h} & \\phantom{0} \\\\
+\\phantom{0} & \\phantom{0} & -\\frac{f+n}{f-n} & -\\frac{2 f n}{f-n} \\\\
+\\phantom{0} & \\phantom{0} & -1 & \\phantom{0} \\\\
 \\end{array}
 \\right)
 \\]

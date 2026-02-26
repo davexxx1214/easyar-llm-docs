@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/intro.html
+original_file: doc--zh-cn--develop--unity--fundamentals--intro.md
+normalized_at: 2026-02-27
 ---
-
-AR 驱动的 Unity 应用基础 | EasyAR 文档
-**
-##### Table of Contents
-**
 # AR 驱动的 Unity 应用基础
 EasyAR Sense Unity 插件包提供了在 Unity 中开发 AR 应用的基础功能。本文介绍了在 Unity 中开发 AR 应用时需要了解的基础知识和组件。
 ## 开始之前
@@ -15,22 +12,22 @@ EasyAR Sense Unity 插件包提供了在 Unity 中开发 AR 应用的基础功�
 * [Unity 兼容性](unity-compatibility.html)
 在 Unity 中，AR 应用的典型流程与 [一般 AR 应用](../../fundamentals/fundamentals.html) 类似，但通过 AR Session 组件来管理摄像头数据的获取、跟踪器的运行以及虚拟内容的渲染。
 ```
-`flowchart TD
+flowchart TD
 subgraph AR
 CameraDevice[Camera Device]
 Tracker[Tracker]
 Renderer[Renderer]
-CameraDevice --&gt;|Image Frame| Tracker
-Tracker --&gt;|Image Frame + Tracked Pose| Renderer
+CameraDevice -->|Image Frame| Tracker
+Tracker -->|Image Frame + Tracked Pose| Renderer
 end
 subgraph unity["Unity AR"]
 B[Session]
 C([Camera])
 O([Origin])
 T([Target])
-B -- transform --&gt; C
-B -- transform --&gt; O
-B -- transform --&gt; T
+B -- transform --> C
+B -- transform --> O
+B -- transform --> T
 classDef Unity fill:#6e6ce6,stroke:#333,color:#fff
 class B Unity
 class C Unity
@@ -42,7 +39,6 @@ Tracker -..- B
 Renderer -..- C
 Renderer -..- O
 Renderer -..- T
-`
 ```
 您将从以下这些基础组件开始，逐步了解 Unity 中 AR 应用的基础知识：
 * [AR Session](session.html)

@@ -1,14 +1,11 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/release-notes.html
+original_file: doc--zh-cn--develop--wechat--mega--release-notes.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Mega 微信小程序插件发布日志 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Mega 微信小程序插件发布日志
 本页面记录了 EasyAR Mega 微信小程序插件各个版本的发布日志。
-##### 重要事项
+> **重要事项**
 **版本维护及升级建议**
 * **2.0.0 及以上版本**：建议所有用户升级至 [最新版本 (2.0.2)](#mega-wechat-miniprogram-plugin-v202) 以获得最佳稳定性。
 * **2.0.0 以下版本**：已完全重构并不再维护，请迁移至新版本。

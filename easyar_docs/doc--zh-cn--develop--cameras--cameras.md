@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/cameras/cameras.html
+original_file: doc--zh-cn--develop--cameras--cameras.md
+normalized_at: 2026-02-27
 ---
-
-摄像头和输入扩展 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 摄像头和输入扩展
 本文介绍物理相机的相机模型、参数和一些其他使用上的注意点，以及使用自定义相机的方式进行输入扩展。
 ![camera](https://doc-asset.easyar.com/develop/cameras/media/cameras-camera.jpg)
@@ -24,11 +21,11 @@ source: https://www.easyar.cn/doc/zh-cn/develop/cameras/cameras.html
 这是通常使用的最简单的模型，光通过一个小孔成一个旋转 180 度的像。但相机输出的数据中会将像正过来。需要六个参数来描述这个模型，像素宽高 \\(w, h\\) ，像素焦距 \\(f\_x, f\_y\\) ，主点像素位置 \\(c\_x, c\_y\\) 。可以注意到如果像素宽高缩放时，像素焦距和主点像素位置也对应缩放，可以保持像的位置不变。
 ### OpenCV 相机模型
 有些相机会存在显著的径向畸变和切向畸变，[OpenCV 相机模型](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)在针孔相机模型上的基础上增加了高次参数来描述径向畸变和切向畸变。径向畸变使用 \\(k\_1, k\_2, k\_3, \\cdots\\) 来描述。切向畸变使用 \\(p\_1, p\_2\\) 来描述。
-##### 注意
+> **注意**
 有一些跟踪器不支持 OpenCV 相机模型。
 ### OpenCV 鱼眼相机模型
 鱼眼相机通过透视投影以将大视角内容压缩到较小的成像面积内。[OpenCV 鱼眼相机模型](https://docs.opencv.org/4.x/db/d58/group__calib3d__fisheye.html)不带畸变矫正，在针孔相机模型 6 个参数的基础上，使用 \\(k\_1, k\_2, k\_3, k\_4, \\cdots\\) 来描述。
-##### 注意
+> **注意**
 有一些跟踪器不支持 OpenCV 鱼眼相机模型。
 ![fisheye camera](https://doc-asset.easyar.com/develop/cameras/media/cameras-fisheye.jpg)
 ### 相机朝向与图像朝向

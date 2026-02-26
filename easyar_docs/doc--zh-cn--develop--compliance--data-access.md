@@ -1,14 +1,15 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/compliance/data-access.html
+original_file: doc--zh-cn--develop--compliance--data-access.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Sense 数据访问 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Sense 数据访问
 介绍 EasyAR Sense 中可能的数据访问。
 ## 数据访问情况列表
+
+> **注意** 自动修复提示：该表格在抓取阶段已损坏，以下保留原始表格流供人工核对。
+
+```text
 |
 功能
 |
@@ -264,6 +265,8 @@ Mega/云定位
 |
 是
 ||
+```
+
 注：
 “访问”指在客户端获得数据。“传输”指将数据从客户端发送到 EasyAR 的服务器。“分享”指将数据从客户端发送到第三方设备。
 “短暂使用”是指服务器处理请求之后不会保存此项数据。

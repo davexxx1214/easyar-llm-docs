@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes.html
+original_file: doc--zh-cn--develop--native--release-notes--release-notes.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Sense 发行说明 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Sense 发行说明
 EasyAR 是灵活好用的增强现实引擎。
 EasyAR Sense 提供感知真实世界的能力，支持平面图像跟踪、3D 物体跟踪、表面跟踪、运动跟踪和稀疏空间地图、稠密空间地图、Mega。
@@ -123,16 +120,16 @@ MEGA
 > + Log 增加 logMessage
 >
 > + 在 C++导出接口回调中增加
-*> EASYAR_FUNCTOR_EXCEPTION_MODE_NORTTI
-*> 选项用于禁用 RTTI
+> EASYAR_FUNCTOR_EXCEPTION_MODE_NORTTI
+> 选项用于禁用 RTTI
 >
 > + 在 C++导出接口回调中增加
-*> EASYAR_FUNCTOR_EXCEPTION_MODE_NOEXCEPTION
-*> 选项用于禁用异常
+> EASYAR_FUNCTOR_EXCEPTION_MODE_NOEXCEPTION
+> 选项用于禁用异常
 >
 > + 在 C++导出接口实现中增加
-*> EASYAR_EXCEPTION_MODE_NOEXCEPTION
-*> 选项用于禁用异常 throw
+> EASYAR_EXCEPTION_MODE_NOEXCEPTION
+> 选项用于禁用异常 throw
 >
 > * 修复了一些稳定性问题
 >

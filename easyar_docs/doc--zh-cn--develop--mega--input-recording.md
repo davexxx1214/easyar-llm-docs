@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/mega/input-recording.html
+original_file: doc--zh-cn--develop--mega--input-recording.md
+normalized_at: 2026-02-27
 ---
-
-采集模拟运行数据 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 采集模拟运行数据
 在 Mega 应用的开发和调试过程中，直接在真实环境中反复测试不仅耗时，而且可能受限于场地、设备和网络条件。为了解决这个问题，EasyAR 提供了一套强大的模拟运行机制，其核心就是 EIF 数据文件。
 本篇将指导您如何采集和回放 EIF 数据，以实现高效的功能验证、问题排查和效果预览。

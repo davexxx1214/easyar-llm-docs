@@ -1,17 +1,14 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/motion-tracking/devices-easyar.html
+original_file: doc--zh-cn--develop--motion-tracking--devices-easyar.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR 运动跟踪支持的设备 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR 运动跟踪支持的设备
 ## EasyAR 运动跟踪的最低设备要求
 要运行 EasyAR 运动跟踪需要满足以下必要（非充分）的要求
 * 包含摄像机，加速度计和陀螺仪。
 * Android 7.0 (API Level 24) 及以上。
-##### 注意
+> **注意**
 如果设备缺少陀螺仪和加速度计，则无法使用运动跟踪功能，这种情况常在低端机型中相对常见(仅具备虚拟陀螺仪的机型不支持运动跟踪)。
 ## 保持最新的设备支持
 为保持您的应用获取最新的设备支持，推荐下列方式：
@@ -942,10 +939,10 @@ EasyAR 会定期标定新发布的机型，不断增加运动跟踪支持的设�
 |OPPO Reno 4 pro||Good|
 |OPPO Reno 5 pro||Good|
 |OPPO Reno 5 pro+|OP4EA7|Good|
-|OPPO Reno 5 4G &amp; 5G|OP4EA3|Good|
-|OPPO Reno 5 4G &amp; 5G|OP4F0BL1|Good|
-|OPPO Reno 5 4G &amp; 5G|OP4F1FL1|Good|
-|OPPO Reno 5 4G &amp; 5G|OP4F25L1|Good|
+|OPPO Reno 5 4G & 5G|OP4EA3|Good|
+|OPPO Reno 5 4G & 5G|OP4F0BL1|Good|
+|OPPO Reno 5 4G & 5G|OP4F1FL1|Good|
+|OPPO Reno 5 4G & 5G|OP4F25L1|Good|
 |OPPO Reno 5|OP4F1BL1|Good|
 |OPPO Reno 5|OP4E8F|Good|
 |OPPO Reno 5A|OP4F2BL1|Good|

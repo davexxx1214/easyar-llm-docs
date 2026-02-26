@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/active-control.html
+original_file: doc--zh-cn--develop--unity--fundamentals--active-control.md
+normalized_at: 2026-02-27
 ---
-
-适用于 target 和 origin 的 active 控制策略 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 适用于 target 和 origin 的 active 控制策略
 通过以下内容，您将了解 target 和 origin 下物体的默认显示和隐藏策略，以及如何根据需要进行调整。
 ## 开始之前
@@ -27,8 +24,7 @@ session 运行过程中，target 和 origin 会经历跟踪和丢失等状态变
 在脚本中，可以通过 [OverrideStrategy](../../../api/unity/easyar.ActiveController.html#u_easyar_ActiveController_OverrideStrategy) 属性来覆盖默认的 active 控制策略。
 比如，下面的代码展示了如何将 target 的 active 控制策略设置为 [ActiveAfterFirstTracked](../../../api/unity/easyar.ActiveController.Strategy.html#u_easyar_ActiveController_Strategy_ActiveAfterFirstTracked)：
 ```
-`target.ActiveController.OverrideStrategy = ActiveController.Strategy.ActiveAfterFirstTracked;
-`
+target.ActiveController.OverrideStrategy = ActiveController.Strategy.ActiveAfterFirstTracked;
 ```
 对 active 策略的修改会即时生效，并根据当前的跟踪状态更新 [GameObject.activeSelf](https://docs.unity3d.com/ScriptReference/GameObject-activeSelf.html)。
 ## 关闭 active 控制
@@ -36,7 +32,6 @@ session 运行过程中，target 和 origin 会经历跟踪和丢失等状态变
 ![alt text](https://doc-asset.easyar.com/develop/unity/fundamentals/media/active-disable.png)
 在脚本中，可以通过设置 [ActiveController](../../../api/unity/easyar.ActiveController.html).[enabled](https://docs.unity3d.com/ScriptReference/Behaviour-enabled.html) 属性来关闭 active 控制。
 ```
-`target.ActiveController.enabled = false;
-`
+target.ActiveController.enabled = false;
 ```
 [enabled](https://docs.unity3d.com/ScriptReference/Behaviour-enabled.html) 属性的修改会即时生效，并且不会再根据跟踪状态更新 [GameObject.activeSelf](https://docs.unity3d.com/ScriptReference/GameObject-activeSelf.html)。如果再次启用 [ActiveController](../../../api/unity/easyar.ActiveController.html) 组件，[GameObject.activeSelf](https://docs.unity3d.com/ScriptReference/GameObject-activeSelf.html) 会根据当前的跟踪状态进行更新。

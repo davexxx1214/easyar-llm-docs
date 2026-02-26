@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/samples.html
+original_file: doc--zh-cn--develop--unity--headsets--samples.md
+normalized_at: 2026-02-27
 ---
-
-在 XR 头显或眼镜上使用 EasyAR 样例 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 在 XR 头显或眼镜上使用 EasyAR 样例
 EasyAR 对所有头显提供统一的样例，样例中没有任何代码，全部由场景中配置实现。功能本身的使用可以参考相关功能在 Android/iOS 手机上样例实现。
 头显样例名称为 `Combination\_BasedOn\_\*` , 比如 Pico 的样例为 `Combination\_BasedOn\_Pico`。 该样例在一个场景中演示了大部分 EasyAR 功能，它们可以动态开关，可以单独使用，也可以同时打开。
@@ -17,7 +14,7 @@ EasyAR 对所有头显提供统一的样例，样例中没有任何代码，全�
 * EasyAR Sense 4.x **XR License** 试用版（试用，在 EasyAR 网站自主开通）
 * EasyAR Sense 4.x **XR License** 正式版（付费后使用，请联系商务购买开通）
 * EasyAR Sense 4.x **XR License** 企业版（企业版 SDK 使用）
-##### 小心
+> **小心**
 头显和眼镜上**仅允许使用 XR License**，普通 License 无法使用 EasyAR 功能。
 ## 导入官方样例
 1. 内建支持的设备的样例位于 EasyAR Unity 插件包中，根据设备单独导入需要的样例。
@@ -56,7 +53,7 @@ XREAL 除了按照 Android 平台设置外，额外需要 [XREAL 工程配置](s
 ![set-the-actual-size](https://doc-asset.easyar.com/develop/unity/headsets/media/set-the-actual-size.png)
 * 在 `EasyAR 运动融合` 打开时，只能跟踪固定位置（不能移动）的图像。如果运动融合关闭，图像超出视野的时候就无法跟踪。
 * 有时候眼镜视角不能很好的反应相机图像大小，如果识别不到可以尝试让眼镜相机靠近图像。实际使用时建议跟踪更大的图像，比如 5米\*5米 大小。
-##### 注意
+> **注意**
 在头显上无论 EasyAR 运动融合功能是开是关，`image target` 的 `Scale` 参数都必须设置为真实的物理大小，否则显示位置会是错误的。
 * Mega 配置
 如果你在使用 EasyAR Mega，你需要参考 [Mega Unity 快速入门](../mega/quickstart.html)。

@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/mega/comp-BlockRootController.html
+original_file: doc--zh-cn--develop--unity--mega--comp-BlockRootController.md
+normalized_at: 2026-02-27
 ---
-
-BlockRootController 组件参考 | EasyAR 文档
-**
-##### Table of Contents
-**
 # BlockRootController 组件参考
 >
 [> 切换到 API

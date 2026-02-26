@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/getting-started/quickstart.html
+original_file: doc--zh-cn--develop--wechat--getting-started--quickstart.md
+normalized_at: 2026-02-27
 ---
-
-在微信小程序中使用 AR | EasyAR 文档
-**
-##### Table of Contents
-**
 # 在微信小程序中使用 AR
 在微信小程序中开发 AR 应用，依赖微信提供的 VisionKit 和 xr-frame 组件。开发者可以实现图像跟踪、运动跟踪等功能。通过 EasyAR，在微信小程序上还支持 Mega 和图像云识别（CRS）功能。
 为了实现小程序上的 AR 体验，需要多个组件共同工作：

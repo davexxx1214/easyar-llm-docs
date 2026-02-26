@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/quickstart-android.html
+original_file: doc--zh-cn--develop--native--getting-started--quickstart-android.md
+normalized_at: 2026-02-27
 ---
-
-运行 EasyAR Android 样例 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 运行 EasyAR Android 样例
 本文介绍如何运行 EasyAR 提供的原生 Android 样例。这里以 HelloAR 为例，介绍如何运行样例，其他样例使用方法可以参考本文。
 ## 准备工作
@@ -17,7 +14,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/quickstar
 * 下载 [EasyAR Sense 原生样例](https://www.easyar.cn/view/download.html) 并解压
 * 在 EasyAR 开发中心（[中文站点](https://www.easyar.cn/view/login.html) / [English Site](https://www.easyar.com/view/login.html) ）获取 License Key，注意包名与样例一致，如 HelloAR 应为 `cn.easyar.samples.helloar`
 ## 导入并编译样例
-1. 在 Android Studio 菜单依次选择 `File -&gt; New -&gt; Import Project...`，选择样例所在目录导入，等待 Android Studio 完成下载和配置。
+1. 在 Android Studio 菜单依次选择 `File -> New -> Import Project...`，选择样例所在目录导入，等待 Android Studio 完成下载和配置。
 ![importhelloar](https://doc-asset.easyar.com/develop/native/getting-started/media/android-studio-import-hello-ar.png)
 2. 设置许可证（License Key）
 根据路径找到 ARActivity.java，按照代码提示填入开发中心获取的 License Key。

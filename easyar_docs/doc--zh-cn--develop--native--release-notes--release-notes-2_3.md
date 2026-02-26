@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-2_3.html
+original_file: doc--zh-cn--develop--native--release-notes--release-notes-2_3.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Sense 2.3 发行说明 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Sense 2.3 发行说明
 ## 2.3.0
 2018-10-24

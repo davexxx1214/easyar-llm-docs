@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/image-tracking/motion-fusion.html
+original_file: doc--zh-cn--develop--image-tracking--motion-fusion.md
+normalized_at: 2026-02-27
 ---
-
-平面跟踪与运动跟踪结合 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 平面跟踪与运动跟踪结合
 本篇介绍如何将平面图像跟踪与设备运动跟踪功能相融合，以提升复杂场景下的跟踪稳定性和用户体验。内容包括核心原理、预期效果及潜在问题分析。
 ## 基本原理

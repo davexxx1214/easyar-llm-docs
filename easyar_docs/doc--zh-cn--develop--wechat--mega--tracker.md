@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/tracker.html
+original_file: doc--zh-cn--develop--wechat--mega--tracker.md
+normalized_at: 2026-02-27
 ---
-
-MegaTracker 的概念与工作流 | EasyAR 文档
-**
-##### Table of Contents
-**
 # MegaTracker 的概念与工作流
 这篇文档将介绍 MegaTracker 的基本概念及 MegaTracker 与微信原生的 AR 系统 VisionKit 和渲染框架 xr-frame 的关系。
 ## 开始之前
@@ -24,17 +21,16 @@ MegaTracker 是连接微信 AR 系统 （VisionKit） 与 Mega 空间计算服�
 * **输出**：当前定位和跟踪的 **Mega Block** 下的相机位姿 。
 ## MegaTracker 是如何在 xr-frame 上工作的
 ```
-`flowchart BT
+flowchart BT
 subgraph Using xr-frame Only
 direction BT
-PlaneARTracker\_1[PlaneARTracker] --&gt;|MotionData &amp; Image| XRFrame\_1[xr-frame]
+PlaneARTracker\_1[PlaneARTracker] -->|MotionData & Image| XRFrame\_1[xr-frame]
 end
 subgraph Using Mega Plugin
 direction BT
-PlaneARTracker\_2[PlaneARTracker] --&gt;|MotionData &amp; Image| MegaTracker
-MegaTracker --&gt;|CameraTransform| XRFrame\_2[xr-frame]
+PlaneARTracker\_2[PlaneARTracker] -->|MotionData & Image| MegaTracker
+MegaTracker -->|CameraTransform| XRFrame\_2[xr-frame]
 end
-`
 ```
 * 在微信原生提供的数据流中 xr-frame 的摄像机组件每帧由**平面 AR 追踪器**的结果直接更新。
 * 在 Mega 小程序提供的数据流中 **在 VisionKit 坐标系下的相机位姿**（即 6DoF 数据）及定位帧的图片数据会输入给 **MegaTracker**，在云定位和本地计算之后输出当前定位和跟踪的 **Mega Block** 下的相机位姿 ，最终更新 xr-frame 场景中摄像机在 **Mega Block** 节点下的 LocalTransform，此时 **MegaTracker** 接管了摄像机的控制权， xr-frame **不再**根据 AR 追踪器更新摄像机。

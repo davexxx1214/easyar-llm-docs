@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/mega/report.html
+original_file: doc--zh-cn--develop--mega--report.md
+normalized_at: 2026-02-27
 ---
-
-问题报告与反馈 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 问题报告与反馈
 我们非常重视您的反馈，这是帮助我们改进 EasyAR Mega 产品和服务的关键。为了让我们能够快速、准确地定位并解决您遇到的问题，请在提交报告前，花几分钟时间阅读本篇指南。
 ## 我们的联系方式
@@ -70,7 +67,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/mega/report.html
 * 已说明是否使用了多图配置。
 ## 使用 EasyAR Sense Unity Plugin 导出 Unity 开发信息
 特别地，针对 Unity 平台的 Mega 应用开发，我们准备了更便捷的反馈信息生成工具。详细的操作步骤如下：
-1. 在菜单栏打开 `EasyAR &gt; Sense &gt; 提问`
+1. 在菜单栏打开 `EasyAR > Sense > 提问`
 ![提问](https://doc-asset.easyar.com/develop/mega/media/unity-question.png)
 2. 在 `提问` 中提供以下信息:
 * 勾选运行环境（单选），如 Android。

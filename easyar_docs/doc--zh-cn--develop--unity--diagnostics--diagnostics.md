@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/diagnostics/diagnostics.html
+original_file: doc--zh-cn--develop--unity--diagnostics--diagnostics.md
+normalized_at: 2026-02-27
 ---
-
-Unity 开发中的问题诊断和报告 | EasyAR 文档
-**
-##### Table of Contents
-**
 # Unity 开发中的问题诊断和报告
 在开发基于 Unity 的插件或应用时，难免会遇到运行异常或逻辑错误。为了帮助开发者快速定位和解决问题，Unity Plugin 提供了一系列内置的诊断与调试工具。本章将介绍这些常用的调试手段和辅助功能，涵盖从实时日志查看、开发者模式启用，到问题数据采集与上报的完整流程。
 * [UI 消息](ui-messages.html)

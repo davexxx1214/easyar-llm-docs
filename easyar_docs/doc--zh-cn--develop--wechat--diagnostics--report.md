@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/diagnostics/report.html
+original_file: doc--zh-cn--develop--wechat--diagnostics--report.md
+normalized_at: 2026-02-27
 ---
-
-微信小程序问题报告 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 微信小程序问题报告
 为了能够快速、准确地定位您在开发或使用使用 EasyAR 提供的能力（Mega 或 CRS）的微信小程序时遇到的问题，在提交反馈前参考本指南提供必要的信息和数据以显著减少排查问题的往返沟通时间。
 ## 问题预检
@@ -30,5 +27,5 @@ source: https://www.easyar.cn/doc/zh-cn/develop/wechat/diagnostics/report.html
 若使用 Mega 插件，请务必在录制屏幕的同时进行 AR Session dump。这能让我们将视频中的视觉现象与底层算法数据对齐。
 ### 运行日志
 若在 vConsole 中出现了报错，您需要提交详细的错误信息，详细方法参考 [微信小程序上的日志分析](../../diagnostics/log-wechat.html)
-##### 重要事项
+> **重要事项**
 如果使用 Mega 时遇到定位或跟踪相关的问题而不是程序异常，请务必提供当时的 **session dump 文件和录屏文件**。纯日志文件仅能提供侧面参考，dump 数据与录屏才是排查问题的**核心依据**。

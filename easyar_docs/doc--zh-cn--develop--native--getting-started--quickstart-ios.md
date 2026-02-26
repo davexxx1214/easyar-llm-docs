@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/quickstart-ios.html
+original_file: doc--zh-cn--develop--native--getting-started--quickstart-ios.md
+normalized_at: 2026-02-27
 ---
-
-运行 EasyAR 的 iOS 样例 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 运行 EasyAR 的 iOS 样例
 本文介绍如何运行 EasyAR 提供的原生 iOS 样例。这里以 HelloAR 为例，介绍如何运行样例，其他样例使用方法可以参考本文。
 ## 准备工作

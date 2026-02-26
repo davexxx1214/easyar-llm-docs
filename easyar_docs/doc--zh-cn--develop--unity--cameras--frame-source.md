@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/frame-source.html
+original_file: doc--zh-cn--develop--unity--cameras--frame-source.md
+normalized_at: 2026-02-27
 ---
-
-Unity 中的摄像头及输入帧数据来源 —— 帧数据源（Frame Source） | EasyAR 文档
-**
-##### Table of Contents
-**
 # Unity 中的摄像头及输入帧数据来源 —— 帧数据源（Frame Source）
 帧数据源是 Unity 中摄像头及输入帧数据的提供者。本文介绍了帧数据源的基本概念、类型以及运行时的选取方法。
 ## 开始之前
@@ -15,20 +12,19 @@ Unity 中的摄像头及输入帧数据来源 —— 帧数据源（Frame Source
 帧数据源（[FrameSource](../../../api/unity/easyar.FrameSource.html)）是输入帧（[InputFrame](../../../api/unity/easyar.InputFrame.html)）的提供者，抽象了摄像头以及其它提供输入帧数据的设备和功能。
 下图展示了帧数据源在 session 中的位置：
 ```
-`flowchart LR
+flowchart LR
 F[Frame Source]
 A((Input Frame))
 B[Session]
 C([Camera])
 O([Origin])
 T([Target])
-F --&gt; A
-A --&gt; B
-B -. transform .-&gt; C
-B -. transform .-&gt; O
-B -. transform .-&gt; T
+F --> A
+A --> B
+B -. transform .-> C
+B -. transform .-> O
+B -. transform .-> T
 style F fill:#6e6ce6,stroke:#333,color:#fff
-`
 ```
 帧数据源可能只是提供数据给下游 AR 功能使用，也可能它自身就实现了一些 AR 功能，比如运动跟踪。部分帧数据源会提供摄像头设备的控制接口，允许用户选择摄像头参数，比如分辨率、对焦模式等。
 ## 帧数据源的类型
@@ -66,8 +62,8 @@ session 的场景层级结构中包含了一个或多个帧数据源组件。在
 |[Auto](../../../api/unity/easyar.AssembleOptions.FrameSourceSelection.html#u_easyar_AssembleOptions_FrameSourceSelection_Auto)（默认）|自动选择，按 transform 顺序选择第一个可用且 active 的子节点。|
 |[Manual](../../../api/unity/easyar.AssembleOptions.FrameSourceSelection.html#u_easyar_AssembleOptions_FrameSourceSelection_Manual)|手动指定。只能指定 session 子节点。|
 |[FramePlayer](../../../api/unity/easyar.AssembleOptions.FrameSourceSelection.html#u_easyar_AssembleOptions_FrameSourceSelection_FramePlayer)|使用 [FramePlayer](../../../api/unity/easyar.FramePlayer.html)。|
-##### 提示
-Unity 物体的 transform 顺序可以使用 [Transform.GetSiblingIndex()](https://docs.unity3d.com/ScriptReference/Transform.GetSiblingIndex.html) 判断，也可以从 Hierarchy 视图中物体的排序判断，但是需要关闭以下选项（默认是关闭状态）： Edit &gt; Preferences &gt; General &gt; Enable Alphanumeric Sorting。
+> **提示**
+Unity 物体的 transform 顺序可以使用 [Transform.GetSiblingIndex()](https://docs.unity3d.com/ScriptReference/Transform.GetSiblingIndex.html) 判断，也可以从 Hierarchy 视图中物体的排序判断，但是需要关闭以下选项（默认是关闭状态）： Edit > Preferences > General > Enable Alphanumeric Sorting。
 session 组装过程中，帧数据源在经历如下步骤后被选定：
 1. session 遍历其子节点，按 transform 顺序收集所有 active 的帧数据源组件。
 2. 根据 [AssembleOptions](../../../api/unity/easyar.ARSession.html#u_easyar_ARSession_AssembleOptions) 中的选源策略（[AssembleOptions.FrameSource](../../../api/unity/easyar.AssembleOptions.html#u_easyar_AssembleOptions_FrameSource)）筛选候选列表：
@@ -85,7 +81,7 @@ session 组装过程中，帧数据源在经历如下步骤后被选定：
 * 必要的第三方 SDK 未安装，比如 XREAL SDK 未安装时 [XREALFrameSource](../../../api/unity/easyar.XREALFrameSource.html) 会被禁用。
 * 配置的条件未满足，比如设备的 [MotionTrackerCameraDeviceQualityLevel](../../../api/unity/easyar.MotionTrackerCameraDeviceQualityLevel.html) 低于 [MotionTrackerFrameSource.DeviceQualityLevel](../../../api/unity/easyar.MotionTrackerFrameSource.html#u_easyar_MotionTrackerFrameSource_DeviceQualityLevel) 时 [MotionTrackerFrameSource](../../../api/unity/easyar.MotionTrackerFrameSource.html) 会被禁用。
 如果最终没有任何一个帧数据源被选定，session 会进入 [Broken](../../../api/unity/easyar.ARSession.SessionState.html#u_easyar_ARSession_SessionState_Broken) 状态，且 session 报告中 [BrokenReason](../../../api/unity/easyar.SessionReport.html#u_easyar_SessionReport_BrokenReason) 字段数值是 [NoAvailabileFrameSource](../../../api/unity/easyar.SessionReport.SessionBrokenReason.html#u_easyar_SessionReport_SessionBrokenReason_NoAvailabileFrameSource)。
-##### 注意
+> **注意**
 设备列表完成更新后，如果设备列表发生变化，帧数据源的可用性可能也会发生改变，可以参考 [设备支持和 session 报告](../fundamentals/session-report.html) 了解这时 session 的行为。
 ## 后续步骤
 * 尝试在场景中 [添加一组帧数据源](frame-source-group.html)

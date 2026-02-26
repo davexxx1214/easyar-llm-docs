@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/camera.html
+original_file: doc--zh-cn--develop--unity--fundamentals--camera.md
+normalized_at: 2026-02-27
 ---
-
-AR 场景中的 Unity 摄像机 | EasyAR 文档
-**
-##### Table of Contents
-**
 # AR 场景中的 Unity 摄像机
 Unity 中 AR 的效果呈现离不开摄像机。通过以下内容，您将了解 AR 场景中摄像机的作用，以及 session 如何控制摄像机的属性以确保正确的 AR 体验。
 ## 开始之前
@@ -33,7 +30,7 @@ Unity 中的摄像机用于向玩家展示游戏世界，而在 AR 场景中，�
 * 摄像机的 transform（位置和朝向）
 * 摄像机的视野（FOV）、宽高比（aspect ratio）和投影矩阵
 * 摄像机的剔除设置（[GL.invertCulling](https://docs.unity3d.com/ScriptReference/GL-invertCulling.html)）
-##### 警告
+> **警告**
 在开发应用时，修改 session 摄像机的这些属性是不受支持的，因为这可能会导致虚拟内容与现实世界对齐不正确，从而影响用户体验。即使通过某些手段修改了这些属性，AR 系统也会在运行过程中覆盖这些修改，或是因为渲染数据与计算数据的不一致导致不可预期的行为。
 根据控制这些属性的对象的不同，session 所使用的摄像机可以分为两类：受 session 控制的摄像机和不受 session 控制的摄像机。
 ## 受 session 控制的摄像机
@@ -45,7 +42,7 @@ Unity 中的摄像机用于向玩家展示游戏世界，而在 AR 场景中，�
 一般 [Camera](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_Camera) 模式很少被应用使用。
 * **在其它中心模式（比如 [FirstTarget](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_FirstTarget)）下，摄像机是不能随意移动的。**
 [FirstTarget](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_FirstTarget) 是大部分 AR 应用会采用的模式。
-##### 警告
+> **警告**
 摄像机 transform 的 scale 数值应始终保持为 (1, 1, 1)。修改摄像机的 scale 可能会导致不可预期的行为。
 ### 投影矩阵
 摄像机的投影矩阵会在 session 每帧更新时根据物理相机的内参进行更新，以确保虚拟内容正确地叠加在现实场景中。
@@ -56,7 +53,7 @@ Unity 中的摄像机用于向玩家展示游戏世界，而在 AR 场景中，�
 在 AR 场景中，摄像机通常会渲染来自物理相机的视频流作为背景，以增强用户的沉浸感。session 会自动处理视频流的获取和渲染，并确保视频流与虚拟内容正确地对齐。
 ## 不受 session 控制的摄像机
 在使用头显和 AR Foundation 、以及实现中指定了 [IsCameraUnderControl](../../../api/unity/easyar.FrameSource.html#u_easyar_FrameSource_IsCameraUnderControl) 为 `false` 的 [FrameSource](../../../api/unity/easyar.FrameSource.html) 时，session 不会控制摄像机的上述属性，而是由外部系统负责控制。
-##### 警告
+> **警告**
 虽然在这种情况下 session 不会控制摄像机的属性，但它们会由第三方系统（比如头显 SDK 或 AR Foundation）所控制，在开发应用时修改这些属性仍然是不受支持的。
 ## 复制摄像机时的注意事项
 有时可能需要将 session 摄像机的参数复制到另一个摄像机上，这时需要额外关注以下两点：

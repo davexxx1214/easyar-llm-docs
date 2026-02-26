@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/mega/faq.html
+original_file: doc--zh-cn--develop--mega--faq.md
+normalized_at: 2026-02-27
 ---
-
-Mega 常见问题 | EasyAR 文档
-**
-##### Table of Contents
-**
 # Mega 常见问题
 在开发过程中遇到问题是在所难免的。本篇旨在帮助您快速定位并解决常见的问题。我们首先从一个常见问题列表（FAQ）开始，如果您在这里找不到答案，请参考后续章节或向我们提交问题报告。
 ## 常见问题解答 (FAQ)

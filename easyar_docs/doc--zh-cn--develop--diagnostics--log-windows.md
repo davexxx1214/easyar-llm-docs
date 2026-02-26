@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/diagnostics/log-windows.html
+original_file: doc--zh-cn--develop--diagnostics--log-windows.md
+normalized_at: 2026-02-27
 ---
-
-Windows 上的日志分析 | EasyAR 文档
-**
-##### Table of Contents
-**
 # Windows 上的日志分析
 关于 原生(Windows) 和 Unity 编辑器(Windows)上的日志，可参考如下说明。
 ## 日志获取方法

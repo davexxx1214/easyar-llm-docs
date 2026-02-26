@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/occlusion.html
+original_file: doc--zh-cn--develop--wechat--mega--occlusion.md
+normalized_at: 2026-02-27
 ---
-
-使用 Mega 插件实现遮挡 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 使用 Mega 插件实现遮挡
 遮挡 （Occlusion） 是提升 AR 虚实融合沉浸感的关键技术。本文将指导您如何在 xr-frame 环境下，通过 EasyAR 云定位与标注实现遮挡效果。
 ## 开始之前
@@ -23,20 +20,20 @@ source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/occlusion.html
 2. 修改标注的名称（如 `occlusion\_wall` ），记录 ID ，上传标注。
 3. 在 xr-frame 小程序中利用其内置几何体加载作为遮挡的标注。
 在 EMA 加载的回调中使用 `scene.createElement(xrFrameSystem.XRMesh,{})` 创建简单的几何体赋予 `easyar-occulusion` 材质。
-##### 注意
+> **注意**
 `easyar-occulusion` 材质的加载，注册，反注册，卸载由 AR Session 控制。
 ```
 ````ts
 handleEmaResult(ema: easyar.ema.v0\_5.Ema) {
 let blockHolder: easyar.BlockHolder = session.blockHolder;
-ema.blocks.forEach(emaBlock =&gt; {
+ema.blocks.forEach(emaBlock => {
 const blockInfo: easyar.BlockInfo = {
 id: emaBlock.id
 };
 // 若 Block 节点不存在，创建 Block 节点
 blockHolder.holdBlock(blockInfo, easyarPlugin.toXRFrame(emaBlock.transform));
 });
-ema.annotations.forEach(annotation =&gt; {
+ema.annotations.forEach(annotation => {
 if (annotation.type != mega.EmaV05AnnotationType.Node) {
 return;
 }
@@ -67,12 +64,10 @@ xrNode.addChild(model);
 })
 }
 ```
-`
 ```
 ```
-`&lt;video src="https://doc-asset.easyar.com/develop/wechat/mega/media/occlusion03.mp4" style="width:480px; max-width:100%; height:auto;" muted playsinline controls&gt;&lt;/video&gt;
-&gt; 有了遮挡后，这个熊猫就可以躲在墙后面跳舞了。
-`
+<video src="https://doc-asset.easyar.com/develop/wechat/mega/media/occlusion03.mp4" style="width:480px; max-width:100%; height:auto;" muted playsinline controls></video>
+> 有了遮挡后，这个熊猫就可以躲在墙后面跳舞了。
 ```
 ## 如何布置复杂几何体的遮挡
 适用于异形设备、不规则建筑等需要高精度遮挡的场景。
@@ -86,7 +81,7 @@ xrNode.addChild(model);
 图中 1 为 LOD 层级，层级越低模型越简单，面数越少，若需要最高的精度选择2，若能接受降低精度以减少面数选择 1 或者 0。
 图中 2 为导出贴图选项，由于我们只需要白模作为遮挡，不需要贴图。
 4. 将导出后的模型在数字内容创建软件（例如 Blender）中进行裁剪，减面，保存为 `Glb`。
-##### 提示
+> **提示**
 例子中使用的是 Blender 的 Decimate Modifier
 ![裁剪前](https://doc-asset.easyar.com/develop/wechat/mega/media/occlusion06.png)
 裁剪并减面后：
@@ -95,8 +90,8 @@ xrNode.addChild(model);
 6. 在 xr-frame 小程序中加载作为遮挡的 GLTF。
 首先**加载**遮挡用的 GLTF 模型，然后使用 `scene.createElement(xrFrameSystem.XRGLTF,options)` 创建 GLTF 模型。
 使用 `assets.getAsset("material", "easyar-occlusion")` 获取材质对象
-使用 `model.getComponent(xrFrameSystem.GLTF).meshes.forEach((m: any) =&gt; {m.setData({ neverCull: true, material: occlusionMaterial });}` 修改 GLTF 模型的材质。
-##### 注意
+使用 `model.getComponent(xrFrameSystem.GLTF).meshes.forEach((m: any) => {m.setData({ neverCull: true, material: occlusionMaterial });}` 修改 GLTF 模型的材质。
+> **注意**
 `easyar-occulusion` 材质的加载，注册，反注册，卸载由 AR Session 控制。
 ```
 ````ts
@@ -150,21 +145,19 @@ if (assetInfo.assetId == 'occlusion1') {
 //获取 mega 插件提供的遮挡材质
 let occlusionMaterial = scene.assets.getAsset("material", "easyar-occlusion");
 //修改遮挡材质
-model.getComponent(xrFrameSystem.GLTF).meshes.forEach((m: any) =&gt; {
+model.getComponent(xrFrameSystem.GLTF).meshes.forEach((m: any) => {
 m.setData({ neverCull: true, material: occlusionMaterial });
 });
 }
 }
 ```
-`
 ```
 ```
-`&gt; [!NOTE]
-&gt; 这里使用 Mega Block 稠密模型进行裁剪后作为遮挡不需要使用标注同步空间位置，这是因为在数字内容创建软件（如 Blender） 中，可以在不改变坐标系定义的情况下对模型进行减免和裁剪。
-&gt;
-&gt; 若需要精确摆放自己制作的 GLTF 模型遮挡，请参考[如何摆放与空间对齐的遮挡模型](./sample.md#wechat-mega-sample-precise-occulusion-model)
+> [!NOTE]
+> 这里使用 Mega Block 稠密模型进行裁剪后作为遮挡不需要使用标注同步空间位置，这是因为在数字内容创建软件（如 Blender） 中，可以在不改变坐标系定义的情况下对模型进行减免和裁剪。
+>
+> 若需要精确摆放自己制作的 GLTF 模型遮挡，请参考[如何摆放与空间对齐的遮挡模型](./sample.md#wechat-mega-sample-precise-occulusion-model)
 最终实机运行效果见文章顶部视频。
-`
 ```
 ## 遮挡的效果预期
 xr-frame 小程序上遮挡的效果主要由以下几点影响：

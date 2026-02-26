@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-unity-setup.html
+original_file: doc--zh-cn--develop--wechat--mega--content-unity-setup.md
+normalized_at: 2026-02-27
 ---
-
-如何安装 Unity 并使用 Mega Studio | EasyAR 文档
-**
-##### Table of Contents
-**
 # 如何安装 Unity 并使用 Mega Studio
 这篇文章将介绍如何安装 Unity 以及如何下载并加载 Mega Unity 插件以在 Unity 编辑器上使用 Mega Studio。
 ## 安装 2021.3 或更高版本的 Unity 长期支持版本（LTS）
@@ -24,32 +21,30 @@ source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-unity-setup.
 下载 **EasyAR Sense Unity Plugin(for Mega)**。
 ![解压文件](https://doc-asset.easyar.com/develop/wechat/mega/media/content-unity-setup09.png)
 解压下载的 `.zip` 压缩包后，您将获得以下目录结构：
-##### 重要事项
+> **重要事项**
 注意：请勿解压 `.tgz` 文件。 这些是 Unity 软件包，需通过 Unity Package Manager 直接导入。
 ```
-`.
+.
 └── EasyARSenseUnityPluginForMega\_\*\*.zip # 完整安装包
 ├── com.easyar.mega-\*\*.tgz # 包含标注工具及 Block 浏览工具
 ├── com.easyar.sense-\*\*.tgz # 包含 EasyAR Sense 核心库及 Unity 插件
 ├── readme.cn.txt # 中文自述文件
 └── readme.en.txt # 英文自述文件
-`
 ```
 版本号说明： 文件名中的 \*\* 代表版本号，格式为：**Major.Minor.Patch + BuildNum.BuildHash** 。请以官方发布的最新版本为准。
 ## 在项目中导入 package （UPM 包）
 请依次导入：
 ```
-`com.easyar.sense-\*\*.tgz
+com.easyar.sense-\*\*.tgz
 com.easyar.mega-\*\*.tgz
-`
 ```
-##### 注意
+> **注意**
 在导入之前，建议将 `.tgz` 文件先拷贝到您的 Unity 项目文件夹内（例如存放在 Packages 目录下）。
 导入后请勿移动或删除这些 `.tgz` 源文件，否则 Unity 将无法加载对应的包。
-点击 **Window** &gt; **Package Management** &gt; **Package Manager** ，在弹出的窗口左上角点击 **+** 号，选择 **Install package from tarball...**
+点击 **Window** > **Package Management** > **Package Manager** ，在弹出的窗口左上角点击 **+** 号，选择 **Install package from tarball...**
 ![Install package](https://doc-asset.easyar.com/develop/wechat/mega/media/content-unity-setup10.png)
 ## 创建标注工具
-在 **Hierarchy** 面板中空白处右键 **EasyAR Mega** &gt; **Tool** &gt; **Annotation Tool（Edit Mode）** 创建标注工具
+在 **Hierarchy** 面板中空白处右键 **EasyAR Mega** > **Tool** > **Annotation Tool（Edit Mode）** 创建标注工具
 ![创建标注工具](https://doc-asset.easyar.com/develop/wechat/mega/media/content-unity-setup11.png)
 ## 登录后使用 Mega Studio
 在 **Hierarchy** 面板中点击 `EasyAR.Mega.Annotation`，在 **Inspector** 面板中输入 EasyAR 账号，密码后点击登录。

@@ -1,17 +1,14 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-gallery.html
+original_file: doc--zh-cn--develop--cloud-recognition--management-gallery.md
+normalized_at: 2026-02-27
 ---
-
-目标图列表查询 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 目标图列表查询
 云识别（CRS）数据库中通常存储着海量的目标图。为了方便开发者快速定位和管理这些数据，本章将详细介绍目标图的查看、分页查询及详情说明。
 ## 通过 EasyAR Web 管理目标图集合
 在可视化界面中，系统默认采用**分页列表**形式展示目标图，并按照**最后修改时间进行逆序排列**（最新改动的排在最前）。
 ### 目标图集合
-**操作路径**：登录 EasyAR Web [开发中心] -&gt; [云识别管理] -&gt; 选择图库 -&gt; 点击 [管理]。
+**操作路径**：登录 EasyAR Web [开发中心] -> [云识别管理] -> 选择图库 -> 点击 [管理]。
 在此界面中，您可以进行以下操作：
 * **列表浏览**：查看分页展示的目标图集合。
 * **详情入口**：点击图中 按钮1 的 **[管理]** 可进入该目标图的详情页。
@@ -41,10 +38,9 @@ source: https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-gal
 * Your-Token → 实际的 API Key Authorization Token
 * Your-CRS-AppId → 您的 appId
 ```
-`curl -X GET "https://&lt;Your Server-side-URL&gt;/targets/infos?appId=&lt;Your-CRS-AppId&gt;" \\
+curl -X GET "https://<Your Server-side-URL>/targets/infos?appId=<Your-CRS-AppId>" \\
 -H "Content-Type: application/json" \\
--H "Authorization: &lt;Your-Token&gt;"
-`
+-H "Authorization: <Your-Token>"
 ```
 下载 Java 示例代码
 * [Java Samples Download](https://github.com/EasyAR-CRS/java-sdk)
@@ -55,7 +51,7 @@ Step 2. 修改全局变量，替换你准备清单里的认证参数
 * API Key / API Secret
 * TARGET\_MGMT\_URL → Server-end URL
 ```
-`public class ListTargets {
+public class ListTargets {
 private static final String TARGET\_MGMT\_URL = "http://cn1.crs.easyar.com:8888";
 private static final String CRS\_APPID = "--here is your CRS AppId--";
 private static final String API\_KEY = "--here is your API Key--";
@@ -76,7 +72,6 @@ Auth accessInfo = new Auth(CRS\_APPID, API\_KEY, API\_SECRET, TARGET\_MGMT\_URL)
 System.out.println(new ListTargets().list(accessInfo));
 }
 }
-`
 ```
 Step 3. 运行 Main
 下载 NodeJS 示例代码
@@ -85,23 +80,21 @@ Step 1. 配置密钥文件 keys.json
 * CRS AppId
 * API Key / API Secret
 ```
-`{
+{
 "appId": "--here is your appId for CRS App Instance for SDK 4--",
 "apiKey": "--here is your api key which is create from website and which has crs permission--",
 "apiSecret": "--here is your api secret which is create from website--"
 }
-`
 ```
 Step 2. 运行，指定密钥文件以及 Server-end URL
 ```
-`node bin/getTargets -t &lt;Server-end-URL&gt; -c keys.json
-`
+node bin/getTargets -t <Server-end-URL> -c keys.json
 ```
 若需更改分页策略，传入 getTargets 分页参数
 * 'pageSize': 分页大小
 * 'pageNum': 第几页
 ```
-`var argv = require('yargs')
+var argv = require('yargs')
 .usage('Usage: $0 [targetId] -t [host] -c [keys]')
 .demand(0)
 .default('t', 'http://localhost:8888').alias('t', 'host')
@@ -123,13 +116,12 @@ console.log(resp.result.targets);
 .fail(function(err) {
 console.log(err);
 });
-`
 ```
 getTargets 调用云服务接口，示例代码在 farmer.js
 ```
-`function getTargetsByPage(pageNum,pageSize) {
+function getTargetsByPage(pageNum,pageSize) {
 return Q.promise(function(resolve, reject) {
-request.get(host + '/targets/infos?pageNum=' + pageNum + '&amp;pageSize=' + pageSize)
+request.get(host + '/targets/infos?pageNum=' + pageNum + '&pageSize=' + pageSize)
 .query(auth.signParams(keypair, {
 "pageNum":pageNum,
 "pageSize":pageSize
@@ -137,7 +129,6 @@ request.get(host + '/targets/infos?pageNum=' + pageNum + '&amp;pageSize=' + page
 .end(done(resolve, reject));
 });
 }
-`
 ```
 下载 Php 示例代码
 * [PHP Samples Download](https://github.com/EasyAR-CRS/php-sdk)
@@ -147,7 +138,7 @@ Step 2. 修改全局变量，替换你准备清单里的认证参数
 * API Key / API Secret
 * Server-end URL
 ```
-`&lt;?php
+<?php
 include 'EasyARClientSdkCRS.php';
 $apiKey = 'API Key';
 $apiSecret = 'API Secret';
@@ -156,23 +147,21 @@ $crsCloudUrl = 'https://cn1-crs.easyar.com';
 $pageNum = 1;
 $pageSize = 5;
 $sdk = new EasyARClientSdkCRS($apiKey, $apiSecret, $crsAppId, $crsCloudUrl);
-$rs = $sdk-&gt;targetsV3($pageNum, $pageSize);
-if ($rs-&gt;statusCode == 0) {
-print\_r($rs-&gt;result);
+$rs = $sdk->targetsV3($pageNum, $pageSize);
+if ($rs->statusCode == 0) {
+print\_r($rs->result);
 } else {
 print\_r($rs);
 }
-`
 ```
 Step 3. 运行 php demo.php
 新建相关代码文件 list\_targets.py，修改全局变量，然后运行
 ```
-`pip install requests
+pip install requests
 python list\_targets.py
-`
 ```
 ```
-`import time
+import time
 import hashlib
 import requests
 # --- Global Configuration ---
@@ -187,7 +176,7 @@ params = {
 'appId': APP\_ID,
 'timestamp': timestamp
 }
-# Signature: Sort keys -&gt; Concat -&gt; Append Secret -&gt; SHA256
+# Signature: Sort keys -> Concat -> Append Secret -> SHA256
 sorted\_keys = sorted(params.keys())
 sign\_str = "".join([f"{k}{params[k]}" for k in sorted\_keys]) + API\_SECRET
 signature = hashlib.sha256(sign\_str.encode('utf-8')).hexdigest()
@@ -198,16 +187,14 @@ response = requests.get(url, params=params)
 print(f"Response: {response.text}")
 if \_\_name\_\_ == "\_\_main\_\_":
 main()
-`
 ```
 新建相关代码文件 main.go，修改全局变量，然后运行
 ```
-`go run main.go
-`
+go run main.go
 ```
 `main.go:`
 ```
-`package main
+package main
 import (
 "crypto/sha256"
 "fmt"
@@ -238,35 +225,34 @@ builder := ""
 for \_, k := range keys { builder += k + params[k] }
 builder += ApiSecret
 signature := fmt.Sprintf("%x", sha256.Sum256([]byte(builder)))
-url := fmt.Sprintf("%s/targets/infos?apiKey=%s&amp;appId=%s&amp;timestamp=%s&amp;signature=%s",
+url := fmt.Sprintf("%s/targets/infos?apiKey=%s&appId=%s&timestamp=%s&signature=%s",
 Host, ApiKey, AppId, ts, signature)
 resp, \_ := http.Get(url)
 defer resp.Body.Close()
 body, \_ := io.ReadAll(resp.Body)
 fmt.Printf("Response: %s\\n", string(body))
 }
-`
 ```
 在 Cargo.toml 中添加 reqwest, tokio, sha2, hex 依赖。
 执行 cargo run。
 ```
-`use sha2::{Sha256, Digest};
+use sha2::{Sha256, Digest};
 use std::collections::BTreeMap;
 use std::time::{SystemTime, UNIX\_EPOCH};
 // --- Global Configuration ---
-const API\_KEY: &amp;str = "YOUR\_API\_KEY";
-const API\_SECRET: &amp;str = "YOUR\_API\_SECRET";
-const APP\_ID: &amp;str = "YOUR\_APP\_ID";
-const HOST: &amp;str = "https://crs-cn1.easyar.com";
+const API\_KEY: &str = "YOUR\_API\_KEY";
+const API\_SECRET: &str = "YOUR\_API\_SECRET";
+const APP\_ID: &str = "YOUR\_APP\_ID";
+const HOST: &str = "https://crs-cn1.easyar.com";
 #[tokio::main]
-async fn main() -&gt; Result&lt;(), Box&lt;dyn std::error::Error&gt;&gt; {
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
 let ts = SystemTime::now().duration\_since(UNIX\_EPOCH)?.as\_millis().to\_string();
 let mut params = BTreeMap::new();
 params.insert("apiKey", API\_KEY);
 params.insert("appId", APP\_ID);
-params.insert("timestamp", &amp;ts);
+params.insert("timestamp", &ts);
 let mut sign\_str = String::new();
-for (k, v) in &amp;params {
+for (k, v) in &params {
 sign\_str.push\_str(k);
 sign\_str.push\_str(v);
 }
@@ -274,22 +260,20 @@ sign\_str.push\_str(API\_SECRET);
 let mut hasher = Sha256::new();
 hasher.update(sign\_str.as\_bytes());
 let signature = hex::encode(hasher.finalize());
-let url = format!("{}/targets/infos?apiKey={}&amp;appId={}&amp;timestamp={}&amp;signature={}",
+let url = format!("{}/targets/infos?apiKey={}&appId={}&timestamp={}&signature={}",
 HOST, API\_KEY, APP\_ID, ts, signature);
 let res = reqwest::get(url).await?;
 println!("Response: {}", res.text().await?);
 Ok(())
 }
-`
 ```
 创建 .NET 控制台项目。
 ```
-`dotnet new console
+dotnet new console
 dotnet run
-`
 ```
 ```
-`using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -303,7 +287,7 @@ static string APP\_ID = "YOUR\_APP\_ID";
 static string HOST = "https://crs-cn1.easyar.com";
 static async System.Threading.Tasks.Task Main() {
 string timestamp = DateTimeOffset.Now.ToUnixTimeMilliseconds().ToString();
-var dict = new SortedDictionary&lt;string, string&gt; {
+var dict = new SortedDictionary<string, string> {
 { "apiKey", API\_KEY },
 { "appId", APP\_ID },
 { "timestamp", timestamp }
@@ -313,7 +297,7 @@ foreach (var kv in dict) sb.Append(kv.Key).Append(kv.Value);
 sb.Append(API\_SECRET);
 string signature = Sha256(sb.ToString());
 using var client = new HttpClient();
-string query = string.Join("&amp;", dict.Select(x =&gt; $"{x.Key}={x.Value}")) + $"&amp;signature={signature}";
+string query = string.Join("&", dict.Select(x => $"{x.Key}={x.Value}")) + $"&signature={signature}";
 string url = $"{HOST}/targets/infos?{query}";
 var response = await client.GetAsync(url);
 Console.WriteLine($"Result: {await response.Content.ReadAsStringAsync()}");
@@ -323,7 +307,6 @@ byte[] bytes = SHA256.HashData(Encoding.UTF8.GetBytes(str));
 return BitConverter.ToString(bytes).Replace("-", "").ToLower();
 }
 }
-`
 ```
 * 运行环境
 * Unity 2020 LTS 以上版本
@@ -332,15 +315,14 @@ return BitConverter.ToString(bytes).Replace("-", "").ToLower();
 Step 1：准备图片文件
 * 在 Unity 项目中创建目录：
 ```
-`Assets/
+Assets/
 └── Scripts/
 └── ListImageTarget.cs
-`
 ```
 * 按照 Assets 目录名
 * 复制下面示例代码 ListImageTarget.cs
 ```
-`using System.Collections;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 public class ListImageTarget : MonoBehaviour
@@ -358,7 +340,7 @@ StartCoroutine(ListTarget());
 private IEnumerator ListTarget()
 {
 string url =
-$"{apiBaseUrl}/targets/infos?appId={crsAppId}&amp;pageSize={pageSize}&amp;pageNum={pageNum}";
+$"{apiBaseUrl}/targets/infos?appId={crsAppId}&pageSize={pageSize}&pageNum={pageNum}";
 UnityWebRequest request = UnityWebRequest.Get(url);
 request.downloadHandler = new DownloadHandlerBuffer();
 request.SetRequestHeader("Content-Type", "application/json");
@@ -377,7 +359,6 @@ Debug.LogError(request.downloadHandler.text);
 }
 }
 }
-`
 ```
 * 在 Unity Editor 中：
 * 创建一个空 GameObject

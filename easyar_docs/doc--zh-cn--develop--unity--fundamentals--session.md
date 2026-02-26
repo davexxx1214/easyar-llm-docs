@@ -1,41 +1,36 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/session.html
+original_file: doc--zh-cn--develop--unity--fundamentals--session.md
+normalized_at: 2026-02-27
 ---
-
-Unity AR 的入口 —— AR Session | EasyAR 文档
-**
-##### Table of Contents
-**
 # Unity AR 的入口 —— AR Session
 AR 会话（session）是所有 AR 功能的入口，通过以下内容您将了解 AR Session 的基本概念、组成、运行流程以及它与 Unity AR Foundation 的 AR Session 有什么关系。您还会了解到在 Unity 中，EasyAR Sense 的数据流到底是如何工作的。
 ## AR Session 是什么
 所有 AR 流程（例如物体跟踪）都是在原生库，即 EasyAR Sense 内部执行的。session 是 Unity 中 AR 功能的主要入口点。它管理 AR 系统的运行过程和状态，包括从物理相机和传感器中读取数据、分析真实世界、驱动场景中虚拟摄像机等其它部分物体的移动和渲染等。
 ```
-`flowchart LR
-A((图像&lt;br&gt;和其它数据))
+flowchart LR
+A((图像<br>和其它数据))
 B[Session]
 C([Camera])
 O([Origin])
 T([Target])
-A --&gt; B
-B -. transform .-&gt; C
-B -. transform .-&gt; O
-B -. transform .-&gt; T
-`
+A --> B
+B -. transform .-> C
+B -. transform .-> O
+B -. transform .-> T
 ```
 ### [可选] EasyAR 的 session 与 AR Foundation 的 session
 EasyAR 的 session 是 Unity 中使用 EasyAR 的核心组件，可以独立于任何第三方或系统 AR 功能运行。而 [AR Foundation 的 session](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@6.4/manual/features/session.html) 是 Unity XR 框架的一部分，只能使用 Unity XR 插件（如 ARKit 或 ARCore）提供的功能。
 ```
-`flowchart TD
-A1[EasyAR&lt;br&gt;AR Session]
+flowchart TD
+A1[EasyAR<br>AR Session]
 A2[EasyAR Sense]
-A1 --&gt; A2
-B1[AR Foundation&lt;br&gt;AR Session]
+A1 --> A2
+B1[AR Foundation<br>AR Session]
 B2[ARKit Plugin]
 B3[ARCore Plugin]
-B1 --&gt; B2
-B1 --&gt; B3
-`
+B1 --> B2
+B1 --> B3
 ```
 使用 EasyAR 时，通常并不需要同时安装和使用 AR Foundation。比如图像跟踪功能，运动跟踪功能等等，都是由 EasyAR Sense 独立提供的。
 在某些情况下，可能需要将 EasyAR Sense 与 AR Foundation 结合使用，以利用 AR Foundation 提供的额外功能（比如在部分设备上的平面检测）和接口。在这种情况下，EasyAR Sense 通过 AR Foundation 提供的接口与 Unity 引擎进行交互。
@@ -46,16 +41,16 @@ B1 --&gt; B3
 * frame filter(s)：提供特定AR功能的组件，比如 *ImageTrackerFrameFilter*
 * camera：场景中的虚拟摄像机对象
 * origin：运动跟踪的原点对象
-##### 注意
+> **注意**
 在 AR Foundation 的概念中，运动跟踪被作为必选功能，因此它始终会提供一个 origin。
 而在 EasyAR 系统中，运动跟踪是一个可选的功能，因此 origin 也是可选的。
 ### [可选] session 的数据流
 [数据流](../../native/fundamentals/dataflow.html) 是 EasyAR Sense 的核心概念之一。它不影响您在 Unity 中开发 AR 应用。如果您想要更加深入地理解 session 的工作原理，可以阅读本节内容。
 在 Unity 中，一个 session 通常表达了一个 EasyAR Sense 的数据流。
 ```
-`flowchart LR
+flowchart LR
 S[Frame Source]
-R[Input Frame Recorder&lt;br&gt;Video Input Frame Recorder]
+R[Input Frame Recorder<br>Video Input Frame Recorder]
 ift[iFrameThrottler]
 iff[iFrameFork]
 i2f[i2FAdapter]
@@ -74,36 +69,34 @@ ofb[oFrameBuffer]
 O(( ))
 ODS(( ))
 OCR(( ))
-S ==&gt; R ==&gt; ift ==&gt; iff
-iff --&gt; i2f
-i2f --&gt; fb
-fb -.-&gt; FOT -.-&gt; ofj
-fb -.-&gt; FIT -.-&gt; ofj
-iff ==&gt; i2o ==&gt; ofj ==&gt; off ==&gt; ofb ==&gt; O
-iff -.-&gt; FMT -.-&gt; ofj
-iff -.-&gt; FSSM -.-&gt; ofj
-iff -.-&gt; FST -.-&gt; ofj
-iff -.-&gt; FDS -.-&gt; ODS
-iff -.-&gt; FCR -.-&gt; OCR
-off --&gt; i2f
-ofb --&gt; ift
-`
+S ==> R ==> ift ==> iff
+iff --> i2f
+i2f --> fb
+fb -.-> FOT -.-> ofj
+fb -.-> FIT -.-> ofj
+iff ==> i2o ==> ofj ==> off ==> ofb ==> O
+iff -.-> FMT -.-> ofj
+iff -.-> FSSM -.-> ofj
+iff -.-> FST -.-> ofj
+iff -.-> FDS -.-> ODS
+iff -.-> FCR -.-> OCR
+off --> i2f
+ofb --> ift
 ```
 这个数据流是在 session 启动过程中创建的，图中除加粗数据通路外，其它部分是否连接取决于启动过程中启用的 AR 组件。
 因此，通过修改 session 中启用的组件，可以灵活改变数据流的结构和功能，也可以很方便地同时启用多个 AR 功能。而这个方法将在接下来的段落中详细介绍。
 ## session 的流程
 ```
-`flowchart LR
-i[初始化&lt;br&gt;Initialize]
-a[组装&lt;br&gt;Assemble]
-starta["启动（已组装的）&lt;br&gt;StartSession(Assembled)"]
-start[启动&lt;br&gt;StartSession]
-update((更新&lt;br&gt;update))
-stop[停止&lt;br&gt;StopSession]
-di[反初始化&lt;br&gt;Deinitialize]
-i --&gt; a --&gt; starta --&gt; update --&gt; stop --&gt; di
-i --&gt; start --&gt; update
-`
+flowchart LR
+i[初始化<br>Initialize]
+a[组装<br>Assemble]
+starta["启动（已组装的）<br>StartSession(Assembled)"]
+start[启动<br>StartSession]
+update((更新<br>update))
+stop[停止<br>StopSession]
+di[反初始化<br>Deinitialize]
+i --> a --> starta --> update --> stop --> di
+i --> start --> update
 ```
 * 初始化
 初始化是使用使用 license key 启动 EasyAR Sense 的过程，在初始化之前，只有极少部分 EasyAR Sense 的接口可以使用。初始化之后，AR 功能才会被激活。
@@ -122,26 +115,25 @@ i --&gt; start --&gt; update
 停止会终止 AR 功能的运行，场景中的物体将不再被 session 控制，输入源的数据也不会被处理。
 6. 反初始化
 反初始化会释放部分全局资源（不会卸载动态库）。反初始化之后，AR 功能组件将无法使用。
-##### 注意
+> **注意**
 所有 AR 功能只能在 ARSession.StartSession 之后使用。
 ## session 的默认生命周期
 ```
-`flowchart LR
+flowchart LR
 uload("BeforeSceneLoad")
 ustart("MonoBehaviour.Start")
 udestroy("MonoBehaviour.OnDestroy")
-oi{Initialize&lt;br&gt;OnStartup}
+oi{Initialize<br>OnStartup}
 ostart{AutoStart}
-i[初始化&lt;br&gt;Initialize]
-start[启动&lt;br&gt;StartSession]
-update((更新&lt;br&gt;update))
-stop[停止&lt;br&gt;StopSession]
-uload -.-&gt; ustart -.-&gt; udestroy
-uload --&gt; oi -. true .-&gt; i
-ustart --&gt; ostart -. true .-&gt; start
-udestroy --&gt; stop
-i --&gt; start --&gt; update --&gt; stop
-`
+i[初始化<br>Initialize]
+start[启动<br>StartSession]
+update((更新<br>update))
+stop[停止<br>StopSession]
+uload -.-> ustart -.-> udestroy
+uload --> oi -. true .-> i
+ustart --> ostart -. true .-> start
+udestroy --> stop
+i --> start --> update --> stop
 ```
 session 的生命周期一般由接口调用的时间决定。采用默认设置时，session 会在以下时间点自动执行：
 * 初始化（[EasyARSettings.InitializeOnStartup](../../../api/unity/easyar.EasyARSettings.html#u_easyar_EasyARSettings_InitializeOnStartup) == `true`）
@@ -165,11 +157,11 @@ ARSession.State 描述了 session 的状态。一个 session 有以下几种状�
 ## 运动跟踪状态
 ARSession.TrackingStatus 描述了 session 的运动跟踪跟踪状态，它表示设备运动跟踪的质量，有这几种状态：
 |状态|描述|
-|Optional&lt;MotionTrackingStatus&gt;.Empty|运动跟踪功能未启用或 session 未运行|
+|Optional<MotionTrackingStatus>.Empty|运动跟踪功能未启用或 session 未运行|
 |NotTracking|运动跟踪结果不可用，原因可能是正在初始化，跟踪丢失或者正在重定位|
 |Limited|运动跟踪是有效的，但是结果不太好，原因可能是当前区域纹理太弱或运动过快|
 |Tracking|运动跟踪质量好|
-##### 注意
+> **注意**
 在 AR Foundation 的概念中，运动跟踪被作为必选功能，因此它的跟踪状态与 session 状态合并在了一起。
 而在 EasyAR 系统中，运动跟踪是一个可选的功能，因此跟踪状态是独立存在且可能为空的。
 ## 其它 AR 功能的跟踪状态在哪

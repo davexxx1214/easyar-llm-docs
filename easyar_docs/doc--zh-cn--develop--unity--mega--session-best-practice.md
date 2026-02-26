@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/mega/session-best-practice.html
+original_file: doc--zh-cn--develop--unity--mega--session-best-practice.md
+normalized_at: 2026-02-27
 ---
-
-适用于 Mega 的 AR Session 最佳实践 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 适用于 Mega 的 AR Session 最佳实践
 本文介绍了如何创建和配置适用于 Mega 的 AR session，以便在不同类型的设备上获得最佳的运行效果。
 ## 开始之前
@@ -16,21 +13,19 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/mega/session-best-practice
 默认的 session 支持以下类型的设备：
 * 支持 6DoF 运动跟踪的设备（部分现代手机和头显）
 * 支持 5DoF 惯性导航功能的设备（大部分有陀螺仪和加速度计的 Android 手机）
-在 `Hierarchy` 视图中 **空白** 处点击右键，通过菜单 `EasyAR Sense` &gt; `Mega` &gt; `AR Session (Mega Block Default Preset)` 可以创建默认的 Mega session。
+在 `Hierarchy` 视图中 **空白** 处点击右键，通过菜单 `EasyAR Sense` > `Mega` > `AR Session (Mega Block Default Preset)` 可以创建默认的 Mega session。
 对应的脚本代码如下：
 ```
-`ARSessionFactory.CreateSession(ARSessionFactory.ARSessionPreset.MegaBlock\_MotionTracking\_Inertial)
-`
+ARSessionFactory.CreateSession(ARSessionFactory.ARSessionPreset.MegaBlock\_MotionTracking\_Inertial)
 ```
 该 session 使用 [MegaBlock\_MotionTracking\_Inertial](../../../api/unity/easyar.ARSessionFactory.ARSessionPreset.html#u_easyar_ARSessionFactory_ARSessionPreset_MegaBlock_MotionTracking_Inertial) 预设：
 * frame source 组件及排序可以参考 [预设 AR Session 的帧数据源组](../cameras/frame-source-group.html) 中 [MegaBlock\_MotionTracking\_Inertial](../../../api/unity/easyar.ARSessionFactory.ARSessionPreset.html#u_easyar_ARSessionFactory_ARSessionPreset_MegaBlock_MotionTracking_Inertial) 预设对应的帧数据源组
 * [MegaTrackerFrameFilter.MinInputFrameLevel](../../../api/unity/easyar.MegaTrackerFrameFilter.html#u_easyar_MegaTrackerFrameFilter_MinInputFrameLevel) 为 [FiveDof](../../../api/unity/easyar.MegaInputFrameLevel.html#u_easyar_MegaInputFrameLevel_FiveDof)
 * [MegaTrackerFrameFilter.ServiceType](../../../api/unity/easyar.MegaTrackerFrameFilter.html#u_easyar_MegaTrackerFrameFilter_ServiceType) 为 [Block](../../../api/unity/easyar.MegaApiType.html#u_easyar_MegaApiType_Block)
-在 `Hierarchy` 视图中 **空白** 处点击右键，通过菜单 `EasyAR Sense` &gt; `Mega` &gt; `AR Session (Mega Landmark Default Preset)` 可以创建默认的 Mega session。
+在 `Hierarchy` 视图中 **空白** 处点击右键，通过菜单 `EasyAR Sense` > `Mega` > `AR Session (Mega Landmark Default Preset)` 可以创建默认的 Mega session。
 对应的脚本代码如下：
 ```
-`ARSessionFactory.CreateSession(ARSessionFactory.ARSessionPreset.MegaLandmark\_MotionTracking\_Inertial)
-`
+ARSessionFactory.CreateSession(ARSessionFactory.ARSessionPreset.MegaLandmark\_MotionTracking\_Inertial)
 ```
 该 session 使用 [MegaBlock\_MotionTracking\_Inertial](../../../api/unity/easyar.ARSessionFactory.ARSessionPreset.html#u_easyar_ARSessionFactory_ARSessionPreset_MegaBlock_MotionTracking_Inertial) 预设：
 * frame source 组件及排序可以参考 [预设 AR Session 的帧数据源组](../cameras/frame-source-group.html) 中 [MegaBlock\_MotionTracking\_Inertial](../../../api/unity/easyar.ARSessionFactory.ARSessionPreset.html#u_easyar_ARSessionFactory_ARSessionPreset_MegaBlock_MotionTracking_Inertial) 预设对应的帧数据源组。
@@ -72,7 +67,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/mega/session-best-practice
 * frame source 组件及排序可以参考 [预设 AR Session 的帧数据源组](../cameras/frame-source-group.html) 中 [MegaBlock\_MotionTracking\_Inertial\_3DOF\_0DOF](../../../api/unity/easyar.ARSessionFactory.ARSessionPreset.html#u_easyar_ARSessionFactory_ARSessionPreset_MegaBlock_MotionTracking_Inertial_3DOF_0DOF) 预设对应的帧数据源组
 * [MegaTrackerFrameFilter.MinInputFrameLevel](../../../api/unity/easyar.MegaTrackerFrameFilter.html#u_easyar_MegaTrackerFrameFilter_MinInputFrameLevel) 为 [ZeroDof](../../../api/unity/easyar.MegaInputFrameLevel.html#u_easyar_MegaInputFrameLevel_ZeroDof)
 * [MegaTrackerFrameFilter.ServiceType](../../../api/unity/easyar.MegaTrackerFrameFilter.html#u_easyar_MegaTrackerFrameFilter_ServiceType) 为 [Block](../../../api/unity/easyar.MegaApiType.html#u_easyar_MegaApiType_Block)
-##### 注意
+> **注意**
 Mega 在不同类型的设备上运行效果是不一样的，详情可以参考 [Mega 支持的设备和平台应用](../../mega/devices.html)。
 ## 后续步骤
 * [添加跟踪目标](target.html)

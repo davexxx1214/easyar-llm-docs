@@ -1,17 +1,14 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/unity-compatibility.html
+original_file: doc--zh-cn--develop--unity--fundamentals--unity-compatibility.md
+normalized_at: 2026-02-27
 ---
-
-Unity 兼容性 | EasyAR 文档
-**
-##### Table of Contents
-**
 # Unity 兼容性
 本文介绍 EasyAR Sense Unity Plugin 所兼容的 Unity 版本和配置要求。
 ## Unity 版本
 EasyAR Sense Unity Plugin 支持 **Unity 2021.3** 或更高版本。
 开发 Mega 功能所需的 EasyAR Mega Studio 支持 **Unity 2021.3.30** 或更高版本。
-##### 提示
+> **提示**
 通常来说, EasyAR 不依赖很多变化的 Unity API，所以如果 Unity 发布了新版本，EasyAR Sense Unity Plugin 一般都可以正常使用。
 EasyAR Sense Unity Plugin 从版本 4.6.4 开始支持 Unity 6 的 URP 17+ Render Graph。
 ## 开发平台
@@ -51,7 +48,7 @@ EasyAR Sense Unity Plugin 直接使用 Unity 的渲染管线，所有 Unity 中�
 ## Scriptable Render Pipeline
 EasyAR Sense Unity Plugin 支持 Universal Render Pipeline (URP) 7.0.0 或更新版本。
 EasyAR Sense Unity Plugin 不支持 High Definition Render Pipeline (HDRP)。
-##### 注意
+> **注意**
 **关于 Unity 6 URP 17+ render graph 支持的声明**
 EasyAR 支持 Unity 6 URP 17+ render graph，但是 Unity 本身仍存在部分未解决的问题。在遇到异常情形时可以尝试使用 Unity 提供的 [URP 兼容模式](https://docs.unity3d.com/6000.2/Documentation/Manual/urp/compatibility-mode.html) 。
 部分问题已经在最新版本的 Unity 中得到解决，建议使用 6.2 及以上版本。

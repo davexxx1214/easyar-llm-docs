@@ -1,28 +1,25 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-realworld-alignment.html
+original_file: doc--zh-cn--develop--wechat--mega--content-realworld-alignment.md
+normalized_at: 2026-02-27
 ---
-
-如何使用 Unity 上的 Mega Studio 创建与实景精确对齐的 3D 内容 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 如何使用 Unity 上的 Mega Studio 创建与实景精确对齐的 3D 内容
 尽管 xr-frame 没有提供 3D 编辑器功能，您还是可以借助 Mega Studio 将虚拟物体准确地摆放在现实空间的某个位置，在 AR 体验中与现实空间精确对齐。
 ## 开始之前
 * 能够[在 Unity 中使用 Mega Studio](content-unity-setup.html)。
 * 准备模型： 使用示例工程中使用的模型（一个憨态可掬的熊猫），或者使用 xr-frame 官方 Demo 中使用的[小机器人模型](https://dldir1.qq.com/weixin/miniprogram/RobotExpressive_aa2603d917384b68bb4a086f32dabe83.glb)，或者参考[XRFame 可加载的 GLTF 格式及支持的拓展](https://developers.weixin.qq.com/miniprogram/dev/component/xr-frame/gltf/specification.html)，准备符合 xr-frame 要求的模型文件。
 * 将模型的文件导入 Unity 。
-##### 提示
+> **提示**
 Mega 插件中已经添加了对 [com.unity.cloud.gltfast](https://docs.unity3d.com/Packages/com.unity.cloud.gltfast@6.8/manual/index.html) 的依赖，因此您可以直接将模型文件拖入 Unity Assets。
 ## 将 3D 内容作为标注的子节点
 将导入的模型拖到场景节点，作为标注的子节点。
 将模型 **Inspector** 面板中的 Position 和 Rotation 全部改为 **0**， Scale 可以根据需要自行调整。
-##### 注意
+> **注意**
 EMA 承载了所有的坐标转换逻辑。将模型 Position 和 Rotation 设为 0，是为了让模型的几何中心与标注点完全重合。所有的位移和旋转调整，都应该通过操作其父节点（标注节点）来完成。
 ![修改模型Transform](https://doc-asset.easyar.com/develop/wechat/mega/media/content-annotation-creation11.png)
 ## 精确调整模型位置
 选择 **标注节点** 在场景中对着稠密模型调整模型的位置和旋转。
-##### 注意
+> **注意**
 模型相对于标注的 Position 和 Rotation 必须始终全部为 **0** ，否则您无法在 xr-frame 上得到正确的渲染结果。
 ## [可选] 根据全景图精确调整模型位置
 点击 **Inspector** 面板中的全景标记右侧的加载按钮，场景中出现全景标记。
@@ -32,7 +29,7 @@ EMA 承载了所有的坐标转换逻辑。将模型 Position 和 Rotation 设�
 ![全景编辑](https://doc-asset.easyar.com/develop/wechat/mega/media/content-annotation-creation15.png)
 ## 如果加载的 Block 模型不水平怎么办
 在 **Hierarchy** 面板中选择 **Block Root** ，在 **Inspector** 面板中修改 **Rotation** 直到稠密模型的朝向在 Unity 编辑器中看起来正确。
-##### 重要事项
+> **重要事项**
 Block Root 是在 3D 引擎场景节点树上所有 Block 节点的父节点。
 Block Root 在世界坐标系下的 Transform **不会**影响 Block 的**本地坐标系**，也因此**不会影响标注和标注下模型的渲染结果**。它的 Transform 和最终的显示效果**无关**。
 ## 如果加载的 Block 模型有破碎，缺损的部分怎么办

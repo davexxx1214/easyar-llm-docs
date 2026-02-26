@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-load.html
+original_file: doc--zh-cn--develop--wechat--mega--content-load.md
+normalized_at: 2026-02-27
 ---
-
-如何在 xr-frame 运行时加载 AR 场景下的 3D 内容 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 如何在 xr-frame 运行时加载 AR 场景下的 3D 内容
 本文详细阐述了 xr-frame 资源加载与节点挂载的分离机制，通过脚本动态实现 3D 内容在 Block 节点下的灵活挂载，实现 AR。
 ## 官方资料
@@ -22,17 +19,16 @@ source: https://www.easyar.cn/doc/zh-cn/develop/wechat/mega/content-load.html
 参数中的 `type` 指资源类型，`assetId` 指加载后的资源 id，`src` 指资源的 url，一般是资源托管服务器的地址。
 需要记录 `assetId` 用于后续的挂载和释放资源。
 ```
-`try {
+try {
 await scene.assets.loadAsset({type: 'gltf', assetId: 'panda', src: 'url/EasyARPanda.glb'});
 } catch (err) {
 console.error(`Failed to load assets: ${err.message}`);
 }
-`
 ```
 2. 节点挂载
 使用 `element.addChild()` 将加载好的模型放在 ShadowRoot 下。
 ```
-`const root = scene.getElementById("shadow-root");
+const root = scene.getElementById("shadow-root");
 let panda = scene.createElement(xrFrameSystem.XRGLTF,
 {
 "model": "panda",
@@ -40,12 +36,11 @@ let panda = scene.createElement(xrFrameSystem.XRGLTF,
 }
 );
 root.addChild(panda);
-`
 ```
 ShadowRoot 元素是 xr-frame 专门用来防止动态创建和移除节点的根节点，详见 [Shadow节点](https://developers.weixin.qq.com/miniprogram/dev/component/xr-frame/core/shadow.html)。
 使用插件对象提供的 [createXRNodeFromNodeAnnotation](../../../api/wechat/easyar.EasyARWechatMiniprogramPlugin.html#w_easyar_EasyARWechatMiniprogramPlugin_createXRNodeFromNodeAnnotation_member) 方法能够根据 EMA 数据创建 Block 的子节点，确保 3D 内容显示在正确的空间位置。
 ```
-`const nodeAnnotation = annotation as easyar.ema.v0\_5.Node;
+const nodeAnnotation = annotation as easyar.ema.v0\_5.Node;
 const xrNode: xrfs.XRNode = easyarPlugin.createXRNodeFromNodeAnnotation(nodeAnnotation, blockHolder);
 let panda = scene.createElement(xrFrameSystem.XRGLTF,
 {
@@ -54,20 +49,19 @@ let panda = scene.createElement(xrFrameSystem.XRGLTF,
 }
 );
 xrNode.addChild(panda);
-`
 ```
 ## 如何在 Block 下不使用标注直接挂载内容
-##### 警告
+> **警告**
 使用此方法的前提是，您已验证该 LocalTransform 的数值在 xr-frame 坐标系下能够实现预期的渲染效果。
 除此以外的情况请[使用 Unity 编辑器的标注功能](content-annotation-creation.html)实现。
 通过 [getBlockById(id)](../../../api/wechat/easyar.BlockHolder.html#w_easyar_BlockHolder_getBlockById_member_1_) 获取场景树上的 block 节点对象，如果不存在相应的 block 节点说明对这个 Block 的定位还未成功过（在第一次定位到该 Block 时节点会被自动创建）。可以用 [holdBlock(blockInfo, blockTransformInput)](../../../api/wechat/easyar.BlockHolder.html#w_easyar_BlockHolder_holdBlock_member_1_) 创建一个该 Block 的节点，也可以在定位回调中判断对该 Block 的定位成功再挂载内容。
-##### 提示
+> **提示**
 在 Unity 编辑器的场景树中选择 **Block 节点** 记录它 **Inspector** 面板上显示的 **ID**
 ![Unity编辑器中的BlockID](https://doc-asset.easyar.com/develop/wechat/mega/media/content-load01.png)
 也可以在云定位库页面中查到 **Block ID**
 ![定位库中的BlockID](https://doc-asset.easyar.com/develop/wechat/mega/media/content-load02.png)
 ```
-`const blockID = "aaaa1234-bbbb-cccc-dddd-eeeeee123456"
+const blockID = "aaaa1234-bbbb-cccc-dddd-eeeeee123456"
 if (!blockHolder.getBlockById(blockParent.id)) {
 // 没有存在的 Block 节点，创建一个
 blockHolder.holdBlock({
@@ -75,11 +69,10 @@ id: blockID
 })
 }
 let blockElement = blockHolder.getBlockById(blockParent.id).el;
-`
 ```
 将模型节点以挂载到指定的 Block 下，分别用 `position.setArray()`，`quaternion.set()` 和 `scale.setArray()` 把修改模型节点的 **LocalTransform** 。
 ```
-`export interface LocalTransform {
+export interface LocalTransform {
 /\*\* @description 位置 \*/
 position: xrfs.Vector3;
 /\*\* @description 旋转 \*/
@@ -108,7 +101,6 @@ targetTransform.scale.x,
 targetTransform.scale.y,
 targetTransform.scale.z
 ]);
-`
 ```
 ## xr-frame 支持的资源类型
 * Texture 纹理和图像
@@ -119,5 +111,5 @@ targetTransform.scale.z
 * Keyframe 帧动画
 * Atlas 图集
 每种资源的加载方法详细见[微信官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/xr-frame/render)及 [xr-frame 官方样例](https://github.com/dtysky/xr-frame-demo)
-##### 注意
+> **注意**
 支持的 GLTF 格式及拓展参考 [xr-frame 官方 GLTF 使用说明](https://developers.weixin.qq.com/miniprogram/dev/component/xr-frame/gltf/specification.html)

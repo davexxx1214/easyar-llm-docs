@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/plane-detection/devices.html
+original_file: doc--zh-cn--develop--plane-detection--devices.md
+normalized_at: 2026-02-27
 ---
-
-平面检测支持的设备和平台 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 平面检测支持的设备和平台
 本章节介绍平面检测功能支持的设备硬件要求和支持的开发平台。
 ## 平面检测支持的设备

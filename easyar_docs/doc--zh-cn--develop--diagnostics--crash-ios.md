@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/diagnostics/crash-ios.html
+original_file: doc--zh-cn--develop--diagnostics--crash-ios.md
+normalized_at: 2026-02-27
 ---
-
-iOS/macOS/visionOS 上的崩溃分析 | EasyAR 文档
-**
-##### Table of Contents
-**
 # iOS/macOS/visionOS 上的崩溃分析
 关于 原生(iOS/macOS) 、 Unity(iOS/macOS/visionOS) 和 Unity 编辑器(macOS) 上的崩溃，可参考如下说明。
 ## 开发中的崩溃位置获取
@@ -13,20 +10,18 @@ iOS/macOS/visionOS 上的崩溃分析 | EasyAR 文档
 ![crash iOS](https://doc-asset.easyar.com/develop/diagnostics/media/diagnostics-crash-ios.png)
 在 lldb 中输入bt，可以获得崩溃原因和代码运行栈，如下
 ```
-`(lldb) bt
+(lldb) bt
 \* thread #11, stop reason = EXC\_BAD\_ACCESS (code=1, address=0x9c40)
 \* frame #0: 0x00000001057e7cb0 easyar`\_\_\_lldb\_unnamed\_symbol2693$$easyar + 6984
 frame #1: 0x00000001057e5e14 easyar`\_\_\_lldb\_unnamed\_symbol2692$$easyar + 276
 frame #2: 0x00000001057e2500 easyar`\_\_\_lldb\_unnamed\_symbol2532$$easyar + 360
 frame #3: 0x00000001f3d60bfc libsystem\_pthread.dylib`\_pthread\_start + 320
-`
 ```
 当代码运行栈中存在 `easyar` 或 `libEasyAR.dylib` 相关的内容时，可能说明崩溃和 EasyAR 有关；如果不存在，则有较大概率崩溃和 EasyAR 无关。
 在 lldb 中输入 `image list easyar` 或者 `image list libEasyAR.dylib`，可以获得动态库加载地址，如下
 ```
-`(lldb) image list easyar
-[ 0] DF06BDD8-A8AF-3982-897D-A906EE229A4F 0x0000000105730000 /Users/&lt;user&gt;/Library/Developer/Xcode/DerivedData/helloar-bpvpobshgxnnwwdiryfjufioysag/Build/Products/Debug-iphoneos/helloar.app/Frameworks/easyar.framework/easyar
-`
+(lldb) image list easyar
+[ 0] DF06BDD8-A8AF-3982-897D-A906EE229A4F 0x0000000105730000 /Users/<user>/Library/Developer/Xcode/DerivedData/helloar-bpvpobshgxnnwwdiryfjufioysag/Build/Products/Debug-iphoneos/helloar.app/Frameworks/easyar.framework/easyar
 ```
 ## 开发中的崩溃位置获取（Unity）
 在使用 Unity 开发应用时，还可以使用 Unity 的日志来分析崩溃。
@@ -36,12 +31,12 @@ Unity 日志分为 Unity 编辑器日志和 Unity 播放器日志，可以通过
 |播放器|iOS|使用 XCode 的 lldb 控制台|
 |播放器|macOS|\~/Library/Logs/Company Name/Product Name/Player.log|
 编辑器日志也可以通过 Console 窗口右上角菜单的 Open Editor Log 命令打开。
-托管异常(C#)可以在 Unity 编辑器的 Console 窗口中查看（Unity 主菜单的 `Window -&gt; General -&gt; Console`）。
+托管异常(C#)可以在 Unity 编辑器的 Console 窗口中查看（Unity 主菜单的 `Window -> General -> Console`）。
 ## 发布后的崩溃位置获取
-发布后，也有可能遇到崩溃的情况。此时从设备的 Privacy - Analytics &amp; Improvements - Analytic Data 查看或通过 TestFlight 和 App Store 来[收集崩溃日志](https://developer.apple.com/documentation/xcode/acquiring-crash-reports-and-diagnostic-logs#Collect-crash-reports-from-TestFlight-and-the-App-Store)。
+发布后，也有可能遇到崩溃的情况。此时从设备的 Privacy - Analytics & Improvements - Analytic Data 查看或通过 TestFlight 和 App Store 来[收集崩溃日志](https://developer.apple.com/documentation/xcode/acquiring-crash-reports-and-diagnostic-logs#Collect-crash-reports-from-TestFlight-and-the-App-Store)。
 以下为一个崩溃的例子：
 ```
-`Incident Identifier: 5916E252-D8C2-43C3-B583-7E38399597C9
+Incident Identifier: 5916E252-D8C2-43C3-B583-7E38399597C9
 CrashReporter Key: 2075d595d8d96cf07913a12798d5e0aba79c5358
 Hardware Model: iPhone9,2
 Process: ARManualEditorDemo [2352]
@@ -67,8 +62,8 @@ Thread 0 Crashed:
 2 JavaScriptCore 0x000000019d7a25cc llint\_entry + 34380
 ...
 13 JavaScriptCore 0x000000019d799cec vmEntryToJavaScript + 268
-14 JavaScriptCore 0x000000019dccb4d0 JSC::Interpreter::executeCall+ 7595216 (JSC::ExecState\*, JSC::JSObject\*, JSC::CallType, JSC::CallData const&amp;, JSC::JSValue, JSC::ArgList const&amp;) + 424
-15 JavaScriptCore 0x000000019dead560 JSC::profiledCall+ 9569632 (JSC::ExecState\*, JSC::ProfilingReason, JSC::JSValue, JSC::CallType, JSC::CallData const&amp;, JSC::JSValue, JSC::ArgList const&amp;) + 188
+14 JavaScriptCore 0x000000019dccb4d0 JSC::Interpreter::executeCall+ 7595216 (JSC::ExecState\*, JSC::JSObject\*, JSC::CallType, JSC::CallData const&, JSC::JSValue, JSC::ArgList const&) + 424
+15 JavaScriptCore 0x000000019dead560 JSC::profiledCall+ 9569632 (JSC::ExecState\*, JSC::ProfilingReason, JSC::JSValue, JSC::CallType, JSC::CallData const&, JSC::JSValue, JSC::ArgList const&) + 188
 16 JavaScriptCore 0x000000019d7df170 JSObjectCallAsFunction + 376
 17 EasyARPlayer 0x000000010353d284 0x10326c000 + 2953860
 18 EasyARPlayer 0x000000010363c880 0x10326c000 + 3999872
@@ -89,19 +84,17 @@ Thread 8:
 7 libsystem\_pthread.dylib 0x0000000196018cdc thread\_start + 4
 ...
 Binary Images:
-0x1023e4000 - 0x1024f3fff ARManualEditorDemo arm64 &lt;0fb0d9b7d18c3e2ebf44e950a68af61f&gt; /var/containers/Bundle/Application/ED9F6959-612A-4595-A7B9-3F573B5097DD/ARManualEditorDemo.app/ARManualEditorDemo
+0x1023e4000 - 0x1024f3fff ARManualEditorDemo arm64 <0fb0d9b7d18c3e2ebf44e950a68af61f> /var/containers/Bundle/Application/ED9F6959-612A-4595-A7B9-3F573B5097DD/ARManualEditorDemo.app/ARManualEditorDemo
 ...
-0x1028b4000 - 0x10310bfff easyar arm64 &lt;cb52ccf821e33255a0c30ca2422d2862&gt; /var/containers/Bundle/Application/ED9F6959-612A-4595-A7B9-3F573B5097DD/ARManualEditorDemo.app/Frameworks/easyar.framework/easyar
+0x1028b4000 - 0x10310bfff easyar arm64 <cb52ccf821e33255a0c30ca2422d2862> /var/containers/Bundle/Application/ED9F6959-612A-4595-A7B9-3F573B5097DD/ARManualEditorDemo.app/Frameworks/easyar.framework/easyar
 ...
 EOF
-`
 ```
 其中，包含 `easyar` 的代码栈有
 ```
-`2 easyar 0x0000000102fba7c0 0x1028b4000 + 7366592
+2 easyar 0x0000000102fba7c0 0x1028b4000 + 7366592
 3 easyar 0x0000000102e7627c 0x1028b4000 + 6038140
 4 easyar 0x0000000102e452e8 0x1028b4000 + 5837544
-`
 ```
 这里的 0x0000000102fba7c0 为代码在内存中的虚拟地址，0x1028b4000 为 `easyar` 的模块加载地址，7366592 为偏移量。
 从 `Binary Images` 的部分也能看出0x1028b4000 为 `easyar` 的模块加载地址。

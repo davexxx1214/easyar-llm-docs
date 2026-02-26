@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/headsets/extension.html
+original_file: doc--zh-cn--develop--unity--headsets--extension.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Unity 头显扩展包 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Unity 头显扩展包
 本文档介绍了 EasyAR Unity 头显扩展包的概念、能力边界以及创建头显扩展包所需的背景知识。
 ## 开始之前
@@ -15,21 +12,21 @@ EasyAR Unity 头显扩展包 | EasyAR 文档
 EasyAR Unity 头显扩展包是一个 Unity package，包含一系列代码和示例，帮助您在您的头显设备上使用 EasyAR Sense 的功能。通过这个扩展包，您可以将 EasyAR Sense 的大部分功能（如图像跟踪、稠密空间地图等）集成到您的设备上，从而利用 EasyAR 提供的强大 AR 功能。
 使用 EasyAR Unity 头显扩展包是 EasyAR 头显支持的其中一种方式。下图展示了 EasyAR 在 Unity 中的整体架构，以及头显扩展包在其中的位置。
 ```
-`block
+block
 columns 4
 block:groupApp:4
 block:groupAppWrapper
 space
-App1["EasyAR + Device A&lt;br&gt;App"]
+App1["EasyAR + Device A<br>App"]
 space
-App2["EasyAR&lt;br&gt;App"]
+App2["EasyAR<br>App"]
 space
-App3["EasyAR + Device B&lt;br&gt;App"]
+App3["EasyAR + Device B<br>App"]
 end
 end
 block:groupSensePluginExtension
 columns 1
-SensePluginExtension["EasyAR Sense Unity Plugin&lt;br&gt;Extension for Device A"]
+SensePluginExtension["EasyAR Sense Unity Plugin<br>Extension for Device A"]
 space
 end
 block:groupSensePlugin
@@ -49,14 +46,14 @@ space
 end
 block:groupDeviceAUnity
 columns 1
-DeviceAUnity["Device A&lt;br&gt;Unity SDK"]
+DeviceAUnity["Device A<br>Unity SDK"]
 space
 end
 block:groupSense
 columns 1
 Sense["EasyAR Sense"]
 block:groupSenseWrapper
-MDeviceB["Device B&lt;br&gt;CameraDevice"]
+MDeviceB["Device B<br>CameraDevice"]
 Others["..."]
 end
 end
@@ -70,29 +67,29 @@ columns 1
 System["Native Library"]
 block:groupSystemWrapper
 space
-DeviceA["Device A&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Library&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;"]
+DeviceA["Device A<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Library&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]
 space
 space
-DeviceB["Device B&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Library&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;"]
+DeviceB["Device B<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Library&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]
 space
 end
 end
-SensePluginExtension --&gt; App1
-SensePlugin --&gt; App1
-SensePlugin --&gt; App2
-SensePlugin --&gt; App3
-ARF --&gt; App3
-XRI --&gt; App1
-XRI --&gt; App3
-groupSense --&gt; SensePlugin
-groupDeviceAUnity --&gt; SensePluginExtension
-SensePlugin --&gt; SensePluginExtension
-DeviceA --&gt; groupDeviceAUnity
-DeviceA --&gt; XRSDK
-XRSubsystem --&gt; ARF
-XRSubsystem --&gt; XRI
-DeviceB --&gt; MDeviceB
-DeviceB --&gt; XRSDK
+SensePluginExtension --> App1
+SensePlugin --> App1
+SensePlugin --> App2
+SensePlugin --> App3
+ARF --> App3
+XRI --> App1
+XRI --> App3
+groupSense --> SensePlugin
+groupDeviceAUnity --> SensePluginExtension
+SensePlugin --> SensePluginExtension
+DeviceA --> groupDeviceAUnity
+DeviceA --> XRSDK
+XRSubsystem --> ARF
+XRSubsystem --> XRI
+DeviceB --> MDeviceB
+DeviceB --> XRSDK
 style groupApp fill:none,stroke:none,stroke-width:0px
 style groupAppWrapper fill:none,stroke:none,stroke-width:0px
 style groupSensePlugin fill:none,stroke:none,stroke-width:0px
@@ -107,7 +104,6 @@ style groupSystemWrapper fill:none,stroke:none,stroke-width:0px
 style groupSensePluginExtension fill:none,stroke:none,stroke-width:0px
 classDef EasyAR fill:#6e6ce6,stroke:#333,color:#fff
 class SensePluginExtension EasyAR
-`
 ```
 图中列出了两种典型的头显支持方式：通过 Unity 头显扩展包对接设备 SDK（Device A），以及在 EasyAR Sense 库中直接对接设备 SDK（Device B）。本文档主要介绍前者。
 ## 我可以创建自己的头显扩展包吗？
@@ -122,7 +118,7 @@ class SensePluginExtension EasyAR
 * 使用 [自定义相机功能](../../cameras/custom-camera.html)，从您的设备 API 抓取数据并发送进 `EasyAR Sense` 的一系列代码。
 * 在 Unity 中，头显扩展会使用 [外部帧数据源](../cameras/external-frame-source.html) 和 `EasyAR Sense Unity Plugin` 定义的一套 `EasyAR Sense` 数据流来简化自定义相机开发。
 * 在 Unity 中，头显扩展是一个 [Unity package](https://docs.unity3d.com/Manual/Packages.html)，包含运行时脚本，编辑器脚本和扩展的 sample，您或 EasyAR 可以将它分发给下游用户。
-##### 提示
+> **提示**
 如果您不希望将对接细节暴露在外部系统中，可以联系 EasyAR 进行沟通。在 EasyAR Sense 内部使用 C 接口直接对接是可行且有先例的。
 您在实现扩展的时候，可能会：
 * 修改您 SDK 的**接口设计和内部实现**。
@@ -148,9 +144,9 @@ class SensePluginExtension EasyAR
 ## 如何在我的设备上使用 Mega？
 在设备上运行 Mega 是很多用户关心的问题。在 Unity 中，Mega 服务是运行在 `EasyAR Sense` 诸多基础功能之上的一个功能模块，所以只要您的设备完整支持 `EasyAR Sense`，那么 Mega 也会被支持。
 一般来说，不建议在一开始就直接在设备上运行 Mega 示例来验证设备对 Mega 的支持情况，因为 Mega 会综合利用所有输入数据，并且其对这些数据的误差容忍度较大。直接运行 Mega 示例很可能会因为数据接口不匹配或数据质量不佳而导致无法获得合理的运行效果，并且无法判断问题出在哪里，这会为日后的调试带来很大困难。
-##### 重要事项
+> **重要事项**
 Mega 服务对设备的运动跟踪能力有一定要求。如果设备的运动跟踪能力不佳，那么 Mega 的表现也会受到影响。在大范围 AR 场景中，还需要特别关注室内外的表现差异。
-##### 重要事项
+> **重要事项**
 Mega 一般服务于大空间场景，因此需要格外关注远距离物体以及转动头部或移动时物体的 **显示** 效果。如果设备的显示系统误差较大，那么即使 Mega 本身运行正常，用户也会感觉虚拟物体无法正确贴合现实物体。
 ## 需要的背景知识和团队配置
 创建头显扩展包不是一个简单的任务，需要您和您的团队在多个领域进行深入的工作。通常来说，要完成头显扩展，需要 Unity 开发参与的同时投入 Unity 开发之外的团队人员。由于缺少标准，只在 3D 引擎上面修改通常无法完成头显扩展，建议从第一天起就让系统工程师和 SDK 工程师等底层开发工程师参与进来。

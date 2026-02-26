@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/frame-source-builtin.html
+original_file: doc--zh-cn--develop--unity--cameras--frame-source-builtin.md
+normalized_at: 2026-02-27
 ---
-
-内置 Frame Source 组件 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 内置 Frame Source 组件
 探索内置 Frame Source 组件窗口中的各项属性以自定义相机参数。
 |接口|组件参考|

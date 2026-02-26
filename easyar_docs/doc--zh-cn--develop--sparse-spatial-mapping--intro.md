@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/sparse-spatial-mapping/intro.html
+original_file: doc--zh-cn--develop--sparse-spatial-mapping--intro.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR 稀疏空间地图 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR 稀疏空间地图
 EasyAR 稀疏空间地图（Sparse Spatial Map）用于扫描用户周围小范围环境（房间级别），生成环境的三维视觉地图并提供视觉定位跟踪功能。适用于开发持久化 AR 应用或多人互动 AR 应用。
 ## EasyAR 稀疏空间地图原理

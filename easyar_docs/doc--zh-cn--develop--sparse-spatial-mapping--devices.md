@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/sparse-spatial-mapping/devices.html
+original_file: doc--zh-cn--develop--sparse-spatial-mapping--devices.md
+normalized_at: 2026-02-27
 ---
-
-稀疏空间地图支持的设备和平台 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 稀疏空间地图支持的设备和平台
 本章节介绍稀疏空间地图功能 (Sparse Spatial Map) 支持的设备硬件要求和开发平台。
 ## 稀疏空间地图支持的设备

@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/comp-ARSession.html
+original_file: doc--zh-cn--develop--unity--fundamentals--comp-ARSession.md
+normalized_at: 2026-02-27
 ---
-
-AR Session 组件参考 | EasyAR 文档
-**
-##### Table of Contents
-**
 # AR Session 组件参考
 >
 [> 切换到 API

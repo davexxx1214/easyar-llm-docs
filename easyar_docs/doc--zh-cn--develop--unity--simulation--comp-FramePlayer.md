@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/simulation/comp-FramePlayer.html
+original_file: doc--zh-cn--develop--unity--simulation--comp-FramePlayer.md
+normalized_at: 2026-02-27
 ---
-
-FramePlayer 组件参考 | EasyAR 文档
-**
-##### Table of Contents
-**
 # FramePlayer 组件参考
 >
 [> 切换到 API

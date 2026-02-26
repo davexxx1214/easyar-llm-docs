@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/coordinates.html
+original_file: doc--zh-cn--develop--native--fundamentals--coordinates.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR 坐标系 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR 坐标系
 3D 程序中，坐标系的定义非常重要。如果没有特别说明，则采用以下惯例。
 * 向量均为列向量。
@@ -20,10 +17,10 @@ pose 可写成：
 \\[
 P = \\left(
 \\begin{array}{cccc}
-p\_{11} &amp; p\_{12} &amp; p\_{13} &amp; p\_{14} \\\\
-p\_{21} &amp; p\_{22} &amp; p\_{23} &amp; p\_{24} \\\\
-p\_{31} &amp; p\_{32} &amp; p\_{33} &amp; p\_{34} \\\\
-0 &amp; 0 &amp; 0 &amp; 1 \\\\
+p\_{11} & p\_{12} & p\_{13} & p\_{14} \\\\
+p\_{21} & p\_{22} & p\_{23} & p\_{24} \\\\
+p\_{31} & p\_{32} & p\_{33} & p\_{34} \\\\
+0 & 0 & 0 & 1 \\\\
 \\end{array}
 \\right)
 \\]
@@ -31,31 +28,31 @@ p\_{31} &amp; p\_{32} &amp; p\_{33} &amp; p\_{34} \\\\
 \\[
 \\left(
 \\begin{array}{cccc}
-1 &amp; 0 &amp; 0 &amp; 0 \\\\
-0 &amp; 1 &amp; 0 &amp; 0 \\\\
-0 &amp; 0 &amp; -1 &amp; 0 \\\\
-0 &amp; 0 &amp; 0 &amp; 1 \\\\
+1 & 0 & 0 & 0 \\\\
+0 & 1 & 0 & 0 \\\\
+0 & 0 & -1 & 0 \\\\
+0 & 0 & 0 & 1 \\\\
 \\end{array}
 \\right)\\left(
 \\begin{array}{cccc}
-p\_{11} &amp; p\_{12} &amp; p\_{13} &amp; p\_{14} \\\\
-p\_{21} &amp; p\_{22} &amp; p\_{23} &amp; p\_{24} \\\\
-p\_{31} &amp; p\_{32} &amp; p\_{33} &amp; p\_{34} \\\\
-0 &amp; 0 &amp; 0 &amp; 1 \\\\
+p\_{11} & p\_{12} & p\_{13} & p\_{14} \\\\
+p\_{21} & p\_{22} & p\_{23} & p\_{24} \\\\
+p\_{31} & p\_{32} & p\_{33} & p\_{34} \\\\
+0 & 0 & 0 & 1 \\\\
 \\end{array}
 \\right)\\left(
 \\begin{array}{cccc}
-1 &amp; 0 &amp; 0 &amp; 0 \\\\
-0 &amp; 1 &amp; 0 &amp; 0 \\\\
-0 &amp; 0 &amp; -1 &amp; 0 \\\\
-0 &amp; 0 &amp; 0 &amp; 1 \\\\
+1 & 0 & 0 & 0 \\\\
+0 & 1 & 0 & 0 \\\\
+0 & 0 & -1 & 0 \\\\
+0 & 0 & 0 & 1 \\\\
 \\end{array}
 \\right)=\\left(
 \\begin{array}{cccc}
-p\_{11} &amp; p\_{12} &amp; -p\_{13} &amp; p\_{14} \\\\
-p\_{21} &amp; p\_{22} &amp; -p\_{23} &amp; p\_{24} \\\\
--p\_{31} &amp; -p\_{32} &amp; p\_{33} &amp; -p\_{34} \\\\
-0 &amp; 0 &amp; 0 &amp; 1 \\\\
+p\_{11} & p\_{12} & -p\_{13} & p\_{14} \\\\
+p\_{21} & p\_{22} & -p\_{23} & p\_{24} \\\\
+-p\_{31} & -p\_{32} & p\_{33} & -p\_{34} \\\\
+0 & 0 & 0 & 1 \\\\
 \\end{array}
 \\right)
 \\]

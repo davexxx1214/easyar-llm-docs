@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/headsets/headsets.html
+original_file: doc--zh-cn--develop--headsets--headsets.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR 的头显支持 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR 的头显支持
 EasyAR SDK 提供了强大的跨平台 AR 功能，其设计理念同样适用于新兴的空间计算设备——头显（Headset）。本篇将介绍 EasyAR 如何支持头显设备，以及开发者可以如何利用这些功能来构建沉浸式体验。
 ## 术语说明
@@ -36,9 +33,9 @@ EasyAR 已经在多个主流头显平台上通过 Unity 的方式进行了测试
 |Rokid AR Studio|Rokid Unity OpenXR Plugin 3.0.3 或更新版本|
 |XREAL Air2 Ultra|XREAL SDK 3.1 或更新版本|
 |Xrany X1|Xrany元霓 SDK|
-##### 注意
+> **注意**
 Rokid AR Studio 可通过 Rokid Unity OpenXR Plugin 支持 Rokid UXR 3，但建议使用 XR Interaction Toolkit，尤其是跨设备使用。
-##### 重要事项
+> **重要事项**
 Apple Vision Pro、PICO、XREAL 都需要其对应的企业授权才能使用，如有疑问请联系商务。
 * 受 Apple Vision Pro 接口授权限制，仅支持获取了 Apple 企业 API 许可的设备。
 * 受 PICO 接口授权限制，仅支持 PICO 企业版设备。

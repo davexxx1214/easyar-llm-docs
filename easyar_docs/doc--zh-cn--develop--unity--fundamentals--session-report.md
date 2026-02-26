@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/session-report.html
+original_file: doc--zh-cn--develop--unity--fundamentals--session-report.md
+normalized_at: 2026-02-27
 ---
-
-设备支持和 session 报告 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 设备支持和 session 报告
 由于设备硬件和性能差异，AR 功能很多时候并不能在所有设备上运行。所以在使用 AR 功能时准确判断当前设备的支持情况是非常重要的。本文介绍了在 Unity 中，设备可用性是如何表达的，以及如何通过 session 报告（[ARSession.Report](../../../api/unity/easyar.ARSession.html#u_easyar_ARSession_Report)）获取设备支持和 session 可用性的信息。
 ## 开始之前

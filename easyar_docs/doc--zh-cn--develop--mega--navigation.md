@@ -1,14 +1,11 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/mega/navigation.html
+original_file: doc--zh-cn--develop--mega--navigation.md
+normalized_at: 2026-02-27
 ---
-
-导航场景最佳实践 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 导航场景最佳实践
 在导航场景中，提供流畅、精准的用户体验至关重要。EasyAR Mega 提供了多种 xDoF 模式来适应不同的设备能力和环境需求。理解这些模式的差异，并结合平台特性进行选择，是构建优秀导航应用的关键。
-##### 提示
+> **提示**
 参考阅读： [不同设备上的体验差异](devices.html#xdof-grade)。
 ## 正确选择跟踪模式
 在 Mega 定位的基础上，我们可以根据设备提供的传感器能力和应用需求，选择不同的跟踪模式来增强导航体验。
@@ -42,7 +39,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/mega/navigation.html
 * **当前行为**：用户在小程序中启动基于 Mega 的导航后，如果运行的设备本身并不支持 6DoF 模式，则 `ARSession` 会无法启动，并在终端报错。
 * **开发建议**：在微信小程序上规划导航功能时，请**以 6DoF 模式作为前提进行设计**。查看 [微信官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/visionkit/plane.html#附录) 获取设备支持列表，或者通过我们的 API 调用检查设备是否支持。
 ```
-`const easyarPlugin: easyar.EasyARWechatMiniprogramPlugin = requirePlugin("easyar-wechat-miniprogram") as easyar.EasyARWechatMiniprogramPlugin;
+const easyarPlugin: easyar.EasyARWechatMiniprogramPlugin = requirePlugin("easyar-wechat-miniprogram") as easyar.EasyARWechatMiniprogramPlugin;
 if (easyarPlugin.isMegaTrackerSupported() === false) {
 const message = `当前设备不支持 VK v1 和 v2，请参考微信官方文档：https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/visionkit/plane.html`;
 wx.showModal({
@@ -52,7 +49,6 @@ showCancel: false,
 });
 console.error(message);
 }
-`
 ```
 ## 微信小程序平台的替代方案
 对于需要在微信小程序中实现拥有**完整设备支持**的导航应用的开发者，我们强烈推荐您直接使用我们的 **视＋ AR 导航** 产品。

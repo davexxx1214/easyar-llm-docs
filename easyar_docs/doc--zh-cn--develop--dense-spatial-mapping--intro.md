@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/dense-spatial-mapping/intro.html
+original_file: doc--zh-cn--develop--dense-spatial-mapping--intro.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR 稠密空间地图 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR 稠密空间地图
 EasyAR 稠密空间地图利用设备的摄像头数据对周围环境进行三维重建，得到稠密的点云地图和网格地图。利用稠密空间地图让虚拟物体更好地融入真实环境之中，以实现真实物体和虚拟物体正确遮挡、碰撞等 AR 应用。
 ## 稠密空间地图功能简介

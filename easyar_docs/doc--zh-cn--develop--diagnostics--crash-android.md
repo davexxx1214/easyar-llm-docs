@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/diagnostics/crash-android.html
+original_file: doc--zh-cn--develop--diagnostics--crash-android.md
+normalized_at: 2026-02-27
 ---
-
-Android 上的崩溃分析 | EasyAR 文档
-**
-##### Table of Contents
-**
 # Android 上的崩溃分析
 关于 原生(Android) 和 Unity(Android)上的崩溃，可参考如下说明。
 ## 开发中的崩溃位置获取
@@ -15,25 +12,23 @@ Android 上的崩溃分析 | EasyAR 文档
 ![crash Android stack](https://doc-asset.easyar.com/develop/diagnostics/media/diagnostics-crash-android-stack.png)
 在 lldb 中输入 `bt` ，可以获得崩溃原因和代码运行栈，如下
 ```
-`(lldb) bt
+(lldb) bt
 \* thread #16, name = 'samples.helloar', stop reason = signal SIGSEGV: invalid address (fault address: 0x9c40)
 \* frame #0: 0x0000004922f3a1d8 libEasyAR.so`\_\_\_lldb\_unnamed\_symbol3056$$libEasyAR.so + 6088
 frame #1: 0x0000004922f38568 libEasyAR.so`\_\_\_lldb\_unnamed\_symbol3054$$libEasyAR.so + 288
 frame #2: 0x0000004922f347f8 libEasyAR.so`\_\_\_lldb\_unnamed\_symbol2876$$libEasyAR.so + 332
 frame #3: 0x00000049be2390c8 libc.so`\_\_pthread\_start(void\*) + 40
 frame #4: 0x00000049be1f04f8 libc.so`\_\_start\_thread + 72
-`
 ```
 当代码运行栈中存在 `libEasyAR.so` 相关的内容时，可能说明崩溃和 EasyAR 有关；如果不存在，则有较大概率崩溃和 EasyAR 无关。
 在 lldb 中输入 `image dump sections libEasyAR.so`，可以获得动态库 `.text` 节加载地址，如下
 ```
-`(lldb) image dump sections libEasyAR.so
+(lldb) image dump sections libEasyAR.so
 ...
 SectID Type Load Address Perm File Off. File Size Flags Section Name
 ...
 0x00000010 code [0x0000004922e30cfc-0x0000004923654558) r-x 0x00256cfc 0x0082385c 0x00000006 libEasyAR.so..text
 ...
-`
 ```
 ## 发布后的崩溃位置获取
 发布后，也有可能遇到崩溃的情况。

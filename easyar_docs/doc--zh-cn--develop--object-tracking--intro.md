@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/object-tracking/intro.html
+original_file: doc--zh-cn--develop--object-tracking--intro.md
+normalized_at: 2026-02-27
 ---
-
-3D 物体跟踪简介 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 3D 物体跟踪简介
 除了平面物体外，EasyAR 同时也提供对 3D 物体的跟踪功能。本篇将介绍 3D 物体跟踪的核心原理、预期效果及潜在限制，帮助开发者理解该技术的适用场景。
 ## 基本原理

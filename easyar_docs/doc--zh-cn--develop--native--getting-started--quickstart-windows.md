@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/quickstart-windows.html
+original_file: doc--zh-cn--develop--native--getting-started--quickstart-windows.md
+normalized_at: 2026-02-27
 ---
-
-运行 EasyAR Windows 样例 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 运行 EasyAR Windows 样例
 本文介绍如何运行 EasyAR 提供的原生 Windows 样例。这里以 HelloARQt 为例，介绍如何运行样例，其他样例使用方法可以参考本文。
 ## 准备工作
@@ -16,7 +13,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/native/getting-started/quickstar
 * (USB) 摄像头，插入状态并可以正常工作。
 * 下载 [EasyAR Sense 原生样例](https://www.easyar.cn/view/download.html) 并解压
 * 在 EasyAR 开发中心（[中文站点](https://www.easyar.cn/view/login.html) / [English Site](https://www.easyar.com/view/login.html) ）获取 License Key
-##### 注意
+> **注意**
 请确保 Visual Studio 的 C++ 支持库已经安装，这些在 Visual Studio 的默认安装情况下不会自动安装。
 ## 编译运行 EasyAR 的 Windows 的样例
 以下以 HelloARQt 为例介绍如何编译运行 EasyAR 官方 Windows 的样例。

@@ -1,19 +1,16 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/getting-started/scene.html
+original_file: doc--zh-cn--develop--unity--getting-started--scene.md
+normalized_at: 2026-02-27
 ---
-
-配置 AR 场景 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 配置 AR 场景
 本文以图像跟踪为例，介绍如何配置一个最简单的 AR 场景。
 ## 开始之前
 * 按 [启用 EasyAR](enable-easyar.html) 的内容导入 EasyAR Sense Unity 插件并填写许可证（License Key）。
-##### 注意
+> **注意**
 如果您的工程使用了 URP (Universal Render Pipeline) ，还需要额外 [配置 URP](universal-render-pipeline.html) 。
 ## 添加 AR Session
-在 `Hierarchy` 视图中，在 **空白** 处点击右键，通过菜单 `EasyAR Sense` &gt; `Image Tracking` &gt; `AR Session (Image Tracking Preset)` 创建一个用于图像跟踪的 session。
+在 `Hierarchy` 视图中，在 **空白** 处点击右键，通过菜单 `EasyAR Sense` > `Image Tracking` > `AR Session (Image Tracking Preset)` 创建一个用于图像跟踪的 session。
 ![PresetImageTracking](https://doc-asset.easyar.com/develop/unity/fundamentals/media/session-creation.png)
 ## 配置摄像机
 选中 `Main Camera`, 在 `Inspector` 设置以下参数。
@@ -22,7 +19,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/getting-started/scene.html
 * 设置 `Clipping Planes` 的 `Near` 为 0.1（米），`Far` 为 1000（米）。
 ![mainCameraSetting](https://doc-asset.easyar.com/develop/unity/getting-started/media/main_camera_setting.png)
 ## 添加 Target
-在 `Hierarchy` 视图中，在 **空白** 处点击右键，通过菜单 `EasyAR Sense` &gt; `Image Tracking` &gt; `Target : Image Target` 添加一个 Image Target，默认显示为问号图标。
+在 `Hierarchy` 视图中，在 **空白** 处点击右键，通过菜单 `EasyAR Sense` > `Image Tracking` > `Target : Image Target` 添加一个 Image Target，默认显示为问号图标。
 ![createimagetarget](https://doc-asset.easyar.com/develop/unity/getting-started/media/create_image_target.png)
 选中需要跟踪的图像，设置以下参数，并点击 `Apply` 按钮应用设置：
 * 设置 `Texture Type` 为 `Editor GUI and Legacy GUI`。
@@ -36,11 +33,11 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/getting-started/scene.html
 * 设置 **Scale** 为 0.09（表示 0.09 米）。
 * 设置 **Tracker** 为 ARSession 下的 `ImageTrackerFrameFilter`。
 ![addimagetargetcontroler](https://doc-asset.easyar.com/develop/unity/getting-started/media/image_target_controller.png)
-##### 提示
+> **提示**
 Source Type 不同时，部分配置内容会有所不同。
 ## 添加跟随 Target 的 3D 内容
 在 Image Target 节点下添加的 3D 内容相对图片的位置保持不变，即图片移动之后，虚拟内容跟随显示。
-在 `Hierarchy` 视图中，选中 `Image Target`，通过菜单 `3D Object` &gt; `Cube` 添加一个 Cube。
+在 `Hierarchy` 视图中，选中 `Image Target`，通过菜单 `3D Object` > `Cube` 添加一个 Cube。
 ![add3D-1](https://doc-asset.easyar.com/develop/unity/getting-started/media/add_3D_1.png)
 选中刚才添加的 Cube，配置其属性：
 * 设置 Transform 的 `Scale` 为 {0.5, 0.3, 0.3}。

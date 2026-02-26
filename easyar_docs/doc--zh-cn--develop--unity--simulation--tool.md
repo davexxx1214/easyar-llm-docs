@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/simulation/tool.html
+original_file: doc--zh-cn--develop--unity--simulation--tool.md
+normalized_at: 2026-02-27
 ---
-
-使用 session 验证工具 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 使用 session 验证工具
 本文介绍了如何使用 session 验证工具，在编辑器中快速验证 session 工作流以及使用 EIF 文件进行模拟运行。
 ## 开始之前
@@ -37,11 +34,11 @@ session 验证工具用于帮助开发者在 Unity 编辑器中快速验证 sess
 > 在场景中，可以看到同时工作的 3 个 AR 功能：
 >
 >
-* > 运动跟踪：它是由 frame player 提供的，蓝色球体是 XR Origin，蓝色锥体代表用户位置。
+> 运动跟踪：它是由 frame player 提供的，蓝色球体是 XR Origin，蓝色锥体代表用户位置。
 >
-* > 稠密空间建图：可用看到随着视角的移动，半透明的网格模型在不断生成。
+> 稠密空间建图：可用看到随着视角的移动，半透明的网格模型在不断生成。
 >
-* > 稀疏空间跟踪：视频中在被跟踪的是一棵圣诞树，叠加的虚拟物体是浅蓝色点云。
+> 稀疏空间跟踪：视频中在被跟踪的是一棵圣诞树，叠加的虚拟物体是浅蓝色点云。
 >
 >
 ## 启动工具
@@ -54,7 +51,7 @@ session 验证工具用于帮助开发者在 Unity 编辑器中快速验证 sess
 ![alt text](https://doc-asset.easyar.com/develop/unity/simulation/media/tool-player-enable.png)
 因此，运行时会有弹窗提示，说明当前 session 所使用的 frame source 已被工具托管：
 ![alt text](https://doc-asset.easyar.com/develop/unity/simulation/media/tool-notice.png)
-##### 注意
+> **注意**
 工具只会在 Unity 编辑器上托管组装过程中 frame source 的选择，在应用打包运行时该选项没有任何影响。
 正常运行时，EIF 播放控制功能会显示在工具的上方图中框出的部分：
 ![alt text](https://doc-asset.easyar.com/develop/unity/simulation/media/tool-player.png)
@@ -69,7 +66,7 @@ session 验证工具用于帮助开发者在 Unity 编辑器中快速验证 sess
 * `▲`：打开文件
 * 进度条：点击可以跳转播放位置（文件支持时）
 可以在播放的同时调整优化场景中的内容和交互逻辑，从而可以在电脑上进行大部分的开发工作，并直观地看到效果。
-##### 注意
+> **注意**
 播放新数据和跳转播放时，场景中原本的数据不会被清空。AR 组件的状态也不会被重置，它们会表现得像是摄像头数据突然从上一帧数据跳到新数据一样。
 虽然这对一部分功能没太大影响，但是对于依赖运动跟踪的功能（比如稠密空间地图、Mega等）来说，可能会导致功能状态异常，从而影响运行效果。
 ## 控制 session 工作流
@@ -86,7 +83,7 @@ session 验证工具用于帮助开发者在 Unity 编辑器中快速验证 sess
 * `StopSession`：停止 session
 * `StopSession (keep image)`：停止 session，但保留图像背景
 * `Deinitialize`：反初始化 session
-##### 注意
+> **注意**
 由于这些控制功能直接调用了 [ARSession](../../../api/unity/easyar.ARSession.html) 和 [EasyARController](../../../api/unity/easyar.EasyARController.html) 的相关方法，因此可以通过这些按钮来验证 session 状态变化对内容的影响，但同时需要注意如果在应用脚本中也调用了类似方法，应用的运行流程可能超出应用本身的预期。
 ## 控制 session 组件
 使用工具的 session 组件控制功能，需要在运行前勾选工具的 `Session Workflow` 选项，该选项是默认勾选的。
@@ -102,7 +99,7 @@ session 验证工具用于帮助开发者在 Unity 编辑器中快速验证 sess
 * Frame Filter：控制具体 AR 功能的启用/禁用
 * Frame Recorder：控制录制 EIF 组件的启用/禁用，只有未启用 frame player 时才可见，启用 frame player 时，该组件不会被组装进 session
 同时区域内还会显示 session 可用的中心模式和 [session 报告](../fundamentals/session-report.html)。
-##### 注意
+> **注意**
 工具中展示的可用中心模式和 session 报告是编辑器下运行的结果，实际设备上运行时会不同。
 ## 相关主题
 * 尝试 [使用 EIF 文件模拟运行](tool.html)，通过脚本控制 EIF 文件的播放

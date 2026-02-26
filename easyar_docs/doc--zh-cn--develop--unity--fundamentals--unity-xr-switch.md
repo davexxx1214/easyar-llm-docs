@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/fundamentals/unity-xr-switch.html
+original_file: doc--zh-cn--develop--unity--fundamentals--unity-xr-switch.md
+normalized_at: 2026-02-27
 ---
-
-在 Unity 场景中自动切换 Unity XR 物体 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 在 Unity 场景中自动切换 Unity XR 物体
 Unity 的 XR 组件（包括 AR Foundation）所能支持的设备有限。为了在受支持的设备上使用 AR Foundation，同时又能在其它大量设备上使用 AR 功能，EasyAR 提供了自动切换 Unity XR 物体的功能。以下内容介绍该功能对场景物体的改动及使用方法。
 ## 开始之前
@@ -22,10 +19,10 @@ Unity 的 XR 组件（包括 AR Foundation）所能支持的设备有限。为�
 * 在 Windows/Mac 上启用。
 * 切换器启动时，如果移动 AR（ARKit/ARCore）的 loader 是激活的，则启用。
 * 切换器启动时，如果存在移动AR（ARKit/ARCore）之外的其它 loader，但没有任何一个 loader 是激活的，则禁用。
-##### 注意
+> **注意**
 XR Interaction Toolkit 的组件不受该功能控制，但其在 EasyAR 中是否可用未经验证。理论上对于只使用 [Unity.XR.CoreUtils.XROrigin](https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.5/api/Unity.XR.CoreUtils.XROrigin.html) GameObject 及其 Camera 的功能应该可以正常使用。如果行为异常可以尝试设置 [ARSession.ARCenterMode](../../../api/unity/easyar.ARSession.ARCenterMode.html) 为 [ARSession.ARCenterMode.SessionOrigin](../../../api/unity/easyar.ARSession.ARCenterMode.html#u_easyar_ARSession_ARCenterMode_SessionOrigin)。如果功能还是不正常，则需要实现自定义的 XR Interaction Toolkit 的组件控制，在 [FrameSource](../../../api/unity/easyar.FrameSource.html) 不是继承自 [ARFoundationFrameSource](../../../api/unity/easyar.ARFoundationFrameSource.html) 时禁用相关组件。
 ## 配置方法
-这个功能可以通过 `Project Settings` &gt; `EasyAR` &gt; `Sense` 中的 `Unity XR` &gt; `Unity XR Auto Switch` 中的选项启用或关闭。
+这个功能可以通过 `Project Settings` > `EasyAR` > `Sense` 中的 `Unity XR` > `Unity XR Auto Switch` 中的选项启用或关闭。
 ![alt text](https://doc-asset.easyar.com/develop/unity/fundamentals/media/xr-auto-switch.png)
 图中选项配置功能行为如下：
 * **Editor**：编辑模式选项
@@ -33,8 +30,8 @@ XR Interaction Toolkit 的组件不受该功能控制，但其在 EasyAR 中是�
 * **Player**：运行模式选项
 * **Enable**：启用运行时控制。注意：关闭该选项时编辑模式被禁用的组件在运行时不会被恢复。
 * **Enable If Desktop**：在 Windows/Mac 上启用。
-* **Enable If Mobile AR On Startup**：切换器启动时，如果移动 AR（ARKit/ARCore）的 loader 是激活的，则启用。通常这个选项需要 `Project Settings` &gt; `XR Plug-in Management` 中的 `Initialize XR on Startup` 是选中的。
-* **Disable If Non Mobile AR Post Startup**：切换器启动时，如果存在移动AR（ARKit/ARCore）之外的其它 loader，但没有任何一个 loader 是激活的，则禁用。通常这个选项会在 `Project Settings` &gt; `XR Plug-in Management` 中的 `Initialize XR on Startup` 未选中时被使用。
+* **Enable If Mobile AR On Startup**：切换器启动时，如果移动 AR（ARKit/ARCore）的 loader 是激活的，则启用。通常这个选项需要 `Project Settings` > `XR Plug-in Management` 中的 `Initialize XR on Startup` 是选中的。
+* **Disable If Non Mobile AR Post Startup**：切换器启动时，如果存在移动AR（ARKit/ARCore）之外的其它 loader，但没有任何一个 loader 是激活的，则禁用。通常这个选项会在 `Project Settings` > `XR Plug-in Management` 中的 `Initialize XR on Startup` 未选中时被使用。
 * **Restore AR Session When Disabled**：功能禁用时，恢复（启用）所有被禁用的 [UnityEngine.XR.ARFoundation.ARSession](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@6.4/api/UnityEngine.XR.ARFoundation.ARSession.html)（无论它是否由 EasyAR 所禁用）。这个选项通常用于恢复编辑时被禁用的组件。
 ## 使用自定义的控制方法
 如果需要自定义这些组件的切换，或是 EasyAR 的行为干扰了某些组件的正常工作，需要确保关闭这些选项，同时根据以下基本规则自定义组件切换：

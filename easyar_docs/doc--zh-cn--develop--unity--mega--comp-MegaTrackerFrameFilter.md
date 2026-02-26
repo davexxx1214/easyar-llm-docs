@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/mega/comp-MegaTrackerFrameFilter.html
+original_file: doc--zh-cn--develop--unity--mega--comp-MegaTrackerFrameFilter.md
+normalized_at: 2026-02-27
 ---
-
-MegaTrackerFrameFilter 组件参考 | EasyAR 文档
-**
-##### Table of Contents
-**
 # MegaTrackerFrameFilter 组件参考
 >
 [> 切换到 API
@@ -24,7 +21,7 @@ MegaTrackerFrameFilter 组件窗口由两个部分组成：组件配置和测试
 * Block：Mega Block。
 * Landmark：Mega Landmark。|
 |*Access Source*|服务访问数据源类型。选项：
-* Global Config：使用全局服务器配置。根据 Service Type 选择 [GlobalMegaBlockLocalizationServiceConfig](../../../api/unity/easyar.EasyARSettings.html#u_easyar_EasyARSettings_GlobalMegaBlockLocalizationServiceConfig) 或 [GlobalMegaLandmarkLocalizationServiceConfig](../../../api/unity/easyar.EasyARSettings.html#u_easyar_EasyARSettings_GlobalMegaLandmarkLocalizationServiceConfig)。全局配置可以点击 Unity 菜单 EasyAR &gt; Sense &gt; Configuration 后在属性面板里面进行填写。
+* Global Config：使用全局服务器配置。根据 Service Type 选择 [GlobalMegaBlockLocalizationServiceConfig](../../../api/unity/easyar.EasyARSettings.html#u_easyar_EasyARSettings_GlobalMegaBlockLocalizationServiceConfig) 或 [GlobalMegaLandmarkLocalizationServiceConfig](../../../api/unity/easyar.EasyARSettings.html#u_easyar_EasyARSettings_GlobalMegaLandmarkLocalizationServiceConfig)。全局配置可以点击 Unity 菜单 EasyAR > Sense > Configuration 后在属性面板里面进行填写。
 * API Key：使用 [APIKeyAccessData](../../../api/unity/easyar.APIKeyAccessData.html) 类型的访问数据。
 * Token：使用 [TokenAccessData](../../../api/unity/easyar.TokenAccessData.html) 类型的访问数据。|
 |*App ID*|Access Source 是 API Key 或 Token 时显示。
@@ -57,4 +54,4 @@ Token。|
 服务类型是 Landmark 时，测试区域显示 Landmark 测试功能：
 ![alt text](https://doc-asset.easyar.com/develop/unity/mega/media/comp-MegaTrackerFrameFilter-test-landmark.png)
 可以模拟 GNSS 数据进行测试。
-可以模拟 [MegaLandmarkFilterWrapper.FilterBySpotId(string, Action&lt;MegaLandmarkFilterResponse&gt;)](../../../api/unity/easyar.MegaLandmarkFilterWrapper.html#u_easyar_MegaLandmarkFilterWrapper_FilterBySpotId_System_String_System_Action_easyar_MegaLandmarkFilterResponse__) 和 [MegaLandmarkFilterWrapper.FilterByLocation(Action&lt;MegaLandmarkFilterResponse&gt;)](../../../api/unity/easyar.MegaLandmarkFilterWrapper.html#u_easyar_MegaLandmarkFilterWrapper_FilterByLocation_System_Action_easyar_MegaLandmarkFilterResponse__) 执行。
+可以模拟 [MegaLandmarkFilterWrapper.FilterBySpotId(string, Action<MegaLandmarkFilterResponse>)](../../../api/unity/easyar.MegaLandmarkFilterWrapper.html#u_easyar_MegaLandmarkFilterWrapper_FilterBySpotId_System_String_System_Action_easyar_MegaLandmarkFilterResponse__) 和 [MegaLandmarkFilterWrapper.FilterByLocation(Action<MegaLandmarkFilterResponse>)](../../../api/unity/easyar.MegaLandmarkFilterWrapper.html#u_easyar_MegaLandmarkFilterWrapper_FilterByLocation_System_Action_easyar_MegaLandmarkFilterResponse__) 执行。

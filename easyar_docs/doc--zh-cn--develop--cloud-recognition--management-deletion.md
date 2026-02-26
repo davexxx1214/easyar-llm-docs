@@ -1,20 +1,17 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/cloud-recognition/management-deletion.html
+original_file: doc--zh-cn--develop--cloud-recognition--management-deletion.md
+normalized_at: 2026-02-27
 ---
-
-删除目标图 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 删除目标图
 EasyAR 提供了两种方式处理不再需要的识别图：**永久删除**和**临时停用**。为了保证生产环境的稳定性，建议您仔细阅读以下操作说明。
 ## 通过 EasyAR Web 管理中心操作
-* **操作步骤**：登录 EasyAR 开发中心 -&gt; 云识别管理 -&gt; 选择对应图库 -&gt; 点击 **管理** 进入图库管理界面。
+* **操作步骤**：登录 EasyAR 开发中心 -> 云识别管理 -> 选择对应图库 -> 点击 **管理** 进入图库管理界面。
 * **删除方式**：
 * **批量删除**：在列表中勾选目标图，点击 **删除** 并确认即可。
 * **单个删除**：点击进入目标图详情页，点击页面内的 **删除** 按钮。
 ![删除操作引导](https://doc-asset.easyar.com/develop/cloud-recognition/media/m5-delete.png)
-##### 警告
+> **警告**
 **删除操作不可逆**。一旦确认删除，该图像的所有特征数据及关联信息将永久丢失。建议先在测试图库中验证流程，严禁直接在生产环境进行破坏性测试。
 ## 最佳实践：目标图停用
 在大多数业务场景下，如果您不确定是否未来还会用到某张图，推荐使用 **停用** 代替 **删除**。
@@ -36,10 +33,9 @@ EasyAR 提供了两种方式处理不再需要的识别图：**永久删除**和
 * Your-CRS-AppId → 您的 appId
 * Your-todo-TargetId → 待删除目标 targetId
 ```
-`curl -X DELETE "https://&lt;Your Server-side-URL&gt;/target/&lt;Your-todo-TargetId&gt;?appId=&lt;Your-CRS-AppId&gt;" \\
+curl -X DELETE "https://<Your Server-side-URL>/target/<Your-todo-TargetId>?appId=<Your-CRS-AppId>" \\
 -H "Content-Type: application/json" \\
--H "Authorization: &lt;Your-Token&gt;"
-`
+-H "Authorization: <Your-Token>"
 ```
 下载 Java 示例代码
 * [Java Samples Download](https://github.com/EasyAR-CRS/java-sdk)
@@ -51,7 +47,7 @@ Step 2. 修改全局变量，替换你准备清单里的认证参数
 * TARGET\_MGMT\_URL → Server-end URL
 * TARGET\_ID → 待删除目标 targetId
 ```
-`public class RemoveTarget {
+public class RemoveTarget {
 private static final String TARGET\_MGMT\_URL = "https://cn1.crs.easyar.com";
 private static final String CRS\_APPID = "--here is your CRS AppId--";
 private static final String API\_KEY = "--here is your API Key--";
@@ -87,7 +83,6 @@ System.out.println(new RemoveTarget().remove(accessInfo, TARGET\_ID));
 System.out.println(new RemoveTarget().removeMultiTargets(accessInfo, TO\_DEL\_IDs));
 }
 }
-`
 ```
 Step 3. 运行 Main
 下载 NodeJS 示例代码
@@ -97,20 +92,18 @@ Step 1. 配置密钥文件 keys.json
 * API Key / API Secret
 * to-delete-targetId
 ```
-`{
+{
 "appId": "--here is your appId for CRS App Instance for SDK 4--",
 "apiKey": "--here is your api key which is create from website and which has crs permission--",
 "apiSecret": "--here is your api secret which is create from website--"
 }
-`
 ```
 Step 2. 运行，指定密钥文件以及 Server-end URL
 ```
-`node bin/deleteTarget &lt;to-delete-targetId&gt; -t &lt;Server-end-URL&gt; -c keys.json
-`
+node bin/deleteTarget <to-delete-targetId> -t <Server-end-URL> -c keys.json
 ```
 ```
-`var argv = require('yargs')
+var argv = require('yargs')
 .usage('Usage: $0 [targetId] -t [host] -c [keys]')
 .demand(1)
 .default('t', 'http://localhost:8888').alias('t', 'host')
@@ -130,18 +123,16 @@ console.log(resp.result.targetId);
 .fail(function(err) {
 console.log(err);
 });
-`
 ```
 deleteTarget 调用云服务接口，示例代码在 farmer.js
 ```
-`function deleteTarget(targetId) {
+function deleteTarget(targetId) {
 return Q.promise(function(resolve, reject) {
 request.del(host + '/target/' + targetId)
 .query(signParams())
 .end(done(resolve, reject));
 });
 }
-`
 ```
 下载 Php 示例代码
 * [PHP Samples Download](https://github.com/EasyAR-CRS/php-sdk)
@@ -152,7 +143,7 @@ Step 2. 修改全局变量，替换你准备清单里的认证参数
 * Server-end URL
 * toDeleteTargetId
 ```
-`&lt;?php
+<?php
 include 'EasyARClientSdkCRS.php';
 $apiKey = 'API Key';
 $apiSecret = 'API Secret';
@@ -160,23 +151,21 @@ $crsAppId = 'CRS AppId'
 $crsCloudUrl = 'https://cn1-crs.easyar.com';
 $toDeleteTargetId = 'to-delete-targetId';
 $sdk = new EasyARClientSdkCRS($apiKey, $apiSecret, $crsAppId, $crsCloudUrl);
-$rs = $sdk-&gt;delete($toDeleteTargetId);
-if ($rs-&gt;statusCode == 0) {
-print\_r($rs-&gt;result);
+$rs = $sdk->delete($toDeleteTargetId);
+if ($rs->statusCode == 0) {
+print\_r($rs->result);
 } else {
 print\_r($rs);
 }
-`
 ```
 Step 3. 运行 php demo.php
 新建相关代码文件 delete\_target.py，修改全局变量，然后运行
 ```
-`pip install requests
+pip install requests
 python delete\_target.py
-`
 ```
 ```
-`import time
+import time
 import hashlib
 import requests
 # --- 全局变量配置 ---
@@ -202,16 +191,14 @@ response = requests.delete(url, params=final\_params)
 print(f"Response: {response.text}")
 if \_\_name\_\_ == "\_\_main\_\_":
 main()
-`
 ```
 新建相关代码文件 main.go，修改全局变量，然后运行
 ```
-`go run main.go
-`
+go run main.go
 ```
 `main.go:`
 ```
-`package main
+package main
 import (
 "crypto/sha256"
 "fmt"
@@ -242,7 +229,7 @@ builder := ""
 for \_, k := range keys { builder += k + params[k] }
 builder += ApiSecret
 signature := fmt.Sprintf("%x", sha256.Sum256([]byte(builder)))
-url := fmt.Sprintf("%s/target/%s?apiKey=%s&amp;appId=%s&amp;timestamp=%s&amp;signature=%s",
+url := fmt.Sprintf("%s/target/%s?apiKey=%s&appId=%s&timestamp=%s&signature=%s",
 Host, TargetId, ApiKey, AppId, ts, signature)
 req, \_ := http.NewRequest("DELETE", url, nil)
 resp, \_ := http.DefaultClient.Do(req)
@@ -250,28 +237,27 @@ defer resp.Body.Close()
 body, \_ := io.ReadAll(resp.Body)
 fmt.Printf("Response: %s\\n", string(body))
 }
-`
 ```
 在 Cargo.toml 中添加 reqwest, tokio, sha2, hex 依赖。
 执行 cargo run。
 ```
-`use sha2::{Sha256, Digest};
+use sha2::{Sha256, Digest};
 use std::collections::BTreeMap;
 use std::time::{SystemTime, UNIX\_EPOCH};
-const API\_KEY: &amp;str = "YOUR\_API\_KEY";
-const API\_SECRET: &amp;str = "YOUR\_API\_SECRET";
-const APP\_ID: &amp;str = "YOUR\_APP\_ID";
-const HOST: &amp;str = "https://crs-cn1.easyar.com";
-const TARGET\_ID: &amp;str = "YOUR\_TARGET\_ID";
+const API\_KEY: &str = "YOUR\_API\_KEY";
+const API\_SECRET: &str = "YOUR\_API\_SECRET";
+const APP\_ID: &str = "YOUR\_APP\_ID";
+const HOST: &str = "https://crs-cn1.easyar.com";
+const TARGET\_ID: &str = "YOUR\_TARGET\_ID";
 #[tokio::main]
-async fn main() -&gt; Result&lt;(), Box&lt;dyn std::error::Error&gt;&gt; {
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
 let ts = SystemTime::now().duration\_since(UNIX\_EPOCH)?.as\_millis().to\_string();
 let mut params = BTreeMap::new();
 params.insert("apiKey", API\_KEY);
 params.insert("appId", APP\_ID);
-params.insert("timestamp", &amp;ts);
+params.insert("timestamp", &ts);
 let mut sign\_str = String::new();
-for (k, v) in &amp;params {
+for (k, v) in &params {
 sign\_str.push\_str(k);
 sign\_str.push\_str(v);
 }
@@ -279,22 +265,20 @@ sign\_str.push\_str(API\_SECRET);
 let mut hasher = Sha256::new();
 hasher.update(sign\_str.as\_bytes());
 let signature = hex::encode(hasher.finalize());
-let url = format!("{}/target/{}?apiKey={}&amp;appId={}&amp;timestamp={}&amp;signature={}",
+let url = format!("{}/target/{}?apiKey={}&appId={}&timestamp={}&signature={}",
 HOST, TARGET\_ID, API\_KEY, APP\_ID, ts, signature);
 let res = reqwest::Client::new().delete(url).send().await?;
 println!("Response: {}", res.text().await?);
 Ok(())
 }
-`
 ```
 创建 .NET 控制台项目。
 ```
-`dotnet new console
+dotnet new console
 dotnet run
-`
 ```
 ```
-`using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -308,7 +292,7 @@ static string HOST = "https://crs-cn1.easyar.com";
 static string TARGET\_ID = "TARGET\_ID";
 static async System.Threading.Tasks.Task Main() {
 string timestamp = DateTimeOffset.Now.ToUnixTimeMilliseconds().ToString();
-var dict = new SortedDictionary&lt;string, string&gt; {
+var dict = new SortedDictionary<string, string> {
 { "apiKey", API\_KEY },
 { "appId", APP\_ID },
 { "timestamp", timestamp }
@@ -318,7 +302,7 @@ foreach (var kv in dict) sb.Append(kv.Key).Append(kv.Value);
 sb.Append(API\_SECRET);
 string signature = Sha256(sb.ToString());
 using var client = new HttpClient();
-string query = string.Join("&amp;", dict.Select(x =&gt; $"{x.Key}={x.Value}")) + $"&amp;signature={signature}";
+string query = string.Join("&", dict.Select(x => $"{x.Key}={x.Value}")) + $"&signature={signature}";
 string url = $"{HOST}/target/{TARGET\_ID}?{query}";
 var response = await client.DeleteAsync(url);
 Console.WriteLine($"Result: {await response.Content.ReadAsStringAsync()}");
@@ -328,7 +312,6 @@ byte[] bytes = SHA256.HashData(Encoding.UTF8.GetBytes(str));
 return BitConverter.ToString(bytes).Replace("-", "").ToLower();
 }
 }
-`
 ```
 * 运行环境
 * Unity 2020 LTS 以上版本
@@ -337,15 +320,14 @@ return BitConverter.ToString(bytes).Replace("-", "").ToLower();
 Step 1：准备图片文件
 * 在 Unity 项目中创建目录：
 ```
-`Assets/
+Assets/
 └── Scripts/
 └── DeleteImageTarget.cs
-`
 ```
 * 按照 Assets 目录名
 * 复制下面示例代码 DeleteImageTarget.cs
 ```
-`using System.Collections;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 public class DeleteImageTarget : MonoBehaviour
@@ -381,7 +363,6 @@ Debug.LogError(request.downloadHandler.text);
 }
 }
 }
-`
 ```
 * 在 Unity Editor 中：
 * 创建一个空 GameObject

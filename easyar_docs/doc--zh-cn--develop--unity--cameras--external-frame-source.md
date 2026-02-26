@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/cameras/external-frame-source.html
+original_file: doc--zh-cn--develop--unity--cameras--external-frame-source.md
+normalized_at: 2026-02-27
 ---
-
-Unity 中的自定义相机实现 —— 外部帧数据源 | EasyAR 文档
-**
-##### Table of Contents
-**
 # Unity 中的自定义相机实现 —— 外部帧数据源
 通过外部帧数据源（[ExternalFrameSource](../../../api/unity/easyar.ExternalFrameSource.html)），开发者可以为 EasyAR Sense 扩展自定义的相机实现，从而支持特定的头显设备或其它输入设备。以下内容介绍了外部帧数据源的类型结构及接口定义。
 ## 开始之前
@@ -13,37 +10,36 @@ Unity 中的自定义相机实现 —— 外部帧数据源 | EasyAR 文档
 * 了解 [帧数据源](frame-source.html) 的基本概念、类型以及运行时的选取方法。
 ## 外部帧数据源类型
 ```
-`---
+---
 config:
 class:
 hideEmptyMembersBox: true
 ---
 classDiagram
 class FrameSource {
-&lt;&lt;abstract&gt;&gt;
+<<abstract>>
 }
 class ExternalFrameSource {
-&lt;&lt;abstract&gt;&gt;
+<<abstract>>
 }
 class ExternalDeviceFrameSource {
-&lt;&lt;abstract&gt;&gt;
+<<abstract>>
 }
 class ExternalDeviceMotionFrameSource:::EasyAR {
-&lt;&lt;abstract&gt;&gt;
+<<abstract>>
 }
 class ExternalDeviceRotationFrameSource:::EasyAR {
-&lt;&lt;abstract&gt;&gt;
+<<abstract>>
 }
 class ExternalImageStreamFrameSource:::EasyAR {
-&lt;&lt;abstract&gt;&gt;
+<<abstract>>
 }
-ExternalFrameSource --|&gt; FrameSource
-ExternalDeviceFrameSource --|&gt; ExternalFrameSource
-ExternalDeviceMotionFrameSource --|&gt; ExternalDeviceFrameSource
-ExternalDeviceRotationFrameSource --|&gt; ExternalDeviceFrameSource
-ExternalImageStreamFrameSource --|&gt; ExternalFrameSource
+ExternalFrameSource --|> FrameSource
+ExternalDeviceFrameSource --|> ExternalFrameSource
+ExternalDeviceMotionFrameSource --|> ExternalDeviceFrameSource
+ExternalDeviceRotationFrameSource --|> ExternalDeviceFrameSource
+ExternalImageStreamFrameSource --|> ExternalFrameSource
 classDef EasyAR fill:#6e6ce6,stroke:#333,color:#fff
-`
 ```
 上图展示了外部帧数据源的类型结构。
 根据输入数据的不同，外部帧数据源可以分为两大类：
@@ -86,10 +82,10 @@ classDef EasyAR fill:#6e6ce6,stroke:#333,color:#fff
 * [FrameSource.IsAvailable](../../../api/unity/easyar.FrameSource.html#u_easyar_FrameSource_IsAvailable)：`可用性（Availability）`
 用于判断 frame source 是否可以使用。
 如果一个 frame source 在当前运行设备或环境下不可用，该数值应为 false。
-如果该数值等于 Optional&lt;bool&gt;.Empty，[FrameSource.CheckAvailability()](../../../api/unity/easyar.FrameSource.html#u_easyar_FrameSource_CheckAvailability) 协程会被调用，应在协程结束前更新 [FrameSource.IsAvailable](../../../api/unity/easyar.FrameSource.html#u_easyar_FrameSource_IsAvailable)。
+如果该数值等于 Optional<bool>.Empty，[FrameSource.CheckAvailability()](../../../api/unity/easyar.FrameSource.html#u_easyar_FrameSource_CheckAvailability) 协程会被调用，应在协程结束前更新 [FrameSource.IsAvailable](../../../api/unity/easyar.FrameSource.html#u_easyar_FrameSource_IsAvailable)。
 可用性接口会在 session 组装时使用，不可用的组件将不会被选择且它的方法在 session 运行时不会被调用。
 * [FrameSource.CheckAvailability()](../../../api/unity/easyar.FrameSource.html#u_easyar_FrameSource_CheckAvailability)（可选）：`检查 frame source 是否可用的协程`
-[FrameSource.IsAvailable](../../../api/unity/easyar.FrameSource.html#u_easyar_FrameSource_IsAvailable) 等于 Optional&lt;bool&gt;.Empty 时会被调用。在该协程结束前，session 的组装过程会被阻塞。
+[FrameSource.IsAvailable](../../../api/unity/easyar.FrameSource.html#u_easyar_FrameSource_IsAvailable) 等于 Optional<bool>.Empty 时会被调用。在该协程结束前，session 的组装过程会被阻塞。
 ### session 原点
 * [ExternalDeviceFrameSource.OriginType](../../../api/unity/easyar.ExternalDeviceFrameSource.html#u_easyar_ExternalDeviceFrameSource_OriginType)：`原点类型`
 * [XROrigin](../../../api/unity/easyar.ExternalDeviceFrameSource.DeviceOriginType.html#u_easyar_ExternalDeviceFrameSource_DeviceOriginType_XROrigin)：设备 SDK 使用 [Unity.XR.CoreUtils.XROrigin](https://docs.unity3d.com/Packages/com.unity.xr.core-utils@2.5/api/Unity.XR.CoreUtils.XROrigin.html) 作为原点。

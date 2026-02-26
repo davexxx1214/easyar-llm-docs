@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/release-notes/release-notes-4_7.html
+original_file: doc--zh-cn--develop--native--release-notes--release-notes-4_7.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR Sense 4.7 发行说明 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR Sense 4.7 发行说明
 ## 4.7.0
 2025-10-20
@@ -101,16 +98,16 @@ MEGA
 > + Log 增加 logMessage
 >
 > + 在 C++导出接口回调中增加
-*> EASYAR_FUNCTOR_EXCEPTION_MODE_NORTTI
-*> 选项用于禁用 RTTI
+> EASYAR_FUNCTOR_EXCEPTION_MODE_NORTTI
+> 选项用于禁用 RTTI
 >
 > + 在 C++导出接口回调中增加
-*> EASYAR_FUNCTOR_EXCEPTION_MODE_NOEXCEPTION
-*> 选项用于禁用异常
+> EASYAR_FUNCTOR_EXCEPTION_MODE_NOEXCEPTION
+> 选项用于禁用异常
 >
 > + 在 C++导出接口实现中增加
-*> EASYAR_EXCEPTION_MODE_NOEXCEPTION
-*> 选项用于禁用异常 throw
+> EASYAR_EXCEPTION_MODE_NOEXCEPTION
+> 选项用于禁用异常 throw
 >
 > * 修复了一些稳定性问题
 >

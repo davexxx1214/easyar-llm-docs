@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/getting-started/ar.html
+original_file: doc--zh-cn--develop--getting-started--ar.md
+normalized_at: 2026-02-27
 ---
-
-EasyAR 增强现实入门 | EasyAR 文档
-**
-##### Table of Contents
-**
 # EasyAR 增强现实入门
 EasyAR Sense 是增强现实（Augmented Reality，AR）引擎，提供感知真实世界的能力。
 EasyAR 的核心在于跟踪 （Tracking） 和渲染 （Rendering）。

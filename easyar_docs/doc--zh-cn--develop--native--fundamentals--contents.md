@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/contents.html
+original_file: doc--zh-cn--develop--native--fundamentals--contents.md
+normalized_at: 2026-02-27
 ---
-
-3D 空间内容展示 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 3D 空间内容展示
 使用 AR 时，通常需要展示虚拟物体。在简单的测试示例中，可以使用简单的几何体，但要面向消费者开发时，一般需要显示高精度的3D 模型和动画，并可能会在点击模型结点时触发事件和交互。
 ## 模型
@@ -18,5 +15,5 @@ source: https://www.easyar.cn/doc/zh-cn/develop/native/fundamentals/contents.htm
 显示动画，需要在运行时不断更新模型结点的位置和姿态（变换矩阵）。大部分 3D 引擎会提供动画功能，只需要在动画制作软件中编辑好动画，并以 3D 引擎支持的格式导出，即可在 3D 引擎中使用。上述 glTF 格式也包含动画的功能。
 ## 交互
 用户点击模型结点时，有时候需要触发事件和交互。一般会对骨骼动画中的骨骼进行命名，并使用碰撞检测或射线检测，在点击时触发事件，返回被点击的骨骼名称。事件的处理，可以使用脚本或者应用代码来进行。
-##### 注意
+> **注意**
 如果您缺少 3D 引擎的使用经验，强烈建议您考虑使用 Unity 来开发您的应用。EasyAR Sense Unity Plugin 对 Unity 有较好的支持，如果您使用其他的 3D 引擎，可能会面临支持和可用资源较少的问题。

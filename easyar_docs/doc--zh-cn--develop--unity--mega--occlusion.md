@@ -1,11 +1,8 @@
 ---
 source: https://www.easyar.cn/doc/zh-cn/develop/unity/mega/occlusion.html
+original_file: doc--zh-cn--develop--unity--mega--occlusion.md
+normalized_at: 2026-02-27
 ---
-
-在 Unity 中使用 EasyAR Mega 实现遮挡 | EasyAR 文档
-**
-##### Table of Contents
-**
 # 在 Unity 中使用 EasyAR Mega 实现遮挡
 遮挡 （Occlusion） 是提升 AR 虚实融合沉浸感的关键技术。本文将介绍如何在 Unity 中通过 EasyAR Mega 实现遮挡效果。
 ## 开始之前
@@ -40,7 +37,7 @@ source: https://www.easyar.cn/doc/zh-cn/develop/unity/mega/occlusion.html
 图中 2 为导出贴图选项，由于我们只需要白模作为遮挡，不需要贴图。
 ### 对模型进行裁剪并减面
 将导出后的模型在数字内容创建软件（例如 Blender）中进行裁剪，减面，保存为 `Glb`。
-##### 提示
+> **提示**
 例子中使用的是 Blender 的 Decimate Modifier。
 ![裁剪前](https://doc-asset.easyar.com/develop/wechat/mega/media/occlusion06.png)
 裁剪并减面后：
